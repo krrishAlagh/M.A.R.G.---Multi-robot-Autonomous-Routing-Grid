@@ -207,6 +207,63 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 }) => {
   const isHi = language === 'hi';
 
+  // Hero Slideshow Carousel Data
+  const HERO_SLIDES = [
+    {
+      img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80',
+      badge: 'ZONE B — HIGH-SPEED PICK & PLACE',
+      badgeColor: 'text-emerald-400 bg-emerald-500/15 border-emerald-500/30',
+      titleEn: 'NEXUS AMR OS — Autonomous Warehouse Intelligence',
+      titleHi: 'NEXUS AMR OS — स्वायत्त फ्लीट इंटेलिजेंस',
+      descEn: 'Next-Generation Autonomous Mobile Robot Operating System built for Bharat Electronics Limited (BEL). Integrates Sub-18ms Edge AI vision, distributed A* spatial path coordination, transparent multi-criteria task allocation scoring, and real-time telemetry streaming.',
+      descHi: 'भारत इलेक्ट्रॉनिक्स लिमिटेड (BEL) के लिए निर्मित नेक्स्ट-जनरेशन एएमआर फ्लीट ऑपरेटिंग सिस्टम। इसमें सब-18ms एज AI विज़न, वितरित A* पाथ समन्वय, और पारदर्शी कार्य आवंटन स्कोरिंग शामिल है।',
+      view: 'overview' as ActiveView
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1600&q=80',
+      badge: 'ZONE A — INBOUND RECEIVING DOCK',
+      badgeColor: 'text-sky-400 bg-sky-500/15 border-sky-500/30',
+      titleEn: 'Automated Goods Receiving & Conveyor Ingestion',
+      titleHi: 'स्वचालित सामान प्राप्ति एवं पैलेट प्रेषण',
+      descEn: 'Real-time synchronization between inbound dock conveyors and AMR nodes for rapid pallet offloading and dynamic storage placement.',
+      descHi: 'इनबाउंड डॉक कन्वेयर और एएमआर फ्लीट नोड्स के बीच त्वरित पैलेट ट्रांसफर का रियल-टाइम सिंक्रनाइज़ेशन।',
+      view: 'tasks' as ActiveView
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1600&q=80',
+      badge: 'BEL COMMAND HQ — LIVE TELEMETRY CORE',
+      badgeColor: 'text-amber-400 bg-amber-500/15 border-amber-500/30',
+      titleEn: 'BEL Central Operations & Telemetry Control Room',
+      titleHi: 'बीईएल सेंट्रल ऑपरेशन्स एवं टेलीमेट्री कंट्रोल रूम',
+      descEn: 'High-frequency 500ms WebSocket telemetry mesh delivering real-time battery monitoring, speed telemetry, collision avoidance warnings, and manual E-stop overrides.',
+      descHi: 'हाई-फ्रीक्वेंसी 500ms वेबसॉकेट टेलीमेट्री मेश जो रियल-टाइम बैटरी मॉनिटरिंग और मैनुअल ई-स्टॉप ओवरराइड्स प्रदान करता है।',
+      view: 'fleet' as ActiveView
+    },
+    {
+      img: 'https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=1600&q=80',
+      badge: 'CHARGING DOCK C1 — AUTOMATED RECHARGE',
+      badgeColor: 'text-purple-400 bg-purple-500/15 border-purple-500/30',
+      titleEn: 'Autonomous Battery Management & Wireless Docking',
+      titleHi: 'स्वायत्त बैटरी प्रबंधन एवं वायरलेस चार्जिंग',
+      descEn: 'Automatic low-battery threshold detection (<15%) dynamically re-routes active AMRs to inductive wireless charging pads for zero-downtime operation.',
+      descHi: 'कम बैटरी थ्रेशोल्ड डिटेक्शन (<15%) जो सक्रिय एएमआर को स्वचालित रूप से चार्जिंग पैड पर पुनर्निर्देशित करता है।',
+      view: 'analytics' as ActiveView
+    }
+  ];
+
+  const [slideIndex, setSlideIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(() => {
+      setSlideIndex((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [isPaused, HERO_SLIDES.length]);
+
+  const currentSlide = HERO_SLIDES[slideIndex];
+
   // Derived
   const activeAmrs   = amrs.filter(a => a.status === 'Active').length;
   const chargingAmrs = amrs.filter(a => a.status === 'Charging').length;
@@ -225,29 +282,40 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
     <div className="space-y-5 select-none font-sans">
 
       {/* ══════════════════════════════════════════════════════
-          HERO BANNER — Apple-style frosted glass gradient
+          HERO BANNER — Automated Interactive Photo Slideshow
       ══════════════════════════════════════════════════════ */}
-      <div className="relative rounded-3xl overflow-hidden shadow-2xl" style={{ minHeight: '200px' }}>
-        {/* Background photo */}
-        <img
-          src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80"
-          alt="Warehouse operations"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+      <div
+        className="relative rounded-3xl overflow-hidden shadow-2xl transition-all duration-700 group"
+        style={{ minHeight: '220px' }}
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        {/* Background photo slideshow with crossfade */}
+        {HERO_SLIDES.map((slide, idx) => (
+          <img
+            key={idx}
+            src={slide.img}
+            alt={slide.titleEn}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              idx === slideIndex ? 'opacity-100 scale-105 transition-transform duration-10000 ease-out' : 'opacity-0 pointer-events-none'
+            }`}
+          />
+        ))}
+
         {/* Dark gradient scrim — Apple-style dark overlay */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(135deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 50%, rgba(10,20,40,0.8) 100%)'
+          background: 'linear-gradient(135deg, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.65) 50%, rgba(10,20,40,0.85) 100%)'
         }} />
         {/* Subtle colour tint */}
         <div className="absolute inset-0" style={{
           background: 'radial-gradient(ellipse at 20% 50%, rgba(56,189,248,0.12) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(74,222,128,0.08) 0%, transparent 50%)'
         }} />
 
-        {/* Content */}
+        {/* Slideshow Content */}
         <div className="relative px-8 py-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-          <div className="max-w-2xl">
-            {/* Eyebrow */}
-            <div className="flex flex-wrap items-center gap-2 mb-3">
+          <div className="max-w-2xl space-y-3">
+            {/* Eyebrow Badges */}
+            <div className="flex flex-wrap items-center gap-2">
               <span className={`flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-full border backdrop-blur-sm ${
                 isConnected
                   ? 'bg-emerald-500/15 border-emerald-500/30 text-emerald-400'
@@ -257,28 +325,40 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 {isConnected ? 'All Systems Live' : 'Disconnected'}
               </span>
               <span className="text-[11px] font-mono text-white/40 bg-white/5 border border-white/10 px-2.5 py-1 rounded-full">SIH26123</span>
-              <span className="text-[11px] font-mono text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-1 rounded-full">BEL CRL R&D</span>
+              <span className={`text-[11px] font-mono px-2.5 py-1 rounded-full border backdrop-blur-sm ${currentSlide.badgeColor}`}>
+                {currentSlide.badge}
+              </span>
             </div>
 
-            {/* Title & Introduction */}
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight mb-2" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', letterSpacing: '-0.02em' }}>
-              {isHi ? 'NEXUS AMR OS — स्वायत्त फ्लीट इंटेलिजेंस' : 'NEXUS AMR OS — Autonomous Warehouse Intelligence'}
+            {/* Slide Title & Introduction Description */}
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', letterSpacing: '-0.02em' }}>
+              {isHi ? currentSlide.titleHi : currentSlide.titleEn}
             </h1>
-            <p className="text-sm text-neutral-300 font-normal leading-relaxed max-w-xl">
-              {isHi
-                ? 'भारत इलेक्ट्रॉनिक्स लिमिटेड (BEL) के लिए निर्मित नेक्स्ट-जनरेशन एएमआर फ्लीट ऑपरेटिंग सिस्टम। इसमें सब-18ms एज AI विज़न, वितरित A* पाथ समन्वय, और पारदर्शी कार्य आवंटन स्कोरिंग शामिल है।'
-                : 'Next-Generation Autonomous Mobile Robot Operating System built for Bharat Electronics Limited (BEL). Integrates Sub-18ms Edge AI vision, distributed A* spatial path coordination, transparent multi-criteria task allocation scoring, and real-time telemetry streaming.'}
+            <p className="text-xs sm:text-sm text-neutral-300 font-normal leading-relaxed max-w-xl">
+              {isHi ? currentSlide.descHi : currentSlide.descEn}
             </p>
+
+            {/* Quick Action Button for current slide */}
+            <div className="pt-1">
+              <button
+                onClick={() => onNavigate(currentSlide.view)}
+                className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs font-bold rounded-xl transition-all cursor-pointer flex items-center gap-2 backdrop-blur-md shadow-lg"
+              >
+                <span>Explore View</span>
+                <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
+              </button>
+            </div>
           </div>
 
           {/* Right: Live clock + quick stats */}
-          <div className="flex flex-col items-end gap-3">
+          <div className="flex flex-col items-end gap-4">
             <div className="text-right">
               <div className="text-3xl font-bold tracking-tight" style={{ fontFamily: 'system-ui', letterSpacing: '-0.03em' }}>
                 <LiveClock />
               </div>
               <div className="text-[11px] text-white/40 mt-0.5">Indian Standard Time</div>
             </div>
+
             <div className="flex items-center gap-2">
               <div className="bg-white/8 backdrop-blur border border-white/10 rounded-2xl px-4 py-2.5 text-center">
                 <div className="text-xl font-bold text-emerald-400 font-mono" style={{ letterSpacing: '-0.02em' }}>{activeAmrs}</div>
@@ -293,6 +373,48 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 <div className="text-[10px] text-white/40 mt-0.5">Alerts</div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Carousel Controls Bar (Dots & Prev/Next Buttons) */}
+        <div className="absolute bottom-3 left-8 right-8 flex items-center justify-between pointer-events-auto">
+          {/* Slide Indicator Dots */}
+          <div className="flex items-center gap-1.5">
+            {HERO_SLIDES.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setSlideIndex(idx)}
+                className={`h-1.5 rounded-full transition-all cursor-pointer ${
+                  idx === slideIndex ? 'w-6 bg-sky-400' : 'w-2 bg-white/30 hover:bg-white/60'
+                }`}
+                title={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Controls: Prev / Pause / Next */}
+          <div className="flex items-center gap-2 bg-black/60 border border-white/10 rounded-full px-2 py-1 backdrop-blur-md">
+            <button
+              onClick={() => setSlideIndex((slideIndex - 1 + HERO_SLIDES.length) % HERO_SLIDES.length)}
+              className="p-1 text-white/70 hover:text-white transition-colors cursor-pointer"
+              title="Previous slide"
+            >
+              <span className="material-symbols-outlined text-[16px]">chevron_left</span>
+            </button>
+            <button
+              onClick={() => setIsPaused(!isPaused)}
+              className="p-1 text-white/70 hover:text-white transition-colors cursor-pointer"
+              title={isPaused ? 'Resume auto-play' : 'Pause auto-play'}
+            >
+              <span className="material-symbols-outlined text-[14px]">{isPaused ? 'play_arrow' : 'pause'}</span>
+            </button>
+            <button
+              onClick={() => setSlideIndex((slideIndex + 1) % HERO_SLIDES.length)}
+              className="p-1 text-white/70 hover:text-white transition-colors cursor-pointer"
+              title="Next slide"
+            >
+              <span className="material-symbols-outlined text-[16px]">chevron_right</span>
+            </button>
           </div>
         </div>
       </div>

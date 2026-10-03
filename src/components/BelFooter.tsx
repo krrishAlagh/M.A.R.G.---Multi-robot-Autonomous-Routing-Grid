@@ -46,8 +46,8 @@ export const BelFooter: React.FC<BelFooterProps> = ({
 
             <p className="text-xs text-[#86868b] leading-relaxed">
               {language === 'hi'
-                ? 'नगर दृष्टि: सार्वजनिक परिवहन आधारित स्वदेशी मोबाइल अर्बन इंटेलिजेंस एवं सड़क अवसंरचना निगरानी प्लेटफॉर्म। एनवीडिया जेटसन और टेंसरआरटी एआई विज़न द्वारा संचालित।'
-                : 'Nagar Drishti: AI-powered mobile urban intelligence & municipal infrastructure diagnostics platform engineered for Indian Smart Cities with real-time transit dashcam edge computer vision.'}
+                ? 'NEXUS AMR OS: भारत इलेक्ट्रॉनिक्स लिमिटेड (BEL) और स्मार्ट इंडिया हैकाथॉन (SIH26123) के लिए निर्मित स्वायत्त मोबाइल रोबोट ऑपरेटिंग सिस्टम। सब-18ms एज AI विज़न और A* पाथ समन्वय द्वारा संचालित।'
+                : 'NEXUS AMR OS: Next-Generation Autonomous Mobile Robot Operating System & Real-Time Warehouse Telemetry Mesh engineered for Bharat Electronics Limited (BEL) and Smart India Hackathon (SIH26123). Powered by Sub-18ms Edge AI vision, distributed A* spatial path coordination, and multi-criteria task allocation scoring.'}
             </p>
 
             {/* Corporate Office Address Box */}

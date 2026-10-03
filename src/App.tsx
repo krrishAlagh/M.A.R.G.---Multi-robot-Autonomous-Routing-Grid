@@ -12,6 +12,7 @@ import { JudgeDemoSimulationView } from './components/JudgeDemoSimulationView';
 import { NotificationsView } from './components/NotificationsView';
 import { SettingsView } from './components/SettingsView';
 import { ContactUsView } from './components/ContactUsView';
+import { BelFooter } from './components/BelFooter';
 import { InfAiChatbot } from './components/InfAiChatbot';
 import { LoginView } from './components/LoginView';
 import { AmrDetailSheet } from './components/AmrDetailSheet';
@@ -240,6 +241,12 @@ export default function App() {
           )}
 
         </div>
+        
+        {/* ── Sovereign BEL Footer ── */}
+        <BelFooter
+          language={language}
+          onNavigate={(view) => setActiveView(view)}
+        />
       </main>
 
       {/* ── INF AI Floating Chatbot Widget (Every Page) ── */}

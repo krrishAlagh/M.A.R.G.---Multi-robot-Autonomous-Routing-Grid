@@ -144,13 +144,12 @@
       "code": "AMR-05",
       "name": "Pallet Cruiser 5",
       "model": "Nexus AMR-1000 Pro",
-      "status": "Blocked",
-      "batteryLevel": 61,
+      "status": "Idle",
+      "batteryLevel": 95.5,
       "currentPosition": {
-        "x": 30,
-        "y": 14,
-        "zoneId": "zone-3",
-        "aisle": "Aisle B3"
+        "x": 4,
+        "y": 38,
+        "zoneId": "zone-5"
       },
       "speed": 0,
       "heading": 90,
@@ -2584,6 +2583,17 @@
       "type": "Pallet Debris",
       "detectedByAmrId": "amr-05",
       "timestamp": "2026-10-03T10:01:31.476Z"
+    },
+    {
+      "id": "obs-sim-1791024318365",
+      "code": "OBS-PALLET-SIM",
+      "position": {
+        "x": 18,
+        "y": 14
+      },
+      "type": "Pallet Debris",
+      "detectedByAmrId": "amr-02",
+      "timestamp": "2026-10-03T10:45:18.366Z"
     }
   ],
   "perceptions": [
@@ -2652,6 +2662,16 @@
     }
   ],
   "alerts": [
+    {
+      "id": "alt-obs-1791024318366",
+      "alertType": "ROBOT_BLOCKED",
+      "severity": "WARNING",
+      "amrId": "amr-02",
+      "amrCode": "AMR-02",
+      "message": "Aisle A blocked by unexpected pallet debris. Dynamic A* path recalculation initiated.",
+      "timestamp": "2026-10-03T10:45:18.366Z",
+      "resolved": false
+    },
     {
       "id": "alt-bat-1791022686388",
       "alertType": "LOW_BATTERY",
