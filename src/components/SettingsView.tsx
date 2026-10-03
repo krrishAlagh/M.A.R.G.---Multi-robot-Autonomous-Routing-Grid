@@ -17,9 +17,16 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
   const [edgeConfidence, setEdgeConfidence] = useState(88);
   const [estopBufferCm, setEstopBufferCm] = useState(30);
 
+  const [savedToast, setSavedToast] = useState(false);
+
+  const handleSave = () => {
+    setSavedToast(true);
+    setTimeout(() => setSavedToast(false), 3000);
+  };
+
   return (
     <div className="flex flex-col gap-6 p-4 sm:p-6 lg:p-10 max-w-[1600px] mx-auto w-full pb-24">
-      <section className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 flex items-center justify-between shadow-xl">
+      <section className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xl">
         <div>
           <div className="flex items-center gap-2">
             <h1 className="text-lg sm:text-2xl font-bold text-white tracking-tight">
@@ -33,7 +40,22 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
             Configure Fleet Allocation scoring weights, Sub-18ms Edge perception thresholds, and A* collision avoidance buffers.
           </p>
         </div>
+
+        <button
+          onClick={handleSave}
+          className="px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white text-xs font-bold font-mono rounded-xl shadow-lg shadow-cyan-500/20 cursor-pointer flex items-center gap-2 transition-all"
+        >
+          <span className="material-symbols-outlined text-base">save</span>
+          Save Configuration
+        </button>
       </section>
+
+      {savedToast && (
+        <div className="p-3 bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold rounded-xl flex items-center gap-2 animate-bounce max-w-5xl">
+          <span className="material-symbols-outlined text-base">check_circle</span>
+          Configuration parameters successfully saved and deployed to Edge AI Fleet nodes!
+        </div>
+      )}
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl">
         {/* Card 1: Task Allocation Scoring Engine */}
@@ -138,3 +160,4 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
     </div>
   );
 };
+

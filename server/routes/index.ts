@@ -6,6 +6,8 @@ import tasksRoutes from './tasks.routes';
 import coordinationRoutes from './coordination.routes';
 import edgeAiRoutes from './edgeAi.routes';
 import simulationRoutes from './simulation.routes';
+import alertsRoutes from './alerts.routes';
+import analyticsRoutes from './analytics.routes';
 import systemRoutes from './system.routes';
 
 const masterRouter = Router();
@@ -18,6 +20,8 @@ v1Router.use('/tasks', tasksRoutes);
 v1Router.use('/coordination', coordinationRoutes);
 v1Router.use('/edge-ai', edgeAiRoutes);
 v1Router.use('/simulation', simulationRoutes);
+v1Router.use('/alerts', alertsRoutes);
+v1Router.use('/analytics', analyticsRoutes);
 
 masterRouter.use('/v1', v1Router);
 
@@ -29,6 +33,9 @@ masterRouter.use('/tasks', tasksRoutes);
 masterRouter.use('/coordination', coordinationRoutes);
 masterRouter.use('/edge-ai', edgeAiRoutes);
 masterRouter.use('/simulation', simulationRoutes);
+masterRouter.use('/alerts', alertsRoutes);
+masterRouter.use('/analytics', analyticsRoutes);
 masterRouter.use('/', systemRoutes);
 
 export default masterRouter;
+

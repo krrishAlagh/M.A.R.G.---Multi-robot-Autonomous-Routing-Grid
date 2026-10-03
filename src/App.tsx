@@ -200,6 +200,7 @@ export default function App() {
             <NotificationsView
               language={language}
               alerts={realtimeState.alerts}
+              onRefresh={refreshData}
             />
           )}
 

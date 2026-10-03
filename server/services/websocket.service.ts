@@ -9,6 +9,7 @@ export type WsMessageType =
   | 'EDGE_PERCEPTION'
   | 'SIMULATION_EVENT'
   | 'OPERATIONAL_ALERT'
+  | 'ALERT_UPDATE'
   | 'SYSTEM_HEARTBEAT';
 
 export interface WsMessagePayload<T = any> {

@@ -164,6 +164,69 @@ export async function fetchEdgePerceptions(amrId?: string): Promise<EdgePercepti
   }
 }
 
+export async function resolveConflict(id: string): Promise<{ success: boolean; message?: string; error?: string }> {
+  try {
+    const res = await fetch(`${API_BASE}/coordination/conflicts/${encodeURIComponent(id)}/resolve`, {
+      method: 'POST'
+    });
+    const json = await res.json();
+    if (!res.ok) throw new Error(json.error?.message || 'Failed to resolve conflict');
+    return { success: true, message: json.message };
+  } catch (err: any) {
+    return { success: false, error: err.message };
+  }
+}
+
+export async function fetchAlerts(): Promise<OperationalAlert[]> {
+  try {
+    const res = await fetch(`${API_BASE}/alerts`);
+    if (!res.ok) return [];
+    const json = await res.json();
+    return json.data || [];
+  } catch {
+    return [];
+  }
+}
+
+export async function resolveAlert(id: string): Promise<{ success: boolean; message?: string; error?: string }> {
+  try {
+    const res = await fetch(`${API_BASE}/alerts/${encodeURIComponent(id)}/resolve`, {
+      method: 'POST'
+    });
+    const json = await res.json();
+    if (!res.ok) throw new Error(json.error?.message || 'Failed to resolve alert');
+    return { success: true, message: json.message };
+  } catch (err: any) {
+    return { success: false, error: err.message };
+  }
+}
+
+export async function fetchMetrics(): Promise<FleetMetrics | null> {
+  try {
+    const res = await fetch(`${API_BASE}/analytics/overview`);
+    if (!res.ok) return null;
+    const json = await res.json();
+    return json.data || null;
+  } catch {
+    return null;
+  }
+}
+
+export async function updateTaskStatus(id: string, status: string, assignedAmrId?: string): Promise<{ success: boolean; data?: WarehouseTask; error?: string }> {
+  try {
+    const res = await fetch(`${API_BASE}/tasks/${encodeURIComponent(id)}/status`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status, assignedAmrId })
+    });
+    const json = await res.json();
+    if (!res.ok) throw new Error(json.error?.message || 'Failed to update task status');
+    return { success: true, data: json.data };
+  } catch (err: any) {
+    return { success: false, error: err.message };
+  }
+}
+
 export async function runSimulationControl(scenario: string): Promise<{ success: boolean; message?: string; error?: string }> {
   try {
     const res = await fetch(`${API_BASE}/simulation/control`, {
@@ -178,3 +241,4 @@ export async function runSimulationControl(scenario: string): Promise<{ success:
     return { success: false, error: err.message };
   }
 }
+

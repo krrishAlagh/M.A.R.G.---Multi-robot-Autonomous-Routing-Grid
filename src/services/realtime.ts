@@ -15,7 +15,9 @@ import {
   fetchWarehouseMap,
   fetchTasks,
   fetchRouteConflicts,
-  fetchEdgePerceptions
+  fetchEdgePerceptions,
+  fetchAlerts,
+  fetchMetrics
 } from './api';
 
 export interface RealtimeWarehouseState {
@@ -89,12 +91,14 @@ export function useRealtimeData() {
   }, []);
 
   const hydrateData = useCallback(async () => {
-    const [amrList, mapData, taskList, conflictList, perceptionList] = await Promise.all([
+    const [amrList, mapData, taskList, conflictList, perceptionList, alertList, metricsData] = await Promise.all([
       fetchAMRs(),
       fetchWarehouseMap(),
       fetchTasks(),
       fetchRouteConflicts(),
-      fetchEdgePerceptions()
+      fetchEdgePerceptions(),
+      fetchAlerts(),
+      fetchMetrics()
     ]);
 
     setState((prev) => ({
@@ -105,7 +109,9 @@ export function useRealtimeData() {
       obstacles: mapData?.obstacles || prev.obstacles,
       tasks: taskList.length > 0 ? taskList : prev.tasks,
       conflicts: conflictList,
-      perceptions: perceptionList.length > 0 ? perceptionList : prev.perceptions
+      perceptions: perceptionList.length > 0 ? perceptionList : prev.perceptions,
+      alerts: alertList.length > 0 ? alertList : prev.alerts,
+      metrics: metricsData || prev.metrics
     }));
   }, []);
 
@@ -114,7 +120,8 @@ export function useRealtimeData() {
 
     // WebSocket Telemetry Connection
     const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    const wsUrl = `${protocol}//${window.location.hostname}:3005/ws`;
+    const host = window.location.host;
+    const wsUrl = `${protocol}//${host}/ws`;
 
     const connectWS = () => {
       try {
@@ -171,6 +178,8 @@ export function useRealtimeData() {
                 }
               }));
               hydrateData();
+            } else if (payload.type === 'ALERT_UPDATE' || payload.type === 'COORDINATION_UPDATE') {
+              hydrateData();
             }
           } catch (err) {
             console.warn('[NEXUS WS] Parse error:', err);
@@ -179,7 +188,7 @@ export function useRealtimeData() {
 
         ws.onclose = () => {
           setState((prev) => ({ ...prev, isConnected: false }));
-          setTimeout(connectWS, 4000);
+          setTimeout(connectWS, 2000);
         };
 
         ws.onerror = () => {
@@ -198,6 +207,7 @@ export function useRealtimeData() {
       }
     };
   }, [hydrateData, playAudioSiren]);
+
 
   const selectAmr = (id: string | null) => {
     setState((prev) => ({ ...prev, selectedAmrId: id }));

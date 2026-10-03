@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { AMR, WarehouseZone, WarehouseStation, WarehouseObstacle, Language } from '../types';
-import { injectObstacle } from '../services/api';
+import { injectObstacle, clearObstacle } from '../services/api';
 
 interface WarehouseDigitalTwinViewProps {
   language: Language;
@@ -58,6 +58,14 @@ export const WarehouseDigitalTwinView: React.FC<WarehouseDigitalTwinViewProps> =
       onRefresh();
     }
   };
+
+  const handleClearObstacle = async (id: string) => {
+    const res = await clearObstacle(id);
+    if (res.success && onRefresh) {
+      onRefresh();
+    }
+  };
+
 
   const filteredAmrs = selectedZone === 'all'
     ? amrs

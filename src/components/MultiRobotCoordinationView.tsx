@@ -1,6 +1,6 @@
 import React from 'react';
 import { RobotRouteConflict, Language } from '../types';
-import { fetchRouteConflicts } from '../services/api';
+import { resolveConflict } from '../services/api';
 
 interface MultiRobotCoordinationViewProps {
   language: Language;
@@ -13,6 +13,13 @@ export const MultiRobotCoordinationView: React.FC<MultiRobotCoordinationViewProp
   conflicts,
   onRefresh
 }) => {
+  const handleResolve = async (id: string) => {
+    const res = await resolveConflict(id);
+    if (res.success && onRefresh) {
+      onRefresh();
+    }
+  };
+
   return (
     <div className="space-y-6">
       {/* Top Banner */}
@@ -73,7 +80,7 @@ export const MultiRobotCoordinationView: React.FC<MultiRobotCoordinationViewProp
                 <th className="p-3">Conflict Position</th>
                 <th className="p-3">Type & Severity</th>
                 <th className="p-3">Automated Coordination Action</th>
-                <th className="p-3">Status</th>
+                <th className="p-3">Status / Action</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-800/60">
@@ -93,13 +100,19 @@ export const MultiRobotCoordinationView: React.FC<MultiRobotCoordinationViewProp
                   </td>
                   <td className="p-3 text-slate-200 font-medium max-w-sm">{cnf.recommendedAction}</td>
                   <td className="p-3 font-mono">
-                    <span
-                      className={`px-2 py-0.5 text-[10px] font-bold rounded ${
-                        cnf.resolved ? 'bg-emerald-500/20 text-emerald-400' : 'bg-amber-500/20 text-amber-400 animate-pulse'
-                      }`}
-                    >
-                      {cnf.resolved ? 'RESOLVED' : 'ACTIVE WAIT'}
-                    </span>
+                    {cnf.resolved ? (
+                      <span className="px-2 py-0.5 text-[10px] font-bold rounded bg-emerald-500/20 text-emerald-400">
+                        RESOLVED
+                      </span>
+                    ) : (
+                      <button
+                        onClick={() => handleResolve(cnf.id)}
+                        className="px-2.5 py-1 text-[10px] font-bold rounded bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 cursor-pointer transition-all flex items-center gap-1"
+                      >
+                        <span className="material-symbols-outlined text-[12px]">check_circle</span>
+                        Resolve
+                      </button>
+                    )}
                   </td>
                 </tr>
               ))}
@@ -110,3 +123,4 @@ export const MultiRobotCoordinationView: React.FC<MultiRobotCoordinationViewProp
     </div>
   );
 };
+

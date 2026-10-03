@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import { OperationalAlert, Language } from '../types';
+import { resolveAlert } from '../services/api';
 
 interface NotificationsViewProps {
   language: Language;
   alerts?: OperationalAlert[];
   onSelectAlert?: (alert: OperationalAlert) => void;
+  onRefresh?: () => void;
 }
 
-export const NotificationsView: React.FC<NotificationsViewProps> = ({ language, alerts = [] }) => {
+export const NotificationsView: React.FC<NotificationsViewProps> = ({
+  language,
+  alerts = [],
+  onRefresh
+}) => {
   const defaultAlerts: OperationalAlert[] = [
     {
       id: 'ALT-101',
@@ -43,6 +49,13 @@ export const NotificationsView: React.FC<NotificationsViewProps> = ({ language, 
 
   const displayAlerts = alerts.length > 0 ? alerts : defaultAlerts;
   const [filter, setFilter] = useState<'all' | 'critical' | 'unresolved'>('all');
+
+  const handleResolveAlert = async (id: string) => {
+    const res = await resolveAlert(id);
+    if (res.success && onRefresh) {
+      onRefresh();
+    }
+  };
 
   const filtered = displayAlerts.filter((a) => {
     if (filter === 'critical') return a.severity === 'CRITICAL';
@@ -127,15 +140,29 @@ export const NotificationsView: React.FC<NotificationsViewProps> = ({ language, 
                 <div className="flex items-center gap-2">
                   <span className="font-mono text-xs text-cyan-400 font-semibold">{alert.amrId || 'HQ'}</span>
                   <span className="text-xs font-semibold text-white">{alert.alertType}</span>
-                  {!alert.resolved && (
+                  {!alert.resolved ? (
                     <span className="px-2 py-0.5 rounded text-[9px] font-mono font-bold bg-rose-500/20 text-rose-400 border border-rose-500/30">
                       ACTIVE
                     </span>
+                  ) : (
+                    <span className="px-2 py-0.5 rounded text-[9px] font-mono font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                      RESOLVED
+                    </span>
                   )}
                 </div>
-                <span className="text-[11px] font-mono text-slate-400">
-                  {new Date(alert.timestamp).toLocaleTimeString()}
-                </span>
+                <div className="flex items-center gap-3">
+                  <span className="text-[11px] font-mono text-slate-400">
+                    {new Date(alert.timestamp).toLocaleTimeString()}
+                  </span>
+                  {!alert.resolved && (
+                    <button
+                      onClick={() => handleResolveAlert(alert.id)}
+                      className="px-2 py-0.5 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 text-[10px] font-bold font-mono rounded cursor-pointer transition-all"
+                    >
+                      Resolve
+                    </button>
+                  )}
+                </div>
               </div>
               <p className="text-xs text-slate-300 mt-1.5 leading-relaxed">{alert.message}</p>
               {alert.recommendedAction && (
@@ -151,3 +178,4 @@ export const NotificationsView: React.FC<NotificationsViewProps> = ({ language, 
     </div>
   );
 };
+
