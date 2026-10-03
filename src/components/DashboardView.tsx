@@ -244,10 +244,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         }} />
 
         {/* Content */}
-        <div className="relative px-8 py-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-          <div>
+        <div className="relative px-8 py-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div className="max-w-2xl">
             {/* Eyebrow */}
-            <div className="flex items-center gap-2 mb-3">
+            <div className="flex flex-wrap items-center gap-2 mb-3">
               <span className={`flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-full border backdrop-blur-sm ${
                 isConnected
                   ? 'bg-emerald-500/15 border-emerald-500/30 text-emerald-400'
@@ -257,13 +257,17 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 {isConnected ? 'All Systems Live' : 'Disconnected'}
               </span>
               <span className="text-[11px] font-mono text-white/40 bg-white/5 border border-white/10 px-2.5 py-1 rounded-full">SIH26123</span>
+              <span className="text-[11px] font-mono text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-1 rounded-full">BEL CRL R&D</span>
             </div>
-            {/* Title */}
-            <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight mb-1" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', letterSpacing: '-0.02em' }}>
-              {isHi ? 'NEXUS AMR OS' : 'NEXUS AMR OS'}
+
+            {/* Title & Introduction */}
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight mb-2" style={{ fontFamily: 'system-ui, -apple-system, sans-serif', letterSpacing: '-0.02em' }}>
+              {isHi ? 'NEXUS AMR OS — स्वायत्त फ्लीट इंटेलिजेंस' : 'NEXUS AMR OS — Autonomous Warehouse Intelligence'}
             </h1>
-            <p className="text-base text-white/50 font-light" style={{ letterSpacing: '-0.01em' }}>
-              {isHi ? 'रियल-टाइम वेयरहाउस इंटेलिजेंस प्लेटफॉर्म' : 'Autonomous Warehouse Intelligence Platform'}
+            <p className="text-sm text-neutral-300 font-normal leading-relaxed max-w-xl">
+              {isHi
+                ? 'भारत इलेक्ट्रॉनिक्स लिमिटेड (BEL) के लिए निर्मित नेक्स्ट-जनरेशन एएमआर फ्लीट ऑपरेटिंग सिस्टम। इसमें सब-18ms एज AI विज़न, वितरित A* पाथ समन्वय, और पारदर्शी कार्य आवंटन स्कोरिंग शामिल है।'
+                : 'Next-Generation Autonomous Mobile Robot Operating System built for Bharat Electronics Limited (BEL). Integrates Sub-18ms Edge AI vision, distributed A* spatial path coordination, transparent multi-criteria task allocation scoring, and real-time telemetry streaming.'}
             </p>
           </div>
 

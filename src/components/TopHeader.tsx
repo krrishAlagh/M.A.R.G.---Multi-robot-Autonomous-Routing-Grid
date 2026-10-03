@@ -66,6 +66,7 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
     analytics: { en: 'Warehouse Throughput Analytics', hi: 'वेयरहाउस थ्रूपुट विश्लेषण' },
     simulation: { en: 'SIH Judge Scenario Controller', hi: 'एसआईएच जज परिदृश्य नियंत्रक' },
     settings: { en: 'System Settings & Nodes', hi: 'सिस्टम सेटिंग्स' },
+    contact: { en: 'Contact Us & Operations HQ', hi: 'संपर्क करें एवं मुख्यालय' },
     login: { en: 'Login Portal', hi: 'लॉगिन पोर्टल' }
   };
 

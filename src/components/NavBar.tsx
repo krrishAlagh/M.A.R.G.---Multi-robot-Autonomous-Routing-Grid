@@ -38,7 +38,8 @@ const ALL_NAV_ITEMS: NavItem[] = [
   { id: 'analytics', label: 'Analytics', labelHi: 'आंकड़े', icon: 'analytics', shortcut: '⌘6' },
   { id: 'simulation', label: 'Judge Demo', labelHi: 'जज डेमो', icon: 'sports_esports', badge: 'Live', shortcut: '⌘7' },
   { id: 'alerts', label: 'Alerts', labelHi: 'अलर्ट', icon: 'notifications', shortcut: '⌘8' },
-  { id: 'settings', label: 'Settings', labelHi: 'सेटिंग्स', icon: 'settings', shortcut: '⌘9' }
+  { id: 'settings', label: 'Settings', labelHi: 'सेटिंग्स', icon: 'settings', shortcut: '⌘9' },
+  { id: 'contact', label: 'Contact Us', labelHi: 'संपर्क करें', icon: 'contact_support' }
 ];
 
 export const NavBar: React.FC<NavBarProps> = ({

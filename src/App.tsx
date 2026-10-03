@@ -11,6 +11,8 @@ import { WarehouseAnalyticsView } from './components/WarehouseAnalyticsView';
 import { JudgeDemoSimulationView } from './components/JudgeDemoSimulationView';
 import { NotificationsView } from './components/NotificationsView';
 import { SettingsView } from './components/SettingsView';
+import { ContactUsView } from './components/ContactUsView';
+import { InfAiChatbot } from './components/InfAiChatbot';
 import { LoginView } from './components/LoginView';
 import { AmrDetailSheet } from './components/AmrDetailSheet';
 import { useRealtimeData } from './services/realtime';
@@ -229,8 +231,27 @@ export default function App() {
             />
           )}
 
+          {/* 11. Contact Us */}
+          {activeView === 'contact' && (
+            <ContactUsView
+              language={language}
+              userRole={userRole}
+            />
+          )}
+
         </div>
       </main>
+
+      {/* ── INF AI Floating Chatbot Widget (Every Page) ── */}
+      <InfAiChatbot
+        language={language}
+        amrs={realtimeState.amrs}
+        tasks={realtimeState.tasks}
+        alerts={realtimeState.alerts}
+        metrics={realtimeState.metrics}
+        conflicts={realtimeState.conflicts}
+        onNavigate={(view) => setActiveView(view)}
+      />
 
       {/* ── AMR Detail Progressive Disclosure Sheet ── */}
       <AmrDetailSheet
