@@ -108,14 +108,14 @@ export const InfAiChatbot: React.FC<InfAiChatbotProps> = ({
     // 5. Contact / Support
     if (q.includes('contact') || q.includes('help') || q.includes('phone') || q.includes('email') || q.includes('support') || q.includes('hq') || q.includes('bel')) {
       return {
-        text: `📞 **BEL Operations HQ & Support Hotline**:\n- **24/7 Hotline**: +91 1800-NEXUS-AMR (+91 1800-63987-267)\n- **Email**: ops@nexus-amr.bel.gov.in\n- **Command Center**: BEL CRL R&D Complex, Bengaluru - 560013.\n\nVisit the **Contact Us** page to send an inquiry ticket.`,
-        chipNav: 'contact'
+        text: `📞 **BEL Operations HQ & Support Hotline**:\n- **24/7 Hotline**: +91 1800-NEXUS-AMR (+91 1800-63987-267)\n- **Email**: ops@nexus-amr.bel.gov.in\n- **Command Center**: BEL CRL R&D Complex, Bengaluru - 560013.`,
+        chipNav: 'dashboard'
       };
     }
 
     // Default fallback
     return {
-      text: `💡 **NEXUS INF AI Assistant**: I am synchronized with live WebSocket telemetry. You can ask me about:\n- Fleet Status & Battery Levels\n- Live Hazards & E-Stop Interlocks\n- Multi-Robot A* Path Coordination\n- Contact Details & Operations HQ Support`,
+      text: `💡 **NEXUS INF AI Assistant**: I am synchronized with live WebSocket telemetry. You can ask me about:\n- Fleet Status & Battery Levels\n- Live Hazards & E-Stop Interlocks\n- Multi-Robot A* Path Coordination\n- BEL Operations HQ Support`,
       chipNav: 'dashboard'
     };
   };

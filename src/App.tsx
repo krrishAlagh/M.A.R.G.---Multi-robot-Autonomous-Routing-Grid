@@ -11,7 +11,7 @@ import { WarehouseAnalyticsView } from './components/WarehouseAnalyticsView';
 import { JudgeDemoSimulationView } from './components/JudgeDemoSimulationView';
 import { NotificationsView } from './components/NotificationsView';
 import { SettingsView } from './components/SettingsView';
-import { ContactUsView } from './components/ContactUsView';
+
 import { BelFooter } from './components/BelFooter';
 import { InfAiChatbot } from './components/InfAiChatbot';
 import { LoginView } from './components/LoginView';
@@ -232,13 +232,7 @@ export default function App() {
             />
           )}
 
-          {/* 11. Contact Us */}
-          {activeView === 'contact' && (
-            <ContactUsView
-              language={language}
-              userRole={userRole}
-            />
-          )}
+
 
         </div>
         

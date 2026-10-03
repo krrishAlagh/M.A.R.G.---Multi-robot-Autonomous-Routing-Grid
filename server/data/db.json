@@ -43,18 +43,74 @@
       "code": "AMR-01",
       "name": "Titan Payload Carrier 1",
       "model": "Nexus AMR-1000 Pro",
-      "status": "Idle",
+      "status": "Active",
       "batteryLevel": 95,
       "currentPosition": {
-        "x": 4,
-        "y": 38,
-        "zoneId": "zone-5"
+        "x": 8,
+        "y": 20
       },
-      "speed": 0,
+      "speed": 1.4285918666625328,
       "heading": 90,
       "payloadKg": 350,
       "maxPayloadKg": 1000,
-      "currentRoute": [],
+      "currentRoute": [
+        {
+          "x": 8,
+          "y": 19
+        },
+        {
+          "x": 8,
+          "y": 18
+        },
+        {
+          "x": 8,
+          "y": 17
+        },
+        {
+          "x": 8,
+          "y": 16
+        },
+        {
+          "x": 8,
+          "y": 15
+        },
+        {
+          "x": 8,
+          "y": 14
+        },
+        {
+          "x": 8,
+          "y": 13
+        },
+        {
+          "x": 8,
+          "y": 12
+        },
+        {
+          "x": 8,
+          "y": 11
+        },
+        {
+          "x": 8,
+          "y": 10
+        },
+        {
+          "x": 8,
+          "y": 9
+        },
+        {
+          "x": 8,
+          "y": 8
+        },
+        {
+          "x": 8,
+          "y": 7
+        },
+        {
+          "x": 8,
+          "y": 6
+        }
+      ],
       "health": {
         "motorTempC": 38.5,
         "wifiSignalDbm": -54,
@@ -94,17 +150,114 @@
       "code": "AMR-03",
       "name": "Heavy Tugger 3",
       "model": "Nexus AMR-1500 Heavy",
-      "status": "Idle",
+      "status": "Active",
       "batteryLevel": 36,
       "currentPosition": {
-        "x": 42,
-        "y": 6
+        "x": 20,
+        "y": 14
       },
-      "speed": 0,
+      "speed": 1.2409033538490792,
       "heading": 0,
       "payloadKg": 0,
       "maxPayloadKg": 1500,
-      "currentRoute": [],
+      "currentRoute": [
+        {
+          "x": 20,
+          "y": 15
+        },
+        {
+          "x": 20,
+          "y": 16
+        },
+        {
+          "x": 20,
+          "y": 17
+        },
+        {
+          "x": 20,
+          "y": 18
+        },
+        {
+          "x": 20,
+          "y": 19
+        },
+        {
+          "x": 20,
+          "y": 20
+        },
+        {
+          "x": 20,
+          "y": 21
+        },
+        {
+          "x": 20,
+          "y": 22
+        },
+        {
+          "x": 20,
+          "y": 23
+        },
+        {
+          "x": 20,
+          "y": 24
+        },
+        {
+          "x": 20,
+          "y": 25
+        },
+        {
+          "x": 20,
+          "y": 26
+        },
+        {
+          "x": 20,
+          "y": 27
+        },
+        {
+          "x": 20,
+          "y": 28
+        },
+        {
+          "x": 20,
+          "y": 29
+        },
+        {
+          "x": 20,
+          "y": 30
+        },
+        {
+          "x": 20,
+          "y": 31
+        },
+        {
+          "x": 20,
+          "y": 32
+        },
+        {
+          "x": 20,
+          "y": 33
+        },
+        {
+          "x": 20,
+          "y": 34
+        },
+        {
+          "x": 20,
+          "y": 35
+        },
+        {
+          "x": 20,
+          "y": 36
+        },
+        {
+          "x": 20,
+          "y": 37
+        },
+        {
+          "x": 20,
+          "y": 38
+        }
+      ],
       "health": {
         "motorTempC": 32,
         "wifiSignalDbm": -48,
@@ -119,17 +272,210 @@
       "code": "AMR-04",
       "name": "Echo Navigator 4",
       "model": "Nexus AMR-500 Light",
-      "status": "Idle",
+      "status": "Active",
       "batteryLevel": 49.4,
       "currentPosition": {
-        "x": 42,
-        "y": 6
+        "x": 30,
+        "y": 38
       },
-      "speed": 0,
+      "speed": 1.510144841485268,
       "heading": 270,
       "payloadKg": 0,
       "maxPayloadKg": 500,
-      "currentRoute": [],
+      "currentRoute": [
+        {
+          "x": 31,
+          "y": 38
+        },
+        {
+          "x": 32,
+          "y": 38
+        },
+        {
+          "x": 33,
+          "y": 38
+        },
+        {
+          "x": 34,
+          "y": 38
+        },
+        {
+          "x": 35,
+          "y": 38
+        },
+        {
+          "x": 36,
+          "y": 38
+        },
+        {
+          "x": 37,
+          "y": 38
+        },
+        {
+          "x": 38,
+          "y": 38
+        },
+        {
+          "x": 39,
+          "y": 38
+        },
+        {
+          "x": 40,
+          "y": 38
+        },
+        {
+          "x": 41,
+          "y": 38
+        },
+        {
+          "x": 42,
+          "y": 38
+        },
+        {
+          "x": 43,
+          "y": 38
+        },
+        {
+          "x": 44,
+          "y": 38
+        },
+        {
+          "x": 45,
+          "y": 38
+        },
+        {
+          "x": 46,
+          "y": 38
+        },
+        {
+          "x": 46,
+          "y": 37
+        },
+        {
+          "x": 46,
+          "y": 36
+        },
+        {
+          "x": 46,
+          "y": 35
+        },
+        {
+          "x": 46,
+          "y": 34
+        },
+        {
+          "x": 46,
+          "y": 33
+        },
+        {
+          "x": 46,
+          "y": 32
+        },
+        {
+          "x": 46,
+          "y": 31
+        },
+        {
+          "x": 46,
+          "y": 30
+        },
+        {
+          "x": 46,
+          "y": 29
+        },
+        {
+          "x": 46,
+          "y": 28
+        },
+        {
+          "x": 46,
+          "y": 27
+        },
+        {
+          "x": 46,
+          "y": 26
+        },
+        {
+          "x": 46,
+          "y": 25
+        },
+        {
+          "x": 46,
+          "y": 24
+        },
+        {
+          "x": 46,
+          "y": 23
+        },
+        {
+          "x": 46,
+          "y": 22
+        },
+        {
+          "x": 46,
+          "y": 21
+        },
+        {
+          "x": 46,
+          "y": 20
+        },
+        {
+          "x": 46,
+          "y": 19
+        },
+        {
+          "x": 46,
+          "y": 18
+        },
+        {
+          "x": 46,
+          "y": 17
+        },
+        {
+          "x": 46,
+          "y": 16
+        },
+        {
+          "x": 46,
+          "y": 15
+        },
+        {
+          "x": 46,
+          "y": 14
+        },
+        {
+          "x": 46,
+          "y": 13
+        },
+        {
+          "x": 46,
+          "y": 12
+        },
+        {
+          "x": 46,
+          "y": 11
+        },
+        {
+          "x": 46,
+          "y": 10
+        },
+        {
+          "x": 46,
+          "y": 9
+        },
+        {
+          "x": 46,
+          "y": 8
+        },
+        {
+          "x": 46,
+          "y": 7
+        },
+        {
+          "x": 46,
+          "y": 6
+        }
+      ],
       "health": {
         "motorTempC": 36.2,
         "wifiSignalDbm": -50,
@@ -144,30 +490,172 @@
       "code": "AMR-05",
       "name": "Pallet Cruiser 5",
       "model": "Nexus AMR-1000 Pro",
-      "status": "Idle",
+      "status": "Active",
       "batteryLevel": 95.5,
       "currentPosition": {
-        "x": 4,
-        "y": 38,
-        "zoneId": "zone-5"
+        "x": 11,
+        "y": 38
       },
-      "speed": 0,
+      "speed": 1.3800554297028385,
       "heading": 90,
       "payloadKg": 420,
       "maxPayloadKg": 1000,
-      "currentTaskId": "task-103",
       "currentRoute": [
         {
-          "x": 30,
+          "x": 10,
+          "y": 38
+        },
+        {
+          "x": 9,
+          "y": 38
+        },
+        {
+          "x": 8,
+          "y": 38
+        },
+        {
+          "x": 7,
+          "y": 38
+        },
+        {
+          "x": 6,
+          "y": 38
+        },
+        {
+          "x": 5,
+          "y": 38
+        },
+        {
+          "x": 4,
+          "y": 38
+        },
+        {
+          "x": 4,
+          "y": 37
+        },
+        {
+          "x": 4,
+          "y": 36
+        },
+        {
+          "x": 4,
+          "y": 35
+        },
+        {
+          "x": 4,
+          "y": 34
+        },
+        {
+          "x": 4,
+          "y": 33
+        },
+        {
+          "x": 4,
+          "y": 32
+        },
+        {
+          "x": 4,
+          "y": 31
+        },
+        {
+          "x": 4,
+          "y": 30
+        },
+        {
+          "x": 4,
+          "y": 29
+        },
+        {
+          "x": 4,
+          "y": 28
+        },
+        {
+          "x": 4,
+          "y": 27
+        },
+        {
+          "x": 4,
+          "y": 26
+        },
+        {
+          "x": 4,
+          "y": 25
+        },
+        {
+          "x": 4,
+          "y": 24
+        },
+        {
+          "x": 4,
+          "y": 23
+        },
+        {
+          "x": 4,
+          "y": 22
+        },
+        {
+          "x": 4,
+          "y": 21
+        },
+        {
+          "x": 4,
+          "y": 20
+        },
+        {
+          "x": 4,
+          "y": 19
+        },
+        {
+          "x": 4,
+          "y": 18
+        },
+        {
+          "x": 4,
+          "y": 17
+        },
+        {
+          "x": 4,
+          "y": 16
+        },
+        {
+          "x": 4,
+          "y": 15
+        },
+        {
+          "x": 4,
           "y": 14
         },
         {
-          "x": 34,
-          "y": 14
+          "x": 4,
+          "y": 13
         },
         {
-          "x": 40,
-          "y": 14
+          "x": 4,
+          "y": 12
+        },
+        {
+          "x": 4,
+          "y": 11
+        },
+        {
+          "x": 4,
+          "y": 10
+        },
+        {
+          "x": 4,
+          "y": 9
+        },
+        {
+          "x": 4,
+          "y": 8
+        },
+        {
+          "x": 4,
+          "y": 7
+        },
+        {
+          "x": 4,
+          "y": 6
         }
       ],
       "health": {
@@ -184,17 +672,34 @@
       "code": "AMR-06",
       "name": "Vanguard Transporter 6",
       "model": "Nexus AMR-1000 Pro",
-      "status": "Idle",
+      "status": "Active",
       "batteryLevel": 38.6,
       "currentPosition": {
-        "x": 46,
+        "x": 38,
         "y": 6
       },
-      "speed": 0,
+      "speed": 1.6735159390945515,
       "heading": 0,
       "payloadKg": 280,
       "maxPayloadKg": 1000,
-      "currentRoute": [],
+      "currentRoute": [
+        {
+          "x": 39,
+          "y": 6
+        },
+        {
+          "x": 40,
+          "y": 6
+        },
+        {
+          "x": 41,
+          "y": 6
+        },
+        {
+          "x": 42,
+          "y": 6
+        }
+      ],
       "health": {
         "motorTempC": 37.1,
         "wifiSignalDbm": -52,
@@ -802,7 +1307,7 @@
       "dropoffStationId": "st-d1",
       "dropoffStationName": "Packing Bay 1",
       "priority": "MEDIUM",
-      "status": "ASSIGNED",
+      "status": "COMPLETED",
       "assignedAmrId": "amr-05",
       "assignedAmrCode": "AMR-05",
       "estimatedWeightKg": 420,
@@ -815,7 +1320,8 @@
         "totalScore": 70.8
       },
       "createdTime": "2026-10-03T07:51:29.085Z",
-      "estimatedDurationSec": 300
+      "estimatedDurationSec": 300,
+      "completedTime": "2026-10-03T11:18:33.372Z"
     },
     {
       "id": "task-104",
@@ -834,6 +1340,70 @@
     }
   ],
   "conflicts": [
+    {
+      "id": "cnf-1791026494447-1-3",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 9,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:21:34.447Z"
+    },
+    {
+      "id": "cnf-1791026466353-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 16,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:21:06.354Z"
+    },
+    {
+      "id": "cnf-1791026418199-1-3",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 8,
+        "y": 22
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:20:18.199Z"
+    },
+    {
+      "id": "cnf-1791026312872-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 42,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:18:32.872Z"
+    },
     {
       "id": "cnf-1791018843638-1-2",
       "amrId1": "amr-03",
@@ -2594,6 +3164,17 @@
       "type": "Pallet Debris",
       "detectedByAmrId": "amr-02",
       "timestamp": "2026-10-03T10:45:18.366Z"
+    },
+    {
+      "id": "obs-sim-1791025529444",
+      "code": "OBS-PALLET-SIM",
+      "position": {
+        "x": 18,
+        "y": 14
+      },
+      "type": "Pallet Debris",
+      "detectedByAmrId": "amr-02",
+      "timestamp": "2026-10-03T11:05:29.444Z"
     }
   ],
   "perceptions": [
@@ -2662,6 +3243,26 @@
     }
   ],
   "alerts": [
+    {
+      "id": "alt-bat-1791025531407",
+      "alertType": "LOW_BATTERY",
+      "severity": "WARNING",
+      "amrId": "amr-01",
+      "amrCode": "AMR-01",
+      "message": "AMR-01 battery dropped below 15% threshold. Returning to Wireless Dock C1.",
+      "timestamp": "2026-10-03T11:05:31.407Z",
+      "resolved": false
+    },
+    {
+      "id": "alt-obs-1791025529445",
+      "alertType": "ROBOT_BLOCKED",
+      "severity": "WARNING",
+      "amrId": "amr-02",
+      "amrCode": "AMR-02",
+      "message": "Aisle A blocked by unexpected pallet debris. Dynamic A* path recalculation initiated.",
+      "timestamp": "2026-10-03T11:05:29.445Z",
+      "resolved": false
+    },
     {
       "id": "alt-obs-1791024318366",
       "alertType": "ROBOT_BLOCKED",

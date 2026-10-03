@@ -10,7 +10,6 @@ export type ActiveView =
   | 'analytics'
   | 'simulation'
   | 'settings'
-  | 'contact'
   | 'login';
 
 export type Language = 'en' | 'hi';
