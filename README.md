@@ -64,17 +64,24 @@ In modern smart warehouses, scaling fleets of Autonomous Mobile Robots (AMRs) cr
 
 ## ✨ Core System Modules
 
-### 1. 2D Digital Twin Spatial Map (`WarehouseDigitalTwinView.tsx`)
+### 1. Operations Command Dashboard (`DashboardView.tsx`)
+* **Apple-Inspired Hero Slideshow**: Dynamic photo slideshow showcasing real-time fleet operations, featuring per-slide accent themes (Emerald, Sky, Amber, Violet), split typography, and quick-action telemetry triggers.
+* **Project Overview & BEL Band**: SIH Problem Statement 26123 summary, Bharat Electronics Limited (BEL) R&D badge, key platform highlights, and real-time operational status.
+* **SVG Ring Gauges & KPI Widgets**: Animated circular arc gauges for Fleet Utilization (%), Task Completion Rate (%), Battery Efficiency (%), and Collision Avoidance Rate (%).
+* **Live Activity Feed**: Real-time unified event stream merging active alerts, completed pick-and-place tasks, and docking events with timestamp tags and status badges.
+* **Mini-Map & Fleet Cards**: Live grid preview with color-coded AMR nodes, route path traces, and battery status bars.
+
+### 2. 2D Digital Twin Spatial Map (`WarehouseDigitalTwinView.tsx`)
 * Interactive **50×50 spatial grid map** displaying real-time X/Y positions of all 6 AMRs.
 * Visualizes storage aisle corridors, charging stations (C1, C2), drop-off zones, and pathing polylines.
 * Supports **real-time obstacle injection** (Pallet Debris, Human Worker, Fallen Box) with instant A* path recalculation.
 
-### 2. AMR Fleet Management (`AmrFleetView.tsx`, `AmrDetailSheet.tsx`)
+### 3. AMR Fleet Management (`AmrFleetView.tsx`, `AmrDetailSheet.tsx`)
 * Fleet overview cards monitoring battery state of charge (%), linear velocity (m/s), motor temperature (°C), payload status, and Wi-Fi signal (dBm).
 * **Progressive Disclosure Slide-over Sheet**: Deep telemetry view with battery discharge mini-sparkline and onboard YOLOv8 camera perception overlay.
 * **Manual Operator Overrides**: One-click `E-STOP`, `DOCK C1`, and `RESUME` emergency commands.
 
-### 3. Multi-Criteria Task Allocation Engine (`TaskAllocationView.tsx`)
+### 4. Multi-Criteria Task Allocation Engine (`TaskAllocationView.tsx`)
 Assigns incoming pick-and-place warehouse tasks to the optimal AMR using a normalized 4-factor scoring algorithm:
 
 $$\text{Score}(A_i, T_j) = w_{\text{dist}} \cdot D(A_i, T_j) + w_{\text{bat}} \cdot (100 - B_i) + w_{\text{work}} \cdot W_i + w_{\text{prio}} \cdot P_j$$
@@ -82,22 +89,26 @@ $$\text{Score}(A_i, T_j) = w_{\text{dist}} \cdot D(A_i, T_j) + w_{\text{bat}} \c
 * Configurable weight parameters ($W_{\text{dist}}=35\%$, $W_{\text{bat}}=25\%$, $W_{\text{work}}=20\%$, $W_{\text{prio}}=20\%$).
 * Real-time task status tracking (`PENDING`, `ASSIGNED`, `IN_PROGRESS`, `COMPLETED`).
 
-### 4. Multi-Robot Pathing & Conflict Avoidance (`MultiRobotCoordinationView.tsx`)
+### 5. Multi-Robot Pathing & Conflict Avoidance (`MultiRobotCoordinationView.tsx`)
 * **Time-Space A* Grid Planner**: Generates collision-free trajectories across grid nodes.
 * **Conflict Detection Engine**: Categorizes path risks into `CROSSING_INTERSECTION`, `HEAD_ON_DEADLOCK`, `STATION_CONGESTION`, and `OBSTACLE_BLOCKED`.
 * Interactive conflict resolution trigger simulating sub-15ms speed throttling and dynamic re-routing.
 
-### 5. Edge AI Perception Engine (`EdgeAiPerceptionView.tsx`, `ai_engine/`)
+### 6. Edge AI Perception Engine (`EdgeAiPerceptionView.tsx`, `ai_engine/`)
 * **8 Warehouse Object Classes**: `Pallet`, `AMR`, `Human Worker`, `Forklift`, `Obstacle Box`, `AGV`, `Charging Dock`, `Dynamic Debris`.
 * Demonstrates **Sub-15ms Edge Inference** vs **185ms Cloud HQ Latency** (>92% bandwidth savings).
 * Complete PyTorch & TensorRT model training suite (`ai_engine/train_model.py`, `ai_engine/evaluate_model.py`).
 
-### 6. Warehouse Analytics & KPIs (`WarehouseAnalyticsView.tsx`)
+### 7. Warehouse Analytics & KPIs (`WarehouseAnalyticsView.tsx`)
 * 12-hour hourly throughput SVG bar chart (Target: 150 Pallets/hr).
 * Per-AMR operational performance matrix (Tasks completed, battery efficiency, total distance traveled, uptime %, zero collisions).
 * 6-Zone Congestion Heatmap & 8-Class YOLOv8 dataset distribution charts.
 
-### 7. SIH Judge Live Simulation Suite (`JudgeDemoSimulationView.tsx`)
+### 8. INF AI Assistant & Floating Bot (`InfAiChatbot.tsx`)
+* Context-aware floating AI assistant synchronized with live WebSocket telemetry.
+* Quick-action chips for instant fleet checks, hazard queries, and BEL Operations HQ support details.
+
+### 9. SIH Judge Live Simulation Suite (`JudgeDemoSimulationView.tsx`)
 * Built specifically for SIH hackathon judging evaluation.
 * One-click trigger buttons for complex scenarios:
   1. `Scenario 1: Dynamic Obstacle Avoidance` (Injects fallen debris in Aisle 3)
