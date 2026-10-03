@@ -64,6 +64,7 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
     alerts: { en: 'Operational Alerts & E-Stops', hi: 'ऑपरेशनल अलर्ट और ई-स्टॉप' },
     analytics: { en: 'Warehouse Throughput Analytics', hi: 'वेयरहाउस थ्रूपुट विश्लेषण' },
     simulation: { en: 'SIH Judge Scenario Controller', hi: 'एसआईएच जज परिदृश्य नियंत्रक' },
+    'api-explorer': { en: 'API Playground & OpenAPI', hi: 'एपीआई प्लेग्राउंड एवं ओपनएपीआई' },
     settings: { en: 'System Settings & Nodes', hi: 'सिस्टम सेटिंग्स' },
     login: { en: 'Login Portal', hi: 'लॉगिन पोर्टल' }
   };

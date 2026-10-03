@@ -37,6 +37,7 @@ const ALL_NAV_ITEMS: NavItem[] = [
   { id: 'analytics', label: 'Throughput Metrics', labelHi: 'थ्रूपुट आंकड़े', icon: 'analytics', shortcut: '⌘6' },
   { id: 'simulation', label: 'SIH Judge Demo', labelHi: 'SIH जज डेमो', icon: 'sports_esports', badge: 'Live', shortcut: '⌘7' },
   { id: 'alerts', label: 'Safety Alerts', labelHi: 'सुरक्षा अलर्ट', icon: 'notifications', shortcut: '⌘8' },
+  { id: 'api-explorer', label: 'API Playground', labelHi: 'एपीआई प्लेग्राउंड', icon: 'api', badge: 'REST/WS', shortcut: '⌘0' },
   { id: 'settings', label: 'Settings', labelHi: 'सेटिंग्स', icon: 'settings', shortcut: '⌘9' }
 ];
 

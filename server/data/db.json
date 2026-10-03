@@ -2572,6 +2572,17 @@
       "type": "Pallet Debris",
       "detectedByAmrId": "amr-02",
       "timestamp": "2026-10-03T09:12:13.313Z"
+    },
+    {
+      "id": "obs-1791021691476",
+      "code": "OBS-646",
+      "position": {
+        "x": 24,
+        "y": 14
+      },
+      "type": "Pallet Debris",
+      "detectedByAmrId": "amr-05",
+      "timestamp": "2026-10-03T10:01:31.476Z"
     }
   ],
   "perceptions": [
@@ -2640,6 +2651,14 @@
     }
   ],
   "alerts": [
+    {
+      "id": "alt-1791021691476",
+      "alertType": "ROBOT_BLOCKED",
+      "severity": "WARNING",
+      "message": "New obstacle OBS-646 (Pallet Debris) detected at Grid Position X:24, Y:14. Dynamic path recalculation initiated.",
+      "timestamp": "2026-10-03T10:01:31.476Z",
+      "resolved": false
+    },
     {
       "id": "alt-obs-1791018733313",
       "alertType": "ROBOT_BLOCKED",

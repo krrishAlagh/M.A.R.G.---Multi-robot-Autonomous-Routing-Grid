@@ -8,6 +8,7 @@ export type ActiveView =
   | 'alerts'
   | 'analytics'
   | 'simulation'
+  | 'api-explorer'
   | 'settings'
   | 'login';
 

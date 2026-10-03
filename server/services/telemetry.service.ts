@@ -12,7 +12,7 @@ export class TelemetryService {
     if (this.isRunning || !ENV.ENABLE_TELEMETRY_SIMULATION) return;
 
     this.isRunning = true;
-    const intervalMs = Math.min(ENV.SIMULATION_INTERVAL_MS, 3000);
+    const intervalMs = 800;
     console.log(`[AMR Telemetry Simulation] Starting indoor autonomous robot telemetry engine (interval: ${intervalMs}ms)`);
 
     this.timer = setInterval(() => {

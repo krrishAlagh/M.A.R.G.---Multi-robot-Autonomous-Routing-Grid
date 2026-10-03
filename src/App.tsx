@@ -8,6 +8,7 @@ import { MultiRobotCoordinationView } from './components/MultiRobotCoordinationV
 import { EdgeAiPerceptionView } from './components/EdgeAiPerceptionView';
 import { WarehouseAnalyticsView } from './components/WarehouseAnalyticsView';
 import { JudgeDemoSimulationView } from './components/JudgeDemoSimulationView';
+import { ApiExplorerView } from './components/ApiExplorerView';
 import { NotificationsView } from './components/NotificationsView';
 import { SettingsView } from './components/SettingsView';
 import { LoginView } from './components/LoginView';
@@ -203,7 +204,12 @@ export default function App() {
             />
           )}
 
-          {/* 9. Settings */}
+          {/* 9. API Playground & OpenAPI Explorer */}
+          {activeView === 'api-explorer' && (
+            <ApiExplorerView language={language} />
+          )}
+
+          {/* 10. Settings */}
           {activeView === 'settings' && (
             <SettingsView
               language={language}
