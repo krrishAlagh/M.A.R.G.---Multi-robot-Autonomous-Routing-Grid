@@ -2,17 +2,14 @@ import { WebSocketServer, WebSocket } from 'ws';
 import { Server as HttpServer } from 'http';
 
 export type WsMessageType = 
-  | 'LIVE_DETECTION'
-  | 'FLEET_UPDATE'
-  | 'TICKET_UPDATE'
-  | 'NEW_DEFECT'
-  | 'NEW_ALERT'
-  | 'CABIN_INCIDENT'
-  | 'STATS_UPDATE'
-  | 'ANALYTICS_UPDATE'
-  | 'SYSTEM_HEARTBEAT'
-  | 'WORK_ORDER_ASSIGNED';
-
+  | 'AMR_TELEMETRY'
+  | 'TASK_UPDATE'
+  | 'COORDINATION_UPDATE'
+  | 'WAREHOUSE_OBSTACLE'
+  | 'EDGE_PERCEPTION'
+  | 'SIMULATION_EVENT'
+  | 'OPERATIONAL_ALERT'
+  | 'SYSTEM_HEARTBEAT';
 
 export interface WsMessagePayload<T = any> {
   type: WsMessageType;
@@ -48,8 +45,8 @@ export class WebSocketService {
         timestamp: new Date().toISOString(),
         data: {
           status: 'connected',
-          server: 'Nagar Drishti Realtime Telemetry Core',
-          version: '2.4.0',
+          server: 'NEXUS AMR OS Fleet Telemetry Core',
+          version: '4.0.0',
           activeClients: this.clients.size
         }
       }));
@@ -60,27 +57,25 @@ export class WebSocketService {
           if (parsed.type === 'PING') {
             ws.send(JSON.stringify({ type: 'PONG', timestamp: new Date().toISOString() }));
           }
-        } catch (e) {
-          // Non-JSON ping or client message
+        } catch {
+          // Ignore malformed messages
         }
       });
 
       ws.on('close', () => {
         this.clients.delete(ws);
-        console.log(`[WebSocket] Client disconnected. Active clients: ${this.clients.size}`);
+        console.log(`[WebSocket] Client disconnected. Remaining clients: ${this.clients.size}`);
       });
 
       ws.on('error', (err) => {
-        console.warn('[WebSocket] Client error:', err.message);
+        console.warn('[WebSocket] Connection error:', err);
         this.clients.delete(ws);
       });
     });
-
-    console.log('[WebSocket] Realtime WebSocket Server initialized on /ws');
   }
 
   public broadcast<T>(type: WsMessageType, data: T) {
-    if (!this.wss || this.clients.size === 0) return;
+    if (this.clients.size === 0) return;
 
     const payload: WsMessagePayload<T> = {
       type,
@@ -88,12 +83,13 @@ export class WebSocketService {
       data
     };
 
-    const serialized = JSON.stringify(payload);
-    for (const client of this.clients) {
+    const messageString = JSON.stringify(payload);
+
+    this.clients.forEach((client) => {
       if (client.readyState === WebSocket.OPEN) {
-        client.send(serialized);
+        client.send(messageString);
       }
-    }
+    });
   }
 
   public getConnectedClientsCount(): number {

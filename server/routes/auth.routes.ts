@@ -7,10 +7,10 @@ const router = Router();
 // GET /api/auth/roles - List available user roles
 router.get('/roles', (req: Request, res: Response) => {
   const roles: UserRole[] = [
-    'Municipal Admin',
-    'Zonal Officer',
-    'Repair Crew Lead',
-    'Transport Authority'
+    'Warehouse Operations Director',
+    'Fleet Systems Engineer',
+    'Safety & Edge AI Specialist',
+    'Warehouse Floor Supervisor'
   ];
   res.json({ success: true, data: roles });
 });
@@ -34,7 +34,7 @@ router.post('/login', (req: Request, res: Response) => {
   }
 
   if (!user) {
-    user = users[0]; // Default fallback
+    user = users[0];
   }
 
   res.json({

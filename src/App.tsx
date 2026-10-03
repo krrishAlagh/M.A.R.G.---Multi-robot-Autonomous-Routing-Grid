@@ -1,103 +1,65 @@
-import React, { useState, useEffect } from 'react';
-import { ActiveView, Language, UserRole, DefectItem, AutoRoutingRule, Theme, FontSizeScale } from './types';
-import { INITIAL_DEFECTS, AUTO_ROUTING_RULES, BUS_CABIN_INCIDENTS, ACCIDENT_BLACKSPOTS } from './data/mockData';
-import { Sidebar } from './components/Sidebar';
-import { TopHeader } from './components/TopHeader';
-import { DashboardView } from './components/DashboardView';
-import { ServicesDirectoryView } from './components/ServicesDirectoryView';
-import { TicketsWorkOrdersView } from './components/TicketsWorkOrdersView';
-import { LiveMapView } from './components/LiveMapView';
-import { AnalyticsView } from './components/AnalyticsView';
-import { FleetMonitoringView } from './components/FleetMonitoringView';
-import { TicketDetailView } from './components/TicketDetailView';
-import { MultiAgencyView } from './components/MultiAgencyView';
+import { useState, useEffect } from 'react';
+import { ActiveView, Language, UserRole, Theme } from './types';
+import { NavBar } from './components/NavBar';
+import { WarehouseDigitalTwinView } from './components/WarehouseDigitalTwinView';
+import { AmrFleetView } from './components/AmrFleetView';
+import { TaskAllocationView } from './components/TaskAllocationView';
+import { MultiRobotCoordinationView } from './components/MultiRobotCoordinationView';
+import { EdgeAiPerceptionView } from './components/EdgeAiPerceptionView';
+import { WarehouseAnalyticsView } from './components/WarehouseAnalyticsView';
+import { JudgeDemoSimulationView } from './components/JudgeDemoSimulationView';
 import { NotificationsView } from './components/NotificationsView';
 import { SettingsView } from './components/SettingsView';
-import { BusSafetyComplaintsView } from './components/BusSafetyComplaintsView';
-import { AccidentBlackspotAnalyticsView } from './components/AccidentBlackspotAnalyticsView';
-import { PublicBusTrackerView } from './components/PublicBusTrackerView';
 import { LoginView } from './components/LoginView';
-import { NewTicketModal } from './components/NewTicketModal';
-import { QuickHelpModal } from './components/QuickHelpModal';
-import { AiCopilotModal } from './components/AiCopilotModal';
-import { BelFooter } from './components/BelFooter';
-import { BusCabinIncident, AccidentZoneBlackspot } from './types';
+import { AmrDetailSheet } from './components/AmrDetailSheet';
 import { useRealtimeData } from './services/realtime';
+import { isViewAllowedForRole, getDefaultViewForRole } from './config/permissions';
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const [userRole, setUserRole] = useState<UserRole>('Municipal Admin');
-  const [activeView, setActiveView] = useState<ActiveView>(() => {
-    const saved = localStorage.getItem('nagar_active_view') as ActiveView;
-    const validViews: ActiveView[] = [
-      'dashboard',
-      'services-directory',
-      'tickets',
-      'live-map',
-      'safety-complaints',
-      'accident-analytics',
-      'analytics',
-      'fleet',
-      'ticket-detail',
-      'multi-agency',
-      'notifications',
-      'settings',
-      'public-transit'
+  const [userRole, setUserRole] = useState<UserRole>(() => {
+    const savedRole = localStorage.getItem('nagar_user_role') as UserRole;
+    const validRoles: UserRole[] = [
+      'Warehouse Operations Director',
+      'Fleet Systems Engineer',
+      'Safety & Edge AI Specialist',
+      'Warehouse Floor Supervisor'
     ];
-    if (saved && validViews.includes(saved)) return saved;
-    return 'dashboard';
+    if (savedRole && validRoles.includes(savedRole)) return savedRole;
+    return 'Warehouse Operations Director';
   });
 
-  // Realtime Live Data Synchronization Hook
-  const {
-    state: realtimeState,
-    updateTicketStatus: realtimeUpdateTicketStatus,
-    addTicket: realtimeAddTicket,
-    addComment: realtimeAddComment
-  } = useRealtimeData();
+  const [activeView, setActiveView] = useState<ActiveView>(() => {
+    const savedRole = (localStorage.getItem('nagar_user_role') as UserRole) || 'Warehouse Operations Director';
+    const saved = localStorage.getItem('nagar_active_view') as ActiveView;
+    if (saved && isViewAllowedForRole(saved, savedRole)) return saved;
+    return getDefaultViewForRole(savedRole);
+  });
 
-  // Persist active view so clicking sections never reverts back to dashboard
-  useEffect(() => {
-    localStorage.setItem('nagar_active_view', activeView);
-  }, [activeView]);
   const [language, setLanguage] = useState<Language>(() => {
     const saved = localStorage.getItem('nagar_language');
     if (saved === 'hi' || saved === 'en') return saved;
-    return 'en'; // Default to English - strictly converted only by clicking language button
+    return 'en';
   });
+
   const [theme, setTheme] = useState<Theme>(() => {
-    const saved = localStorage.getItem('nagar_theme');
-    if (saved === 'dark' || saved === 'light') return saved;
-    return 'light'; // Default to clean, official government light theme
+    const saved = localStorage.getItem('nagar_theme') as Theme;
+    return saved === 'light' || saved === 'dark' ? saved : 'dark';
   });
-  const [fontSizeScale, setFontSizeScale] = useState<FontSizeScale>('md');
-  const [searchTerm, setSearchTerm] = useState('');
-  
-  // Realtime-synced collections
-  const tickets = realtimeState.tickets;
-  const fleet = realtimeState.fleet;
-  const liveFeed = realtimeState.liveFeed;
-  const alerts = realtimeState.alerts;
-  const analyticsKpi = realtimeState.analyticsKpi;
-  const isConnected = realtimeState.isConnected;
-  const latestEvent = realtimeState.latestEvent;
 
-  const [cabinIncidents, setCabinIncidents] = useState<BusCabinIncident[]>(BUS_CABIN_INCIDENTS);
-  const [blackspots, setBlackspots] = useState<AccidentZoneBlackspot[]>(ACCIDENT_BLACKSPOTS);
-  const [activeTicketId, setActiveTicketId] = useState<string>('TK-8921');
-  const [rules, setRules] = useState<AutoRoutingRule[]>(AUTO_ROUTING_RULES);
-  const [isNewTicketModalOpen, setIsNewTicketModalOpen] = useState(false);
-  const [isHelpModalOpen, setIsHelpModalOpen] = useState(false);
-  const [isAiCopilotOpen, setIsAiCopilotOpen] = useState(false);
-  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
+  const [audioMuted, setAudioMuted] = useState(false);
 
+  // Realtime Live Data Hook
+  const { state: realtimeState, refreshData, selectAmr } = useRealtimeData();
 
-  // Persist explicit language preference
+  useEffect(() => { localStorage.setItem('nagar_active_view', activeView); }, [activeView]);
+  useEffect(() => { localStorage.setItem('nagar_user_role', userRole); }, [userRole]);
   useEffect(() => {
-    localStorage.setItem('nagar_language', language);
-  }, [language]);
-
-  // Apply Theme class
+    if (!isViewAllowedForRole(activeView, userRole)) {
+      setActiveView(getDefaultViewForRole(userRole));
+    }
+  }, [userRole, activeView]);
+  useEffect(() => { localStorage.setItem('nagar_language', language); }, [language]);
   useEffect(() => {
     localStorage.setItem('nagar_theme', theme);
     if (theme === 'dark') {
@@ -107,90 +69,24 @@ export default function App() {
     }
   }, [theme]);
 
-  // Apply Font Size Accessibility scaling class
-  useEffect(() => {
-    document.documentElement.classList.remove('font-size-sm', 'font-size-md', 'font-size-lg');
-    document.documentElement.classList.add(`font-size-${fontSizeScale}`);
-  }, [fontSizeScale]);
-
-  const toggleLanguage = () => {
-    setLanguage((prev) => (prev === 'en' ? 'hi' : 'en'));
-  };
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-  };
+  const toggleLanguage = () => setLanguage((prev) => (prev === 'en' ? 'hi' : 'en'));
+  const toggleTheme = () => setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
 
   const handleLogin = (role: UserRole) => {
     setUserRole(role);
     setIsLoggedIn(true);
-    if (role === 'Public Commuter') {
-      setActiveView('public-transit');
-    } else {
-      setActiveView('dashboard');
+    setActiveView(getDefaultViewForRole(role));
+  };
+
+  const handleRoleChange = (newRole: UserRole) => {
+    setUserRole(newRole);
+    if (!isViewAllowedForRole(activeView, newRole)) {
+      setActiveView(getDefaultViewForRole(newRole));
     }
   };
 
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
+  const handleLogout = () => setIsLoggedIn(false);
 
-  const handleSelectTicket = (ticketNumber: string) => {
-    const found = tickets.find(
-      (t) => t.ticketNumber === ticketNumber || t.id === ticketNumber
-    );
-    if (found) {
-      setActiveTicketId(found.ticketNumber);
-      setActiveView('ticket-detail');
-    }
-  };
-
-  const handleNavigateWithFilter = (view: ActiveView, filterParam?: string) => {
-    if (filterParam) {
-      setSearchTerm(filterParam);
-    }
-    setActiveView(view);
-    setIsMobileSidebarOpen(false);
-  };
-
-  const handleUpdateTicketStatus = (
-    ticketId: string,
-    status: DefectItem['status']
-  ) => {
-    realtimeUpdateTicketStatus(ticketId, status);
-  };
-
-  const handleAddComment = (ticketId: string, commentText: string) => {
-    realtimeAddComment(ticketId, commentText, userRole);
-  };
-
-  const handleAddTicket = (newTicket: DefectItem) => {
-    realtimeAddTicket(newTicket);
-    setActiveTicketId(newTicket.ticketNumber);
-    setActiveView('ticket-detail');
-  };
-
-  const handleToggleRuleActive = (ruleId: string) => {
-    setRules((prev) =>
-      prev.map((r) => (r.id === ruleId ? { ...r, isActive: !r.isActive } : r))
-    );
-  };
-
-  const handleAddRule = (newRule: AutoRoutingRule) => {
-    setRules((prev) => [...prev, newRule]);
-  };
-
-  const handleAddCabinIncident = (newInc: BusCabinIncident) => {
-    setCabinIncidents((prev) => [newInc, ...prev]);
-  };
-
-  const handleUpdateCabinIncidentStatus = (id: string, status: BusCabinIncident['status']) => {
-    setCabinIncidents((prev) =>
-      prev.map((inc) => (inc.id === id ? { ...inc, status } : inc))
-    );
-  };
-
-  // If user is logged out, render the Login screen (Screen 5)
   if (!isLoggedIn) {
     return (
       <LoginView
@@ -203,316 +99,129 @@ export default function App() {
     );
   }
 
-  // Active ticket for Detail View
-  const currentTicket =
-    tickets.find((t) => t.ticketNumber === activeTicketId || t.id === activeTicketId) ||
-    tickets[0] ||
-    INITIAL_DEFECTS[0];
+  const selectedAmr = realtimeState.amrs.find((a) => a.id === realtimeState.selectedAmrId) || null;
+  const unreadAlerts = realtimeState.alerts.filter((a) => !a.resolved).length;
 
   return (
-    <div className={`flex flex-col h-screen w-screen overflow-hidden font-sans antialiased theme-transition ${theme === 'dark' ? 'dark bg-black text-[#f5f5f7]' : 'bg-[#F5F5F7] text-[#1d1d1f]'}`}>
-      {/* Top Header & Apple Horizontal Navigation Subnav */}
-      <TopHeader
+    <div className={`min-h-screen w-full font-sans antialiased transition-colors ${
+      theme === 'dark' ? 'bg-[#09090b] text-[#f4f4f5] dark' : 'bg-[#fafafa] text-[#09090b]'
+    }`}>
+
+      {/* ── Minimalist Top Navigation Header ── */}
+      <NavBar
+        activeView={activeView}
+        setActiveView={setActiveView}
         language={language}
         onToggleLanguage={toggleLanguage}
         theme={theme}
         onToggleTheme={toggleTheme}
-        fontSizeScale={fontSizeScale}
-        onSetFontSizeScale={setFontSizeScale}
-        searchTerm={searchTerm}
-        onSearchChange={setSearchTerm}
-        onNotificationsClick={() => {
-          setActiveView('notifications');
-        }}
-        onProfileClick={() => {
-          setActiveView('settings');
-        }}
-        activeView={activeView}
-        setActiveView={(v, filterParam) => handleNavigateWithFilter(v, filterParam)}
-        ticketId={activeTicketId}
-        tickets={tickets}
-        onSelectTicket={handleSelectTicket}
-        onNavigate={(v, filterParam) => handleNavigateWithFilter(v, filterParam)}
-        onOpenHelp={() => setIsHelpModalOpen(true)}
-        onOpenNewTicket={() => setIsNewTicketModalOpen(true)}
-        onOpenAiCopilot={() => setIsAiCopilotOpen(true)}
-        onLogout={handleLogout}
-        isConnected={isConnected}
-        latestEvent={latestEvent}
         userRole={userRole}
+        onRoleChange={handleRoleChange}
+        onLogout={handleLogout}
+        isConnected={realtimeState.isConnected}
+        unreadAlertsCount={unreadAlerts}
+        audioMuted={audioMuted}
+        onToggleAudioMute={() => setAudioMuted(!audioMuted)}
+        latestEvent={realtimeState.latestEvent}
       />
 
-      {/* Main Full-Width Content Canvas - Smooth Page Scroll Container */}
-      <div className="flex-1 overflow-y-auto custom-scrollbar w-full min-w-0 flex flex-col justify-between">
-        {/* View Switcher Container */}
-        <main className="w-full min-w-0 flex-1 relative pb-16 lg:pb-0">
-          {/* 1. Main Dashboard */}
-          {activeView === 'dashboard' && (
-            <DashboardView
+      {/* ── Main scrollable content ── */}
+      <main className="pt-[96px] min-h-screen">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+          {/* 1. Digital Twin / Warehouse Grid */}
+          {(activeView === 'overview' || activeView === 'warehouse') && (
+            <WarehouseDigitalTwinView
               language={language}
-              onSelectTicket={handleSelectTicket}
-              onNavigateToMap={() => setActiveView('live-map')}
-              onNavigate={(v, filterParam) => handleNavigateWithFilter(v, filterParam)}
-              onOpenNewTicket={() => setIsNewTicketModalOpen(true)}
-              onOpenAiCopilot={() => setIsAiCopilotOpen(true)}
-              tickets={tickets}
-              liveFeed={liveFeed}
-              analyticsKpi={analyticsKpi}
-              isConnected={isConnected}
+              amrs={realtimeState.amrs}
+              zones={realtimeState.zones}
+              stations={realtimeState.stations}
+              obstacles={realtimeState.obstacles}
+              onSelectAmr={(id) => selectAmr(id)}
+              onRefresh={refreshData}
             />
           )}
 
-          {/* 2. UIDAI Style Service Categories Directory */}
-          {activeView === 'services-directory' && (
-            <ServicesDirectoryView
-              language={language}
-              onNavigate={(v, filterParam) => handleNavigateWithFilter(v, filterParam)}
-              onOpenNewTicketModal={() => setIsNewTicketModalOpen(true)}
-            />
-          )}
-
-          {/* 3. Tickets & Work Orders */}
-          {activeView === 'tickets' && (
-            <TicketsWorkOrdersView
-              language={language}
-              tickets={tickets}
-              rules={rules}
-              onSelectTicket={handleSelectTicket}
-              onUpdateTicketStatus={handleUpdateTicketStatus}
-              onOpenNewTicketModal={() => setIsNewTicketModalOpen(true)}
-              onToggleRuleActive={handleToggleRuleActive}
-              onAddRule={handleAddRule}
-            />
-          )}
-
-          {/* 4. Live GIS Map */}
-          {activeView === 'live-map' && (
-            <LiveMapView
-              language={language}
-              tickets={tickets}
-              liveFeed={liveFeed}
-              onSelectTicket={handleSelectTicket}
-              onOpenWorkOrder={(id) => handleUpdateTicketStatus(id, 'ASSIGNED')}
-              onNavigateToAccidents={() => setActiveView('accident-analytics')}
-            />
-          )}
-
-          {/* 5. Bus Cabin Safety Complaints */}
-          {activeView === 'safety-complaints' && (
-            <BusSafetyComplaintsView
-              language={language}
-              incidents={cabinIncidents}
-              onAddIncident={handleAddCabinIncident}
-              onUpdateIncidentStatus={handleUpdateCabinIncidentStatus}
-            />
-          )}
-
-          {/* 6. Accident Blackspots Analytics */}
-          {activeView === 'accident-analytics' && (
-            <AccidentBlackspotAnalyticsView
-              language={language}
-              blackspots={blackspots}
-              onSelectBlackspotOnMap={(spotCode) => {
-                setActiveView('live-map');
-              }}
-            />
-          )}
-
-          {/* 7. Municipal Defect Analytics */}
-          {activeView === 'analytics' && (
-            <AnalyticsView
-              language={language}
-              analyticsKpi={analyticsKpi}
-              onNavigateToHotspot={(loc) => {
-                setActiveView('live-map');
-              }}
-            />
-          )}
-
-          {/* 8. AI Fleet Monitoring */}
+          {/* 2. AMR Fleet */}
           {activeView === 'fleet' && (
-            <FleetMonitoringView
+            <AmrFleetView
               language={language}
-              fleet={fleet}
-              alerts={alerts}
+              amrs={realtimeState.amrs}
+              onSelectAmr={(id) => selectAmr(id)}
+              onRefresh={refreshData}
             />
           )}
 
-          {/* 8b. Public Bus Tracker & Commuter Portal */}
-          {activeView === 'public-transit' && (
-            <PublicBusTrackerView
+          {/* 3. Task Allocation */}
+          {activeView === 'tasks' && (
+            <TaskAllocationView
               language={language}
-              tickets={tickets}
-              onAddTicket={realtimeAddTicket}
-              onNavigateToTicket={handleSelectTicket}
+              tasks={realtimeState.tasks}
+              stations={realtimeState.stations}
+              onRefresh={refreshData}
             />
           )}
 
-
-          {/* 9. Ticket Detail View */}
-          {activeView === 'ticket-detail' && (
-            <TicketDetailView
+          {/* 4. Multi-Robot Coordination */}
+          {activeView === 'coordination' && (
+            <MultiRobotCoordinationView
               language={language}
-              ticket={currentTicket}
-              onBack={() => setActiveView('tickets')}
-              onUpdateStatus={handleUpdateTicketStatus}
-              onAddComment={handleAddComment}
+              conflicts={realtimeState.conflicts}
+              onRefresh={refreshData}
             />
           )}
 
-          {/* 10. Multi-Agency Coordination Hub */}
-          {activeView === 'multi-agency' && (
-            <MultiAgencyView language={language} />
+          {/* 5. Edge AI Perception */}
+          {activeView === 'edge-ai' && (
+            <EdgeAiPerceptionView
+              language={language}
+              perceptions={realtimeState.perceptions}
+            />
           )}
 
-          {/* 11. Notifications View */}
-          {activeView === 'notifications' && (
-            <NotificationsView language={language} />
+          {/* 6. Operational Alerts */}
+          {activeView === 'alerts' && (
+            <NotificationsView
+              language={language}
+              alerts={realtimeState.alerts}
+            />
           )}
 
-          {/* 12. Settings & Profile View */}
+          {/* 7. Warehouse Analytics */}
+          {activeView === 'analytics' && (
+            <WarehouseAnalyticsView
+              language={language}
+              metrics={realtimeState.metrics}
+            />
+          )}
+
+          {/* 8. SIH Judge Demo Simulation */}
+          {activeView === 'simulation' && (
+            <JudgeDemoSimulationView
+              language={language}
+              onRefresh={refreshData}
+            />
+          )}
+
+          {/* 9. Settings */}
           {activeView === 'settings' && (
             <SettingsView
               language={language}
               onToggleLanguage={toggleLanguage}
               userRole={userRole}
-              theme={theme}
-              onToggleTheme={toggleTheme}
             />
           )}
-        </main>
 
-        {/* Bharat Electronics Limited (BEL) Sovereign Footer */}
-        <BelFooter
-          language={language}
-          onNavigate={(v) => setActiveView(v)}
-          onOpenAiCopilot={() => setIsAiCopilotOpen(true)}
-        />
-
-        {/* Mobile Apple-Style Bottom Navigation Bar */}
-        {userRole !== 'Public Commuter' && (
-          <nav
-            className="lg:hidden fixed bottom-0 left-0 right-0 h-14 bg-[#161617]/90 backdrop-blur-2xl border-t border-white/10 z-40 px-2 flex items-center justify-around text-white shadow-2xl safe-area-pb"
-            aria-label="Mobile Navigation"
-          >
-          <button
-            type="button"
-            onClick={() => setActiveView('dashboard')}
-            className={`flex flex-col items-center justify-center flex-1 py-1 transition-colors ${
-              activeView === 'dashboard' ? 'text-[#0071E3]' : 'text-[#86868b] hover:text-white'
-            }`}
-          >
-            <span className={`material-symbols-outlined text-[19px] ${activeView === 'dashboard' ? 'icon-fill' : ''}`}>
-              dashboard
-            </span>
-            <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'डैशबोर्ड' : 'Overview'}</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setActiveView('services-directory')}
-            className={`flex flex-col items-center justify-center flex-1 py-1 transition-colors ${
-              activeView === 'services-directory' ? 'text-[#0071E3]' : 'text-[#86868b] hover:text-white'
-            }`}
-          >
-            <span className={`material-symbols-outlined text-[19px] ${activeView === 'services-directory' ? 'icon-fill' : ''}`}>
-              account_tree
-            </span>
-            <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'श्रेणियां' : 'Services'}</span>
-          </button>
-
-          {/* Integrated Center Action Button */}
-          <button
-            type="button"
-            onClick={() => setIsNewTicketModalOpen(true)}
-            className="flex flex-col items-center justify-center bg-[#0071E3] active:scale-95 text-white rounded-full px-3 py-1 shadow-md transition-all cursor-pointer font-bold"
-            title="Log New Defect"
-          >
-            <span className="material-symbols-outlined text-[17px] font-bold">add</span>
-            <span className="text-[8px] font-semibold uppercase leading-none">{language === 'hi' ? 'नया' : 'Report'}</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setActiveView('tickets')}
-            className={`flex flex-col items-center justify-center flex-1 py-1 transition-colors ${
-              activeView === 'tickets' || activeView === 'ticket-detail' ? 'text-[#0071E3]' : 'text-[#86868b] hover:text-white'
-            }`}
-          >
-            <span className={`material-symbols-outlined text-[19px] ${activeView === 'tickets' || activeView === 'ticket-detail' ? 'icon-fill' : ''}`}>
-              assignment
-            </span>
-            <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'टिकट' : 'Tickets'}</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setIsMobileSidebarOpen(true)}
-            className="flex flex-col items-center justify-center flex-1 py-1 text-[#86868b] hover:text-white transition-colors cursor-pointer"
-          >
-            <span className="material-symbols-outlined text-[19px]">
-              menu
-            </span>
-            <span className="text-[9px] font-medium mt-0.5">{language === 'hi' ? 'मेन्यू' : 'Menu'}</span>
-          </button>
-          </nav>
-        )}
-      </div>
-
-      {/* Floating Apple AI Copilot Trigger Button (Quick Access) */}
-      <button
-        type="button"
-        onClick={() => setIsAiCopilotOpen(true)}
-        className="fixed bottom-6 right-6 z-40 hidden sm:flex items-center gap-2.5 px-5 py-3 rounded-full bg-white/80 dark:bg-[#1c1c1e]/90 backdrop-blur-2xl border border-black/10 dark:border-white/15 shadow-2xl hover:border-[#0071E3] hover:shadow-[#0071E3]/20 hover:scale-105 transition-all text-xs font-bold cursor-pointer group"
-        title="Open Nagar Drishti AI Copilot"
-      >
-        <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#0071E3] to-[#40A9FF] text-white flex items-center justify-center shadow-xs">
-          <span className="material-symbols-outlined text-[15px] animate-pulse">auto_awesome</span>
         </div>
-        <span className="text-slate-900 dark:text-white group-hover:text-[#0071E3] transition-colors">
-          {language === 'hi' ? 'नगर AI कॉपायलट' : 'Ask Nagar AI'}
-        </span>
-        <span className="w-2 h-2 rounded-full bg-[#34C759] animate-pulse"></span>
-      </button>
+      </main>
 
-      {/* Global New Ticket Modal */}
-      <NewTicketModal
-        isOpen={isNewTicketModalOpen}
-        onClose={() => setIsNewTicketModalOpen(false)}
-        onAddTicket={handleAddTicket}
-      />
-
-      {/* AI Copilot Modal */}
-      <AiCopilotModal
-        isOpen={isAiCopilotOpen}
-        onClose={() => setIsAiCopilotOpen(false)}
+      {/* ── AMR Detail Progressive Disclosure Sheet ── */}
+      <AmrDetailSheet
+        amr={selectedAmr}
+        tasks={realtimeState.tasks}
         language={language}
-        theme={theme}
-        activeView={activeView}
-        activeTicketId={activeTicketId}
-        onNavigate={(v) => {
-          setIsAiCopilotOpen(false);
-          setActiveView(v);
-        }}
-        onOpenNewTicket={() => {
-          setIsAiCopilotOpen(false);
-          setIsNewTicketModalOpen(true);
-        }}
-      />
-
-      {/* Quick Help Modal */}
-      <QuickHelpModal
-        isOpen={isHelpModalOpen}
-        onClose={() => setIsHelpModalOpen(false)}
-        language={language}
-        onOpenNewTicket={() => {
-          setIsHelpModalOpen(false);
-          setIsNewTicketModalOpen(true);
-        }}
-        onNavigate={(v) => {
-          setIsHelpModalOpen(false);
-          setActiveView(v);
-        }}
+        onClose={() => selectAmr(null)}
+        onRefresh={refreshData}
       />
     </div>
   );

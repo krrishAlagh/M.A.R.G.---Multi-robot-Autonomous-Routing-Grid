@@ -11,13 +11,12 @@ from pydantic import BaseModel, Field, ConfigDict
 
 
 class DefectCategory(str, Enum):
+    """Road surface defect types detected by bus fleet dashcam AI (dataset class 0: RoadDamages)."""
     POTHOLE = "POTHOLE"
     ROAD_CRACK = "ROAD_CRACK"
-    DAMAGED_DIVIDER = "DAMAGED_DIVIDER"
     MISSING_ZEBRA_CROSSING = "MISSING_ZEBRA_CROSSING"
     DAMAGED_TRAFFIC_SIGN = "DAMAGED_TRAFFIC_SIGN"
     WATERLOGGING = "WATERLOGGING"
-    BLIND_SPOT_PEDESTRIAN = "BLIND_SPOT_PEDESTRIAN"
     CABIN_MISCONDUCT = "CABIN_MISCONDUCT"
 
 

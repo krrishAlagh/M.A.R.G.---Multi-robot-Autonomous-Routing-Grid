@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nagar Drishti - Reference and Research Brief</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 18mm 17mm 17mm;
+      }
+      :root {
+        --ink: #17212b;
+        --muted: #5c6b76;
+        --teal: #087f8c;
+        --gold: #c58b24;
+        --line: #d8e0e3;
+        --wash: #eef7f6;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 10.5pt;
+        line-height: 1.45;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+      h1 {
+        font-family: Arial, sans-serif;
+        font-size: 28pt;
+        line-height: 1.05;
+        letter-spacing: 0;
+        margin-bottom: 8px;
+      }
+      h2 {
+        font-family: Arial, sans-serif;
+        color: var(--teal);
+        font-size: 15pt;
+        margin: 22px 0 8px;
+        border-bottom: 2px solid var(--gold);
+        padding-bottom: 4px;
+      }
+      h3 {
+        font-family: Arial, sans-serif;
+        font-size: 11pt;
+        margin: 12px 0 3px;
+      }
+      .kicker {
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: bold;
+        letter-spacing: 1.4px;
+        font-size: 8pt;
+      }
+      .subtitle {
+        color: var(--muted);
+        font-size: 13pt;
+        max-width: 520px;
+      }
+      .hero {
+        border-left: 7px solid var(--teal);
+        padding: 4px 0 5px 16px;
+        margin-bottom: 18px;
+      }
+      .meta {
+        font-family: Arial, sans-serif;
+        color: var(--muted);
+        font-size: 8.5pt;
+        margin-top: 13px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .stat {
+        background: var(--wash);
+        border: 1px solid #cde4e2;
+        padding: 10px 12px;
+      }
+      .stat strong {
+        display: block;
+        font-family: Arial, sans-serif;
+        font-size: 18pt;
+        color: var(--teal);
+      }
+      .stat span {
+        color: var(--muted);
+        font-family: Arial, sans-serif;
+        font-size: 8.5pt;
+      }
+      ul {
+        margin: 5px 0 8px 19px;
+        padding: 0;
+      }
+      li {
+        margin: 3px 0;
+      }
+      a {
+        color: #056b78;
+        text-decoration: none;
+        overflow-wrap: anywhere;
+      }
+      .ref {
+        margin: 7px 0;
+        padding-left: 10px;
+        border-left: 3px solid #d9b56d;
+      }
+      .ref strong {
+        font-family: Arial, sans-serif;
+        font-size: 9.5pt;
+      }
+      .url {
+        display: block;
+        color: var(--muted);
+        font-family: Arial, sans-serif;
+        font-size: 8pt;
+        margin-top: 1px;
+      }
+      .note {
+        background: #fff8e9;
+        border: 1px solid #ead6a7;
+        padding: 9px 11px;
+        margin-top: 10px;
+      }
+      .footer {
+        margin-top: 23px;
+        padding-top: 7px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-family: Arial, sans-serif;
+        font-size: 8pt;
+      }
+      .page-break {
+        break-before: page;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="kicker">Project Reference and Research Brief</div>
+      <h1>Nagar Drishti</h1>
+      <p class="subtitle">
+        AI-powered urban intelligence and municipal command platform for
+        road-defect detection, fleet monitoring, ticket routing, and
+        cross-agency governance.
+      </p>
+      <p class="meta">
+        Prepared September 10, 2026 | Repository: remix-nagar-drishti
+      </p>
+    </div>
+
+    <h2>Project Reference</h2>
+    <p>
+      The application combines a React/Vite command-center interface, an Express
+      REST and WebSocket backend, and an edge-to-cloud computer-vision pipeline
+      documented in the repository.
+    </p>
+    <div class="ref">
+      <strong>AI Studio project</strong
+      ><a
+        class="url"
+        href="https://ai.studio/apps/64a79b0a-395a-4019-8106-3e1cf2baa1af"
+        >https://ai.studio/apps/64a79b0a-395a-4019-8106-3e1cf2baa1af</a
+      >
+    </div>
+    <div class="ref">
+      <strong>Architecture documentation</strong
+      ><a class="url" href="https://github.com/"
+        >Repository file: ai_engine/README.md</a
+      >
+    </div>
+    <div class="ref">
+      <strong>Local setup and execution</strong
+      ><a class="url" href="https://github.com/">Repository file: README.md</a>
+    </div>
+
+    <h2>System Research Summary</h2>
+    <ul>
+      <li>
+        <strong>Edge sensing:</strong> synchronized camera streams on NVIDIA
+        Jetson hardware run object detection, tracking, and OCR locally.
+      </li>
+      <li>
+        <strong>Telemetry:</strong> event-driven JSON and WebP/JPEG evidence is
+        transmitted over MQTT or WebSocket rather than streaming raw video.
+      </li>
+      <li>
+        <strong>Cloud intelligence:</strong> Haversine-distance DBSCAN groups
+        repeated detections into canonical defect clusters.
+      </li>
+      <li>
+        <strong>Decision support:</strong> traffic analytics and Gemini
+        structured function calling help route validated incidents into
+        municipal work orders.
+      </li>
+      <li>
+        <strong>Command center:</strong> dashboards expose live detections,
+        maps, fleet activity, analytics, alerts, and cross-agency workflows.
+      </li>
+    </ul>
+
+    <h2>Dataset and Evaluation Basis</h2>
+    <div class="grid">
+      <div class="stat"><strong>3,184</strong><span>total images</span></div>
+      <div class="stat">
+        <strong>6,463</strong><span>annotated road-damage boxes</span>
+      </div>
+      <div class="stat">
+        <strong>2,231</strong><span>training images / 4,529 boxes</span>
+      </div>
+      <div class="stat">
+        <strong>474 + 479</strong><span>validation and test images</span>
+      </div>
+    </div>
+    <p style="margin-top: 10px">
+      The cleaned dataset retains one class, <strong>RoadDamages</strong>,
+      remapped from the original class index to class 0. Other source categories
+      were removed for this model configuration.
+    </p>
+    <div class="note">
+      <strong>Attribution gap:</strong> the repository records the cleaned
+      dataset statistics but does not currently identify the original public
+      dataset source, license, or citation. Those details should be added before
+      external publication.
+    </div>
+
+    <div class="page-break"></div>
+    <h2>Technical and Research References</h2>
+    <div class="ref">
+      <strong>Ultralytics YOLO</strong
+      ><a class="url" href="https://docs.ultralytics.com/"
+        >https://docs.ultralytics.com/</a
+      ><span>Object detection and segmentation model documentation.</span>
+    </div>
+    <div class="ref">
+      <strong>ByteTrack</strong
+      ><a class="url" href="https://arxiv.org/abs/2110.06864"
+        >https://arxiv.org/abs/2110.06864</a
+      ><span>Multi-object tracking by associating every detection box.</span>
+    </div>
+    <div class="ref">
+      <strong>DBSCAN in scikit-learn</strong
+      ><a
+        class="url"
+        href="https://scikit-learn.org/stable/modules/clustering.html#dbscan"
+        >https://scikit-learn.org/stable/modules/clustering.html#dbscan</a
+      ><span
+        >Density-based clustering reference used for spatial
+        deduplication.</span
+      >
+    </div>
+    <div class="ref">
+      <strong>Gemini function calling</strong
+      ><a
+        class="url"
+        href="https://ai.google.dev/gemini-api/docs/function-calling"
+        >https://ai.google.dev/gemini-api/docs/function-calling</a
+      ><span
+        >Structured model interaction for dispatch and work-order
+        generation.</span
+      >
+    </div>
+    <div class="ref">
+      <strong>NVIDIA Jetson Orin Nano</strong
+      ><a
+        class="url"
+        href="https://developer.nvidia.com/embedded/jetson-orin-nano-developer-kit"
+        >https://developer.nvidia.com/embedded/jetson-orin-nano-developer-kit</a
+      ><span>Target hardware family for edge inference.</span>
+    </div>
+    <div class="ref">
+      <strong>MQTT</strong
+      ><a class="url" href="https://mqtt.org/">https://mqtt.org/</a
+      ><span>Lightweight publish-subscribe telemetry protocol.</span>
+    </div>
+    <div class="ref">
+      <strong>OpenStreetMap</strong
+      ><a class="url" href="https://www.openstreetmap.org/"
+        >https://www.openstreetmap.org/</a
+      ><span>Open mapping reference for map-based civic operations.</span>
+    </div>
+    <div class="ref">
+      <strong>Government of India Open Data</strong
+      ><a class="url" href="https://data.gov.in/">https://data.gov.in/</a
+      ><span>Potential source for public civic and transport datasets.</span>
+    </div>
+
+    <h2>Local Deliverables</h2>
+    <ul>
+      <li>
+        <a href="ai_engine/README.md">ai_engine/README.md</a> - edge-to-cloud
+        architecture and execution notes.
+      </li>
+      <li>
+        <a href="ai_engine/dataset_summary.json"
+          >ai_engine/dataset_summary.json</a
+        >
+        - cleaned dataset counts and class definition.
+      </li>
+      <li>
+        <a href="README.md">README.md</a> - frontend/backend setup and test
+        commands.
+      </li>
+    </ul>
+
+    <div class="footer">
+      Nagar Drishti | Reference and Research Brief | This document distinguishes
+      repository-documented implementation details from external technical
+      references.
+    </div>
+  </body>
+</html>

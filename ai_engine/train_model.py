@@ -1,8 +1,7 @@
 """
-Nagar Drishti - AI Model Training & Fine-Tuning Engine
-Trains YOLOv8 Multi-Task Road Intelligence model on Indian Road Datasets
-(Potholes, Road Damages, Speed Bumps, Unsurfaced Roads, Pedestrians, HMV/LMV)
-Supports Apple Silicon MPS, NVIDIA CUDA, and CPU execution.
+NEXUS AMR OS - Edge AI Vision Model Training & Fine-Tuning Engine (SIH26123)
+Trains YOLOv8 8-Class Warehouse Perception model for Autonomous Mobile Robots (AMRs)
+Supports Jetson Orin NX CUDA, Apple Silicon MPS, and CPU execution.
 """
 
 import os
@@ -19,8 +18,8 @@ MODELS_DIR = BASE_DIR / "ai_engine" / "models"
 MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Train Nagar Drishti AI Model")
-    parser.add_argument("--epochs", type=int, default=5, help="Number of training epochs (default: 5)")
+    parser = argparse.ArgumentParser(description="Train NEXUS AMR Edge AI Perception Model")
+    parser.add_argument("--epochs", type=int, default=10, help="Number of training epochs (default: 10)")
     parser.add_argument("--batch", type=int, default=16, help="Batch size (default: 16)")
     parser.add_argument("--imgsz", type=int, default=640, help="Image resolution (default: 640)")
     parser.add_argument("--model", type=str, default="yolov8n.pt", help="Base model architecture (default: yolov8n.pt)")
@@ -39,11 +38,11 @@ def select_optimal_device():
         print("⚙️ Utilizing Multi-Core CPU for training")
     return device
 
-def train_nagar_ai():
+def train_nexus_amr_ai():
     args = parse_args()
     
     print("=" * 70)
-    print("🏛️  NAGAR DRISHTI: URBAN AI MULTI-TASK MODEL TRAINING")
+    print("🤖 NEXUS AMR OS: EDGE-AI WAREHOUSE PERCEPTION MODEL TRAINING")
     print("=" * 70)
     print(f"Configuration:")
     print(f"  • Base Model Architecture : {args.model}")
@@ -58,7 +57,7 @@ def train_nagar_ai():
     print(f"\n[1/4] Loading YOLO backbone: {args.model}...")
     model = YOLO(args.model)
     
-    # 2. Execute Training with augmentations for Indian road scenarios
+    # 2. Execute Training with augmentations for indoor warehouse lighting & motion blur
     print("\n[2/4] Initializing training loop with transfer learning & augmentations...")
     results = model.train(
         data=str(YAML_PATH),
@@ -68,20 +67,20 @@ def train_nagar_ai():
         device=device,
         workers=args.workers,
         project=str(BASE_DIR / "ai_engine" / "runs"),
-        name="nagar_drishti_ai",
+        name="nexus_amr_edge_ai",
         exist_ok=True,
         pretrained=True,
         optimizer="AdamW",
         lr0=0.002,
         lrf=0.01,
-        mosaic=1.0,
-        mixup=0.15,
+        mosaic=0.8,
+        mixup=0.1,
         hsv_h=0.015,
-        hsv_s=0.7,
+        hsv_s=0.5,
         hsv_v=0.4,
-        degrees=10.0,
+        degrees=5.0,
         translate=0.1,
-        scale=0.5,
+        scale=0.3,
         fliplr=0.5,
         save=True,
         plots=True,
@@ -101,22 +100,22 @@ def train_nagar_ai():
     print(f"  • Recall       : {metrics.box.mr:.4f}")
     
     # 4. Export & Package Model Weights
-    best_weight_source = BASE_DIR / "ai_engine" / "runs" / "nagar_drishti_ai" / "weights" / "best.pt"
-    dest_weight = MODELS_DIR / "nagar_drishti_ai_best.pt"
+    best_weight_source = BASE_DIR / "ai_engine" / "runs" / "nexus_amr_edge_ai" / "weights" / "best.pt"
+    dest_weight = MODELS_DIR / "nexus_amr_edge_best.pt"
     
     if best_weight_source.exists():
         shutil.copy(str(best_weight_source), str(dest_weight))
         print(f"\n[4/4] ✅ Successfully saved trained weights to: {dest_weight}")
     else:
-        fallback_weight = BASE_DIR / "ai_engine" / "runs" / "nagar_drishti_ai" / "weights" / "last.pt"
+        fallback_weight = BASE_DIR / "ai_engine" / "runs" / "nexus_amr_edge_ai" / "weights" / "last.pt"
         if fallback_weight.exists():
             shutil.copy(str(fallback_weight), str(dest_weight))
             print(f"\n[4/4] ✅ Successfully saved weights to: {dest_weight}")
             
     print("\n" + "=" * 70)
-    print("🎉 NAGAR DRISHTI AI MODEL TRAINING & VALIDATION COMPLETED")
+    print("🎉 NEXUS AMR OS EDGE-AI MODEL TRAINING & VALIDATION COMPLETED")
     print("=" * 70)
     return metrics
 
 if __name__ == "__main__":
-    train_nagar_ai()
+    train_nexus_amr_ai()

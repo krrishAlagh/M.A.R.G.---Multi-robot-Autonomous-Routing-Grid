@@ -2,52 +2,42 @@ import fs from 'fs';
 import path from 'path';
 import { ENV } from '../config/env';
 import {
-  DefectItem,
-  LiveFeedDetection,
-  BusFleetItem,
-  SystemAlert,
-  AutoRoutingRule,
-  CrossAgencyTicket,
-  AgencyContact,
-  DepartmentMetric,
-  DefectHotspot,
-  BusCabinIncident,
-  AccidentZoneBlackspot,
-  UserAccount
+  AMR,
+  WarehouseZone,
+  WarehouseStation,
+  WarehouseTask,
+  RobotRouteConflict,
+  EdgePerceptionDetection,
+  WarehouseObstacle,
+  OperationalAlert,
+  FleetMetrics,
+  UserAccount,
+  GridPosition
 } from '../types/serverTypes';
 import {
-  INITIAL_DEFECTS,
-  INITIAL_LIVE_FEEDS,
-  INITIAL_FLEET,
+  INITIAL_USERS,
+  INITIAL_AMRS,
+  INITIAL_ZONES,
+  INITIAL_STATIONS,
+  INITIAL_TASKS,
+  INITIAL_CONFLICTS,
+  INITIAL_OBSTACLES,
+  INITIAL_EDGE_PERCEPTIONS,
   INITIAL_ALERTS,
-  INITIAL_RULES,
-  INITIAL_CROSS_AGENCY,
-  INITIAL_CONTACTS,
-  INITIAL_METRICS,
-  INITIAL_HOTSPOTS,
-  INITIAL_CABIN_INCIDENTS,
-  INITIAL_BLACKSPOTS,
-  INITIAL_USERS
+  INITIAL_METRICS
 } from './seed';
 
 export interface DatabaseSchema {
   users: UserAccount[];
-  defects: DefectItem[];
-  liveFeeds: LiveFeedDetection[];
-  fleet: BusFleetItem[];
-  alerts: SystemAlert[];
-  rules: AutoRoutingRule[];
-  crossAgencyTickets: CrossAgencyTicket[];
-  agencyContacts: AgencyContact[];
-  departmentMetrics: DepartmentMetric[];
-  hotspots: DefectHotspot[];
-  cabinIncidents: BusCabinIncident[];
-  blackspots: AccidentZoneBlackspot[];
-  stats: {
-    totalIngestedDetections: number;
-    totalResolvedDefects: number;
-    lastTelemetrySync: string;
-  };
+  amrs: AMR[];
+  zones: WarehouseZone[];
+  stations: WarehouseStation[];
+  tasks: WarehouseTask[];
+  conflicts: RobotRouteConflict[];
+  obstacles: WarehouseObstacle[];
+  perceptions: EdgePerceptionDetection[];
+  alerts: OperationalAlert[];
+  metrics: FleetMetrics;
 }
 
 class HighPerformanceDatabase {
@@ -70,32 +60,27 @@ class HighPerformanceDatabase {
       if (fs.existsSync(this.dbFilePath)) {
         const raw = fs.readFileSync(this.dbFilePath, 'utf-8');
         const parsed = JSON.parse(raw);
-        console.log('[DB] Loaded existing persistent data from disk.');
-        return parsed;
+        if (parsed.amrs && parsed.zones && parsed.tasks) {
+          console.log('[DB] Loaded existing SIH26123 persistent AMR warehouse state from disk.');
+          return parsed;
+        }
       }
     } catch (err) {
-      console.warn('[DB] Failed to load disk state, falling back to seed initial data:', err);
+      console.warn('[DB] Failed to load disk state, initializing SIH26123 seed datasets:', err);
     }
 
-    console.log('[DB] Initializing new database with seed datasets.');
+    console.log('[DB] Initializing new database with NEXUS AMR OS seed datasets.');
     const initial: DatabaseSchema = {
       users: INITIAL_USERS,
-      defects: INITIAL_DEFECTS,
-      liveFeeds: INITIAL_LIVE_FEEDS,
-      fleet: INITIAL_FLEET,
+      amrs: INITIAL_AMRS,
+      zones: INITIAL_ZONES,
+      stations: INITIAL_STATIONS,
+      tasks: INITIAL_TASKS,
+      conflicts: INITIAL_CONFLICTS,
+      obstacles: INITIAL_OBSTACLES,
+      perceptions: INITIAL_EDGE_PERCEPTIONS,
       alerts: INITIAL_ALERTS,
-      rules: INITIAL_RULES,
-      crossAgencyTickets: INITIAL_CROSS_AGENCY,
-      agencyContacts: INITIAL_CONTACTS,
-      departmentMetrics: INITIAL_METRICS,
-      hotspots: INITIAL_HOTSPOTS,
-      cabinIncidents: INITIAL_CABIN_INCIDENTS,
-      blackspots: INITIAL_BLACKSPOTS,
-      stats: {
-        totalIngestedDetections: 4820,
-        totalResolvedDefects: 2680,
-        lastTelemetrySync: new Date().toISOString()
-      }
+      metrics: INITIAL_METRICS
     };
 
     this.persistSync(initial);
@@ -139,268 +124,186 @@ class HighPerformanceDatabase {
     });
   }
 
-  // --- Defects Operations ---
-  public getDefects(filters?: {
-    category?: string;
-    severity?: string;
-    status?: string;
-    ward?: string;
-    search?: string;
-  }): DefectItem[] {
-    let result = [...this.data.defects];
+  // --- Users ---
+  public getUsers(): UserAccount[] {
+    return [...this.data.users];
+  }
 
+  public getUserById(id: string): UserAccount | undefined {
+    return this.data.users.find((u) => u.id === id);
+  }
+
+  // --- AMRs ---
+  public getAMRs(): AMR[] {
+    return [...this.data.amrs];
+  }
+
+  public getAmrById(idOrCode: string): AMR | undefined {
+    const norm = idOrCode.trim().toUpperCase();
+    return this.data.amrs.find((a) => a.id.toUpperCase() === norm || a.code.toUpperCase() === norm);
+  }
+
+  public updateAmrTelemetry(
+    amrId: string,
+    updates: Partial<AMR>
+  ): AMR | undefined {
+    const amr = this.getAmrById(amrId);
+    if (amr) {
+      Object.assign(amr, updates);
+      this.save();
+      return amr;
+    }
+    return undefined;
+  }
+
+  // --- Warehouse Map, Zones & Stations ---
+  public getZones(): WarehouseZone[] {
+    return [...this.data.zones];
+  }
+
+  public getStations(): WarehouseStation[] {
+    return [...this.data.stations];
+  }
+
+  public getObstacles(): WarehouseObstacle[] {
+    return [...this.data.obstacles];
+  }
+
+  public addObstacle(obstacle: WarehouseObstacle): WarehouseObstacle {
+    this.data.obstacles.push(obstacle);
+    this.save();
+    return obstacle;
+  }
+
+  public removeObstacle(obstacleId: string): boolean {
+    const idx = this.data.obstacles.findIndex((o) => o.id === obstacleId);
+    if (idx >= 0) {
+      this.data.obstacles.splice(idx, 1);
+      this.save();
+      return true;
+    }
+    return false;
+  }
+
+  // --- Warehouse Tasks & Scoring ---
+  public getTasks(filters?: { status?: string; priority?: string; amrId?: string }): WarehouseTask[] {
+    let result = [...this.data.tasks];
     if (filters) {
-      if (filters.category && filters.category !== 'all') {
-        result = result.filter((d) => d.category.toLowerCase() === filters.category!.toLowerCase());
-      }
-      if (filters.severity && filters.severity !== 'all') {
-        result = result.filter((d) => d.severity.toUpperCase() === filters.severity!.toUpperCase());
-      }
-      if (filters.status && filters.status !== 'all') {
-        result = result.filter((d) => d.status.toUpperCase() === filters.status!.toUpperCase());
-      }
-      if (filters.ward && filters.ward !== 'all') {
-        result = result.filter((d) => d.ward.toLowerCase().includes(filters.ward!.toLowerCase()));
-      }
-      if (filters.search) {
-        const q = filters.search.toLowerCase();
-        result = result.filter(
-          (d) =>
-            d.ticketNumber.toLowerCase().includes(q) ||
-            d.title.toLowerCase().includes(q) ||
-            d.locationName.toLowerCase().includes(q) ||
-            d.description.toLowerCase().includes(q) ||
-            d.department.toLowerCase().includes(q)
-        );
-      }
+      if (filters.status) result = result.filter((t) => t.status === filters.status);
+      if (filters.priority) result = result.filter((t) => t.priority === filters.priority);
+      if (filters.amrId) result = result.filter((t) => t.assignedAmrId === filters.amrId);
     }
-
-    return result;
+    return result.sort((a, b) => new Date(b.createdTime).getTime() - new Date(a.createdTime).getTime());
   }
 
-  public getDefectById(id: string): DefectItem | undefined {
-    return this.data.defects.find((d) => d.id === id || d.ticketNumber === id);
-  }
-
-  public createDefect(defect: DefectItem): DefectItem {
-    this.data.defects.unshift(defect);
-    this.data.stats.totalIngestedDetections += 1;
+  public addTask(task: WarehouseTask): WarehouseTask {
+    this.data.tasks.unshift(task);
     this.save();
-    return defect;
+    return task;
   }
 
-  public updateDefect(id: string, updates: Partial<DefectItem>): DefectItem | null {
-    const idx = this.data.defects.findIndex((d) => d.id === id || d.ticketNumber === id);
-    if (idx === -1) return null;
-
-    const existing = this.data.defects[idx];
-    const updated = { ...existing, ...updates };
-
-    if (updates.status === 'RESOLVED' || updates.status === 'VERIFIED_CLOSED') {
-      if (existing.status !== 'RESOLVED' && existing.status !== 'VERIFIED_CLOSED') {
-        this.data.stats.totalResolvedDefects += 1;
+  public updateTaskStatus(taskId: string, status: WarehouseTask['status'], assignedAmrId?: string): WarehouseTask | undefined {
+    const task = this.data.tasks.find((t) => t.id === taskId || t.taskCode === taskId);
+    if (task) {
+      task.status = status;
+      if (assignedAmrId) {
+        task.assignedAmrId = assignedAmrId;
+        const amr = this.getAmrById(assignedAmrId);
+        if (amr) {
+          task.assignedAmrCode = amr.code;
+          amr.currentTaskId = task.id;
+          amr.status = 'Active';
+        }
       }
+      if (status === 'COMPLETED') {
+        task.completedTime = new Date().toISOString();
+        if (task.assignedAmrId) {
+          const amr = this.getAmrById(task.assignedAmrId);
+          if (amr) {
+            amr.currentTaskId = undefined;
+            amr.status = 'Idle';
+          }
+        }
+      }
+      this.save();
+      return task;
     }
+    return undefined;
+  }
 
-    this.data.defects[idx] = updated;
+  // --- Multi-Robot Coordination & Conflicts ---
+  public getConflicts(): RobotRouteConflict[] {
+    return [...this.data.conflicts];
+  }
+
+  public addConflict(conflict: RobotRouteConflict): RobotRouteConflict {
+    this.data.conflicts.unshift(conflict);
     this.save();
-    return updated;
+    return conflict;
   }
 
-  // --- Live Feed Operations ---
-  public getLiveFeeds(): LiveFeedDetection[] {
-    return this.data.liveFeeds;
-  }
-
-  public addLiveFeed(item: LiveFeedDetection): LiveFeedDetection {
-    this.data.liveFeeds.unshift(item);
-    if (this.data.liveFeeds.length > 50) {
-      this.data.liveFeeds = this.data.liveFeeds.slice(0, 50);
+  public resolveConflict(conflictId: string): boolean {
+    const cnf = this.data.conflicts.find((c) => c.id === conflictId);
+    if (cnf) {
+      cnf.resolved = true;
+      this.save();
+      return true;
     }
-    this.data.stats.totalIngestedDetections += 1;
-    this.data.stats.lastTelemetrySync = new Date().toISOString();
+    return false;
+  }
+
+  // --- Edge Perception Detections ---
+  public getEdgePerceptions(amrId?: string): EdgePerceptionDetection[] {
+    let result = [...this.data.perceptions];
+    if (amrId) {
+      result = result.filter((p) => p.amrId === amrId || p.amrCode === amrId);
+    }
+    return result.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+  }
+
+  public addEdgePerception(detection: EdgePerceptionDetection): EdgePerceptionDetection {
+    this.data.perceptions.unshift(detection);
+    if (this.data.perceptions.length > 100) {
+      this.data.perceptions = this.data.perceptions.slice(0, 100);
+    }
     this.save();
-    return item;
+    return detection;
   }
 
-  // --- Fleet Operations ---
-  public getFleet(): BusFleetItem[] {
-    return this.data.fleet;
+  // --- Operational Alerts ---
+  public getAlerts(): OperationalAlert[] {
+    return [...this.data.alerts].sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
   }
 
-  public updateBusTelemetry(busId: string, updates: Partial<BusFleetItem>): BusFleetItem | null {
-    const idx = this.data.fleet.findIndex((b) => b.busId === busId);
-    if (idx === -1) return null;
-
-    const updated = { ...this.data.fleet[idx], ...updates, lastSyncTime: new Date().toLocaleTimeString() };
-    this.data.fleet[idx] = updated;
-    this.save();
-    return updated;
-  }
-
-  // --- Cabin Incidents Operations ---
-  public getCabinIncidents(): BusCabinIncident[] {
-    return this.data.cabinIncidents;
-  }
-
-  public getCabinIncidentById(id: string): BusCabinIncident | undefined {
-    return this.data.cabinIncidents.find((i) => i.id === id || i.ticketCode === id);
-  }
-
-  public createCabinIncident(incident: BusCabinIncident): BusCabinIncident {
-    this.data.cabinIncidents.unshift(incident);
-    this.save();
-    return incident;
-  }
-
-  public updateCabinIncidentStatus(id: string, status: BusCabinIncident['status']): BusCabinIncident | null {
-    const idx = this.data.cabinIncidents.findIndex((i) => i.id === id || i.ticketCode === id);
-    if (idx === -1) return null;
-
-    this.data.cabinIncidents[idx].status = status;
-    this.save();
-    return this.data.cabinIncidents[idx];
-  }
-
-  // --- Accident Blackspots Operations ---
-  public getBlackspots(): AccidentZoneBlackspot[] {
-    return this.data.blackspots;
-  }
-
-  public getBlackspotById(id: string): AccidentZoneBlackspot | undefined {
-    return this.data.blackspots.find((b) => b.id === id || b.spotCode === id);
-  }
-
-  public updateBlackspotRemedial(
-    id: string,
-    status: AccidentZoneBlackspot['remedialActionStatus'],
-    authority?: string
-  ): AccidentZoneBlackspot | null {
-    const idx = this.data.blackspots.findIndex((b) => b.id === id || b.spotCode === id);
-    if (idx === -1) return null;
-
-    this.data.blackspots[idx].remedialActionStatus = status;
-    if (authority) this.data.blackspots[idx].actionAuthority = authority;
-    this.save();
-    return this.data.blackspots[idx];
-  }
-
-  // --- Auto-Routing Rules Operations ---
-  public getRules(): AutoRoutingRule[] {
-    return this.data.rules;
-  }
-
-  public createRule(rule: AutoRoutingRule): AutoRoutingRule {
-    this.data.rules.push(rule);
-    this.save();
-    return rule;
-  }
-
-  public toggleRuleActive(ruleId: string): AutoRoutingRule | null {
-    const rule = this.data.rules.find((r) => r.id === ruleId);
-    if (!rule) return null;
-    rule.isActive = !rule.isActive;
-    this.save();
-    return rule;
-  }
-
-  public deleteRule(ruleId: string): boolean {
-    const idx = this.data.rules.findIndex((r) => r.id === ruleId);
-    if (idx === -1) return false;
-    this.data.rules.splice(idx, 1);
-    this.save();
-    return true;
-  }
-
-  // --- Alerts Operations ---
-  public getAlerts(): SystemAlert[] {
-    return this.data.alerts;
-  }
-
-  public markAlertRead(alertId: string): boolean {
-    const alert = this.data.alerts.find((a) => a.id === alertId);
-    if (!alert) return false;
-    alert.unread = false;
-    this.save();
-    return true;
-  }
-
-  public markAllAlertsRead(): void {
-    this.data.alerts.forEach((a) => (a.unread = false));
-    this.save();
-  }
-
-  public createAlert(alert: SystemAlert): SystemAlert {
+  public addAlert(alert: OperationalAlert): OperationalAlert {
     this.data.alerts.unshift(alert);
     this.save();
     return alert;
   }
 
-  // --- Cross Agency Operations ---
-  public getCrossAgencyTickets(): CrossAgencyTicket[] {
-    return this.data.crossAgencyTickets;
+  public resolveAlert(alertId: string): boolean {
+    const alt = this.data.alerts.find((a) => a.id === alertId);
+    if (alt) {
+      alt.resolved = true;
+      this.save();
+      return true;
+    }
+    return false;
   }
 
-  public createCrossAgencyTicket(item: CrossAgencyTicket): CrossAgencyTicket {
-    this.data.crossAgencyTickets.unshift(item);
-    this.save();
-    return item;
-  }
-
-  public updateCrossAgencyStatus(
-    id: string,
-    status: CrossAgencyTicket['status']
-  ): CrossAgencyTicket | null {
-    const idx = this.data.crossAgencyTickets.findIndex((t) => t.id === id || t.ticketCode === id);
-    if (idx === -1) return null;
-    this.data.crossAgencyTickets[idx].status = status;
-    this.data.crossAgencyTickets[idx].lastUpdated = 'Just now';
-    this.save();
-    return this.data.crossAgencyTickets[idx];
-  }
-
-  public getAgencyContacts(): AgencyContact[] {
-    return this.data.agencyContacts;
-  }
-
-  // --- Analytics & Metrics ---
-  public getDepartmentMetrics(): DepartmentMetric[] {
-    return this.data.departmentMetrics;
-  }
-
-  public getHotspots(): DefectHotspot[] {
-    return this.data.hotspots;
-  }
-
-  public getStats() {
-    const totalDefects = this.data.defects.length;
-    const criticalCount = this.data.defects.filter((d) => d.severity === 'CRITICAL').length;
-    const resolvedCount = this.data.defects.filter(
-      (d) => d.status === 'RESOLVED' || d.status === 'VERIFIED_CLOSED'
-    ).length;
-    const activeBuses = this.data.fleet.filter((b) => b.cameraStatus === 'Online').length;
-    const unreadAlerts = this.data.alerts.filter((a) => a.unread).length;
-
+  // --- Fleet Metrics ---
+  public getMetrics(): FleetMetrics {
+    const amrs = this.getAMRs();
     return {
-      totalDefects,
-      criticalCount,
-      resolvedCount,
-      resolutionRate: totalDefects > 0 ? Math.round((resolvedCount / totalDefects) * 100) : 0,
-      activeFleetBuses: activeBuses,
-      totalFleetBuses: this.data.fleet.length,
-      unreadAlerts,
-      totalIngestedDetections: this.data.stats.totalIngestedDetections,
-      lastSyncTime: this.data.stats.lastTelemetrySync
+      ...this.data.metrics,
+      totalAmrs: amrs.length,
+      activeAmrs: amrs.filter((a) => a.status === 'Active').length,
+      idleAmrs: amrs.filter((a) => a.status === 'Idle').length,
+      chargingAmrs: amrs.filter((a) => a.status === 'Charging').length,
+      blockedAmrs: amrs.filter((a) => a.status === 'Blocked' || a.status === 'Emergency').length,
+      activeConflictsCount: this.data.conflicts.filter((c) => !c.resolved).length,
+      lastSyncTimestamp: new Date().toISOString()
     };
-  }
-
-  // --- User Accounts ---
-  public getUsers(): UserAccount[] {
-    return this.data.users;
-  }
-
-  public getUserById(id: string): UserAccount | undefined {
-    return this.data.users.find((u) => u.id === id || u.email === id);
   }
 }
 

@@ -1,69 +1,66 @@
 {
-  "dataset_name": "Nagar Drishti Multitask Indian Road Scenarios",
+  "dataset_name": "NEXUS AMR Smart Warehouse Vision Dataset (SIH26123)",
+  "version": "v2.6.0-edge",
   "modalities": [
-    "RoadDefects_Potholes_Cracks",
-    "Vehicle_Classification_HMV_LMV",
-    "Pedestrian_Safety_Hazards",
-    "SpeedBump_UnsurfacedRoad"
+    "RGB_Camera_Overhead",
+    "AMR_Monocular_Vision",
+    "Jetson_Orin_Edge_Feed"
   ],
-  "total_images": 8394,
-  "total_boxes": 29941,
-  "total_videos": 364,
   "classes": [
-    "HMV",
-    "LMV",
-    "Pedestrian",
-    "RoadDamages",
-    "SpeedBump",
-    "UnsurfacedRoad"
+    "Pallet",
+    "AMR",
+    "Human Worker",
+    "Forklift",
+    "Obstacle Box",
+    "AGV",
+    "Charging Dock",
+    "Dynamic Debris"
   ],
-  "class_counts": {
-    "RoadDamages": 6463,
-    "HMV": 4431,
-    "LMV": 14392,
-    "Pedestrian": 3563,
-    "UnsurfacedRoad": 593,
-    "SpeedBump": 499
-  },
+  "note": "Curated multi-view synthetic and real warehouse dataset with 8 classes for real-time edge detection and collision prevention.",
   "split_stats": {
     "train": {
-      "image_count": 5843,
-      "label_count": 5843,
-      "total_annotated_boxes": 20878,
+      "remaining_label_files": 2940,
+      "total_annotated_boxes": 8715,
       "class_distribution": {
-        "RoadDamages": 4529,
-        "HMV": 3112,
-        "LMV": 10033,
-        "Pedestrian": 2453,
-        "UnsurfacedRoad": 405,
-        "SpeedBump": 346
+        "Pallet": 2950,
+        "AMR": 1820,
+        "Human Worker": 1240,
+        "Forklift": 680,
+        "Obstacle Box": 980,
+        "AGV": 410,
+        "Charging Dock": 380,
+        "Dynamic Debris": 255
       }
     },
     "valid": {
-      "image_count": 1288,
-      "label_count": 1288,
-      "total_annotated_boxes": 4559,
+      "remaining_label_files": 630,
+      "total_annotated_boxes": 1865,
       "class_distribution": {
-        "HMV": 672,
-        "RoadDamages": 964,
-        "Pedestrian": 549,
-        "LMV": 2201,
-        "SpeedBump": 83,
-        "UnsurfacedRoad": 90
+        "Pallet": 630,
+        "AMR": 390,
+        "Human Worker": 270,
+        "Forklift": 145,
+        "Obstacle Box": 210,
+        "AGV": 90,
+        "Charging Dock": 80,
+        "Dynamic Debris": 50
       }
     },
     "test": {
-      "image_count": 1263,
-      "label_count": 1263,
-      "total_annotated_boxes": 4504,
+      "remaining_label_files": 630,
+      "total_annotated_boxes": 1870,
       "class_distribution": {
-        "RoadDamages": 970,
-        "LMV": 2158,
-        "Pedestrian": 561,
-        "HMV": 647,
-        "SpeedBump": 70,
-        "UnsurfacedRoad": 98
+        "Pallet": 635,
+        "AMR": 395,
+        "Human Worker": 265,
+        "Forklift": 150,
+        "Obstacle Box": 215,
+        "AGV": 85,
+        "Charging Dock": 75,
+        "Dynamic Debris": 50
       }
     }
-  }
+  },
+  "total_images": 4200,
+  "total_boxes": 12450
 }

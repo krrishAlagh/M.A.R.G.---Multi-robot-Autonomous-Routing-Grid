@@ -1,281 +1,212 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
-import { DefectItem, BusFleetItem, LiveFeedDetection, SystemAlert } from '../types';
-import { INITIAL_DEFECTS, FLEET_BUSES, LIVE_FEED_ITEMS, SYSTEM_ALERTS } from '../data/mockData';
+import {
+  AMR,
+  WarehouseZone,
+  WarehouseStation,
+  WarehouseTask,
+  RobotRouteConflict,
+  EdgePerceptionDetection,
+  WarehouseObstacle,
+  OperationalAlert,
+  FleetMetrics
+} from '../types';
+import {
+  fetchAMRs,
+  fetchWarehouseMap,
+  fetchTasks,
+  fetchRouteConflicts,
+  fetchEdgePerceptions
+} from './api';
 
-export interface RealtimeState {
+export interface RealtimeWarehouseState {
   isConnected: boolean;
-  tickets: DefectItem[];
-  fleet: BusFleetItem[];
-  liveFeed: LiveFeedDetection[];
-  alerts: SystemAlert[];
-  analyticsKpi: {
-    totalIngestedDetections: number;
-    activeFleetBuses: number;
-    totalFleetBuses: number;
-    resolvedTodayCount: number;
-    criticalPotholesCount: number;
-    avgAiConfidence: number;
-    avgEdgeLatencyMs: number;
-  };
-  latestEvent: {
-    type: string;
-    message: string;
-    timestamp: string;
-  } | null;
+  amrs: AMR[];
+  zones: WarehouseZone[];
+  stations: WarehouseStation[];
+  tasks: WarehouseTask[];
+  conflicts: RobotRouteConflict[];
+  obstacles: WarehouseObstacle[];
+  perceptions: EdgePerceptionDetection[];
+  alerts: OperationalAlert[];
+  metrics: FleetMetrics;
+  latestEvent: { type: string; message: string; timestamp: string } | null;
+  selectedAmrId: string | null;
 }
 
 export function useRealtimeData() {
-  const [state, setState] = useState<RealtimeState>({
+  const [state, setState] = useState<RealtimeWarehouseState>({
     isConnected: false,
-    tickets: INITIAL_DEFECTS,
-    fleet: FLEET_BUSES,
-    liveFeed: LIVE_FEED_ITEMS,
-    alerts: SYSTEM_ALERTS,
-    analyticsKpi: {
-      totalIngestedDetections: 5843,
-      activeFleetBuses: 48,
-      totalFleetBuses: 48,
-      resolvedTodayCount: 142,
-      criticalPotholesCount: 19,
-      avgAiConfidence: 94.6,
-      avgEdgeLatencyMs: 18.4
+    amrs: [],
+    zones: [],
+    stations: [],
+    tasks: [],
+    conflicts: [],
+    obstacles: [],
+    perceptions: [],
+    alerts: [],
+    metrics: {
+      totalAmrs: 6,
+      activeAmrs: 3,
+      idleAmrs: 1,
+      chargingAmrs: 1,
+      blockedAmrs: 1,
+      taskCompletionRatePct: 98.4,
+      avgTaskTimeSec: 215,
+      warehouseThroughputPalletsHr: 142,
+      collisionWarningsAvoidedCount: 18,
+      activeConflictsCount: 1,
+      avgWifiLatencyMs: 14.2,
+      lastSyncTimestamp: new Date().toISOString()
     },
-    latestEvent: null
+    latestEvent: null,
+    selectedAmrId: null
   });
 
   const wsRef = useRef<WebSocket | null>(null);
-  const reconnectTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // 1. Initial REST API Hydration
-  const fetchInitialData = useCallback(async () => {
+  // Play audio alert tone for collisions or emergency blocks
+  const playAudioSiren = useCallback((severity: string) => {
     try {
-      // Defects
-      const defectsRes = await fetch('/api/defects').catch(() => null);
-      if (defectsRes && defectsRes.ok) {
-        const json = await defectsRes.json();
-        if (json.success && Array.isArray(json.data) && json.data.length > 0) {
-          setState((prev) => ({ ...prev, tickets: json.data }));
-        }
-      }
+      const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
 
-      // Fleet
-      const fleetRes = await fetch('/api/fleet').catch(() => null);
-      if (fleetRes && fleetRes.ok) {
-        const json = await fleetRes.json();
-        if (json.success && Array.isArray(json.data) && json.data.length > 0) {
-          setState((prev) => ({ ...prev, fleet: json.data }));
-        }
-      }
+      osc.type = severity === 'CRITICAL' ? 'sawtooth' : 'sine';
+      osc.frequency.setValueAtTime(severity === 'CRITICAL' ? 784 : 523.25, audioCtx.currentTime); // G5 or C5
+      osc.frequency.exponentialRampToValueAtTime(392, audioCtx.currentTime + 0.3);
 
-      // Live Feed
-      const feedRes = await fetch('/api/live-feed').catch(() => null);
-      if (feedRes && feedRes.ok) {
-        const json = await feedRes.json();
-        if (json.success && Array.isArray(json.data) && json.data.length > 0) {
-          setState((prev) => ({ ...prev, liveFeed: json.data }));
-        }
-      }
+      gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
 
-      // Analytics Overview
-      const analyticsRes = await fetch('/api/analytics/overview').catch(() => null);
-      if (analyticsRes && analyticsRes.ok) {
-        const json = await analyticsRes.json();
-        if (json.success && json.data && json.data.kpi) {
-          setState((prev) => ({
-            ...prev,
-            analyticsKpi: {
-              ...prev.analyticsKpi,
-              ...json.data.kpi
-            }
-          }));
-        }
-      }
-    } catch (err) {
-      console.warn('[Realtime] Initial REST hydration fallback:', err);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.3);
+    } catch {
+      // Audio playback catch
     }
   }, []);
 
-  // 2. WebSocket Realtime Sync
-  const connectWebSocket = useCallback(() => {
-    try {
-      const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-      const wsUrl = `${protocol}//${window.location.host}/ws`;
+  const hydrateData = useCallback(async () => {
+    const [amrList, mapData, taskList, conflictList, perceptionList] = await Promise.all([
+      fetchAMRs(),
+      fetchWarehouseMap(),
+      fetchTasks(),
+      fetchRouteConflicts(),
+      fetchEdgePerceptions()
+    ]);
 
-      const ws = new WebSocket(wsUrl);
-      wsRef.current = ws;
-
-      ws.onopen = () => {
-        console.log('⚡ [Realtime WS] Connected to backend telemetry stream:', wsUrl);
-        setState((prev) => ({ ...prev, isConnected: true }));
-      };
-
-      ws.onmessage = (event) => {
-        try {
-          const payload = JSON.parse(event.data);
-          const { type, data } = payload;
-
-          if (type === 'LIVE_DETECTION') {
-            setState((prev) => {
-              const updatedFeed = [data, ...prev.liveFeed.slice(0, 49)];
-              return {
-                ...prev,
-                liveFeed: updatedFeed,
-                analyticsKpi: {
-                  ...prev.analyticsKpi,
-                  totalIngestedDetections: prev.analyticsKpi.totalIngestedDetections + 1
-                },
-                latestEvent: {
-                  type: 'LIVE_DETECTION',
-                  message: `New AI Detection: ${data.title} (${data.confidence}% conf) on ${data.busNode || 'BUS'}`,
-                  timestamp: new Date().toLocaleTimeString()
-                }
-              };
-            });
-          } else if (type === 'FLEET_UPDATE') {
-            setState((prev) => {
-              const updatedFleet = prev.fleet.map((bus) =>
-                bus.busId === data.busId ? { ...bus, ...data } : bus
-              );
-              return {
-                ...prev,
-                fleet: updatedFleet
-              };
-            });
-          } else if (type === 'NEW_DEFECT' || type === 'TICKET_UPDATE') {
-            setState((prev) => {
-              const existingIndex = prev.tickets.findIndex((t) => t.id === data.id || t.ticketNumber === data.ticketNumber);
-              let updatedTickets: DefectItem[];
-              if (existingIndex >= 0) {
-                updatedTickets = [...prev.tickets];
-                updatedTickets[existingIndex] = { ...updatedTickets[existingIndex], ...data };
-              } else {
-                updatedTickets = [data, ...prev.tickets];
-              }
-              return {
-                ...prev,
-                tickets: updatedTickets,
-                latestEvent: {
-                  type: 'TICKET_UPDATE',
-                  message: `Work Order ${data.ticketNumber} [${data.status}]: ${data.title}`,
-                  timestamp: new Date().toLocaleTimeString()
-                }
-              };
-            });
-          } else if (type === 'ANALYTICS_UPDATE') {
-            if (data && data.kpi) {
-              setState((prev) => ({
-                ...prev,
-                analyticsKpi: { ...prev.analyticsKpi, ...data.kpi }
-              }));
-            }
-          } else if (type === 'NEW_ALERT' || type === 'CABIN_INCIDENT') {
-            setState((prev) => ({
-              ...prev,
-              latestEvent: {
-                type: 'ALERT',
-                message: `Safety Alert: ${data.title || data.category || 'Incident reported'}`,
-                timestamp: new Date().toLocaleTimeString()
-              }
-            }));
-          }
-        } catch (err) {
-          console.warn('[Realtime WS] Message parse error:', err);
-        }
-      };
-
-      ws.onclose = () => {
-        setState((prev) => ({ ...prev, isConnected: false }));
-        // Auto-reconnect after 2.5s
-        reconnectTimeoutRef.current = setTimeout(() => {
-          connectWebSocket();
-        }, 2500);
-      };
-
-      ws.onerror = () => {
-        ws.close();
-      };
-    } catch (err) {
-      console.warn('[Realtime WS] Connection setup failed:', err);
-    }
+    setState((prev) => ({
+      ...prev,
+      amrs: amrList.length > 0 ? amrList : prev.amrs,
+      zones: mapData?.zones || prev.zones,
+      stations: mapData?.stations || prev.stations,
+      obstacles: mapData?.obstacles || prev.obstacles,
+      tasks: taskList.length > 0 ? taskList : prev.tasks,
+      conflicts: conflictList,
+      perceptions: perceptionList.length > 0 ? perceptionList : prev.perceptions
+    }));
   }, []);
 
   useEffect(() => {
-    fetchInitialData();
-    connectWebSocket();
+    hydrateData();
+
+    // WebSocket Telemetry Connection
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const wsUrl = `${protocol}//${window.location.hostname}:3005/ws`;
+
+    const connectWS = () => {
+      try {
+        const ws = new WebSocket(wsUrl);
+        wsRef.current = ws;
+
+        ws.onopen = () => {
+          console.log('[NEXUS Realtime WS] Connected to AMR Fleet Telemetry Server.');
+          setState((prev) => ({ ...prev, isConnected: true }));
+        };
+
+        ws.onmessage = (evt) => {
+          try {
+            const payload = JSON.parse(evt.data);
+
+            if (payload.type === 'AMR_TELEMETRY' && payload.data) {
+              const amr: AMR = payload.data;
+              setState((prev) => {
+                const idx = prev.amrs.findIndex((a) => a.id === amr.id);
+                const updatedAmrs = [...prev.amrs];
+                if (idx >= 0) updatedAmrs[idx] = amr;
+                else updatedAmrs.push(amr);
+                return { ...prev, amrs: updatedAmrs };
+              });
+            } else if (payload.type === 'TASK_UPDATE' && payload.data) {
+              const task: WarehouseTask = payload.data;
+              setState((prev) => {
+                const idx = prev.tasks.findIndex((t) => t.id === task.id);
+                const updatedTasks = [...prev.tasks];
+                if (idx >= 0) updatedTasks[idx] = task;
+                else updatedTasks.unshift(task);
+                return { ...prev, tasks: updatedTasks };
+              });
+            } else if (payload.type === 'WAREHOUSE_OBSTACLE' && payload.data) {
+              const obs: WarehouseObstacle = payload.data;
+              playAudioSiren('WARNING');
+              setState((prev) => ({
+                ...prev,
+                obstacles: [obs, ...prev.obstacles],
+                latestEvent: {
+                  type: 'OBSTACLE_DETECTED',
+                  message: `New obstacle ${obs.code} (${obs.type}) injected at X:${obs.position.x}, Y:${obs.position.y}`,
+                  timestamp: new Date().toLocaleTimeString()
+                }
+              }));
+            } else if (payload.type === 'SIMULATION_EVENT' && payload.data) {
+              playAudioSiren('CRITICAL');
+              setState((prev) => ({
+                ...prev,
+                latestEvent: {
+                  type: payload.data.scenario,
+                  message: payload.data.message,
+                  timestamp: new Date().toLocaleTimeString()
+                }
+              }));
+              hydrateData();
+            }
+          } catch (err) {
+            console.warn('[NEXUS WS] Parse error:', err);
+          }
+        };
+
+        ws.onclose = () => {
+          setState((prev) => ({ ...prev, isConnected: false }));
+          setTimeout(connectWS, 4000);
+        };
+
+        ws.onerror = () => {
+          ws.close();
+        };
+      } catch {
+        setState((prev) => ({ ...prev, isConnected: false }));
+      }
+    };
+
+    connectWS();
 
     return () => {
-      if (reconnectTimeoutRef.current) clearTimeout(reconnectTimeoutRef.current);
-      if (wsRef.current) wsRef.current.close();
+      if (wsRef.current) {
+        wsRef.current.close();
+      }
     };
-  }, [fetchInitialData, connectWebSocket]);
+  }, [hydrateData, playAudioSiren]);
 
-  // Methods to interact with backend
-  const updateTicketStatus = async (ticketId: string, status: DefectItem['status']) => {
-    setState((prev) => ({
-      ...prev,
-      tickets: prev.tickets.map((t) => (t.id === ticketId ? { ...t, status } : t))
-    }));
-
-    try {
-      await fetch(`/api/defects/${ticketId}/status`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ status })
-      });
-    } catch (err) {
-      console.warn('[Realtime] Status patch error:', err);
-    }
-  };
-
-  const addTicket = async (newTicket: DefectItem) => {
-    setState((prev) => ({
-      ...prev,
-      tickets: [newTicket, ...prev.tickets]
-    }));
-
-    try {
-      await fetch('/api/defects', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newTicket)
-      });
-    } catch (err) {
-      console.warn('[Realtime] Defect creation error:', err);
-    }
-  };
-
-  const addComment = async (ticketId: string, commentText: string, userRole: string) => {
-    const newComment = {
-      id: `cmt-${Date.now()}`,
-      author: `Officer (${userRole})`,
-      role: userRole as any,
-      time: 'Just now',
-      text: commentText
-    };
-
-    setState((prev) => ({
-      ...prev,
-      tickets: prev.tickets.map((t) =>
-        t.id === ticketId ? { ...t, comments: [...(t.comments || []), newComment] } : t
-      )
-    }));
-
-    try {
-      await fetch(`/api/defects/${ticketId}/comments`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newComment)
-      });
-    } catch (err) {
-      console.warn('[Realtime] Comment post error:', err);
-    }
+  const selectAmr = (id: string | null) => {
+    setState((prev) => ({ ...prev, selectedAmrId: id }));
   };
 
   return {
     state,
-    updateTicketStatus,
-    addTicket,
-    addComment,
-    refetch: fetchInitialData
+    refreshData: hydrateData,
+    selectAmr,
+    playAudioSiren
   };
 }

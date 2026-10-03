@@ -1,16 +1,14 @@
 export type ActiveView = 
-  | 'dashboard'
-  | 'live-map'
-  | 'tickets'
-  | 'ticket-detail'
-  | 'safety-complaints'
-  | 'accident-analytics'
-  | 'analytics'
+  | 'overview'
   | 'fleet'
-  | 'multi-agency'
-  | 'notifications'
+  | 'warehouse'
+  | 'tasks'
+  | 'coordination'
+  | 'edge-ai'
+  | 'alerts'
+  | 'analytics'
+  | 'simulation'
   | 'settings'
-  | 'services-directory'
   | 'login';
 
 export type Language = 'en' | 'hi';
@@ -18,245 +16,162 @@ export type Theme = 'light' | 'dark';
 export type FontSizeScale = 'sm' | 'md' | 'lg';
 
 export type UserRole = 
-  | 'Municipal Admin'
-  | 'Zonal Officer'
-  | 'Repair Crew Lead'
-  | 'Transport Authority';
+  | 'Warehouse Operations Director'
+  | 'Fleet Systems Engineer'
+  | 'Safety & Edge AI Specialist'
+  | 'Warehouse Floor Supervisor';
 
-export type TicketPriority = 'CRITICAL' | 'HIGH' | 'MED' | 'LOW';
-export type TicketStatus = 'NEW' | 'ASSIGNED' | 'IN_PROGRESS' | 'RESOLVED' | 'VERIFIED_CLOSED';
+export type AmrStatus = 
+  | 'Active' 
+  | 'Idle' 
+  | 'Charging' 
+  | 'Blocked' 
+  | 'Maintenance' 
+  | 'Emergency';
 
-export type DefectCategory = 
-  | 'Potholes'
-  | 'Sanitation'
-  | 'Streetlights'
-  | 'Water Logging'
-  | 'Encroachment'
-  | 'Electrical'
-  | 'Manhole Hazard'
-  | 'Traffic Signal';
+export type TaskPriority = 'CRITICAL' | 'HIGH' | 'MEDIUM' | 'LOW';
 
-export interface CommentItem {
+export type TaskStatus = 'PENDING' | 'ASSIGNED' | 'IN_TRANSIT' | 'COMPLETED' | 'FAILED';
+
+export interface GridPosition {
+  x: number;
+  y: number;
+  zoneId?: string;
+  aisle?: string;
+}
+
+export interface AMRHealth {
+  motorTempC: number;
+  wifiSignalDbm: number;
+  sensorOk: boolean;
+  lidarStatus: 'OK' | 'DEGRADED' | 'OFFLINE';
+  batteryCycles: number;
+}
+
+export interface AMR {
   id: string;
-  author: string;
-  avatar?: string;
-  role: string;
-  time: string;
-  text: string;
-}
-
-export interface TimelineItem {
-  title: string;
-  subtitle: string;
-  time: string;
-  completed: boolean;
-  active?: boolean;
-}
-
-export interface DefectItem {
-  id: string;
-  ticketNumber: string;
-  title: string;
-  category: DefectCategory;
-  severity: TicketPriority;
-  confidence: number;
-  locationName: string;
-  coordinates: {
-    lat: number;
-    lng: number;
-    formatted: string;
-  };
-  ward: string;
-  timestamp: string;
-  timeAgo: string;
-  imageUrl: string;
-  hasOverlay?: boolean;
-  busId?: string;
-  assignedTo?: {
-    name: string;
-    avatar?: string;
-    team?: string;
-  };
-  department: string;
-  slaRemaining: string;
-  isOverdue?: boolean;
-  description: string;
-  status: TicketStatus;
-  comments?: CommentItem[];
-  timeline?: TimelineItem[];
-}
-
-export interface LiveFeedDetection {
-  id: string;
-  title: string;
-  category: string;
-  severity: 'error' | 'warning' | 'info';
-  confidence: number;
-  location: string;
-  timestamp: string;
-  imageUrl: string;
-  hasImage: boolean;
-  ticketId?: string;
-  busNode?: string;
-  speedKmh?: number;
-  latencyMs?: number;
-  fps?: number;
-  bbox?: { x: number; y: number; w: number; h: number };
-}
-
-export interface BusFleetItem {
-  busId: string;
-  route: string;
-  cameraStatus: 'Online' | 'Warning' | 'Offline';
-  gpsSignal: 'full' | 'medium' | 'lost';
-  lastSyncTime: string;
-  kmScanned: number;
-  depot: string;
-  coordinates: { x: number; y: number };
-  activeAlert?: string;
-}
-
-export interface SystemAlert {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  time: string;
-  type: 'critical' | 'warning' | 'info';
-  icon: string;
-  unread?: boolean;
-}
-
-export interface AutoRoutingRule {
-  id: string;
+  code: string;
   name: string;
-  condition: string;
-  action: string;
-  isActive: boolean;
-  department: string;
-  severity: TicketPriority;
-  sla: string;
+  model: string;
+  status: AmrStatus;
+  batteryLevel: number; // 0 - 100
+  currentPosition: GridPosition;
+  speed: number; // m/s
+  heading: number; // degrees 0-360
+  payloadKg: number;
+  maxPayloadKg: number;
+  currentTaskId?: string;
+  currentRoute: GridPosition[];
+  health: AMRHealth;
+  cameraFeedUrl: string;
+  isSimulated?: boolean;
 }
 
-export interface CrossAgencyTicket {
+export interface WarehouseZone {
   id: string;
-  ticketCode: string;
-  issue: string;
-  originatingDept: string;
-  receivingDept: string;
-  status: 'Pending Hand-off' | 'Urgent Action' | 'In Progress' | 'Resolved';
-  hasUnreadMessage: boolean;
-  lastUpdated: string;
-  messagesCount: number;
-}
-
-export interface AgencyContact {
-  id: string;
+  code: string;
   name: string;
-  officer: string;
-  designation: string;
-  phone: string;
-  available: boolean;
+  type: 'Storage' | 'Aisle' | 'Loading' | 'Unloading' | 'Charging' | 'Restricted';
+  bounds: { x: number; y: number; width: number; height: number };
+  status: 'CLEAR' | 'CONGESTED' | 'BLOCKED';
 }
 
-export interface DepartmentMetric {
-  department: string;
-  assigned: number;
-  resolved: number;
-  avgResTimeHrs: number;
-  slaCompliance: number;
-}
-
-export interface DefectHotspot {
+export interface WarehouseStation {
   id: string;
-  locationCode: string;
+  code: string;
   name: string;
-  primaryIssue: string;
-  repeatCount: number;
-  lastDetected: string;
-  badgeType: 'error' | 'warning' | 'secondary';
+  type: 'Pickup' | 'Dropoff' | 'Charging' | 'Maintenance';
+  position: GridPosition;
 }
 
-export type CabinIncidentCategory = 
-  | 'Driver Misconduct / Phone Use'
-  | 'Conductor Overcharging / Dispute'
-  | 'Passenger Harassment / Women Safety'
-  | 'Overcrowding & Gate Blocking'
-  | 'Fare POS & Sensor Malfunction'
-  | 'Medical Emergency / Fall';
+export interface TaskScoreBreakdown {
+  distanceScore: number;
+  batteryScore: number;
+  workloadScore: number;
+  priorityScore: number;
+  congestionScore: number;
+  totalScore: number;
+}
 
-export interface BusCabinIncident {
+export interface WarehouseTask {
   id: string;
-  ticketCode: string;
-  busNumber: string;
-  routeNumber: string;
-  category: CabinIncidentCategory;
-  severity: 'CRITICAL' | 'HIGH' | 'MED' | 'LOW';
-  detectedBy: 'AI Cabin Camera' | 'Citizen Passenger' | 'Conductor Panic Switch' | 'Depot Inspection';
-  status: 'NEW' | 'INVESTIGATING' | 'DISPATCHED_ENFORCEMENT' | 'RESOLVED';
+  taskCode: string;
+  title: string;
+  pickupStationId: string;
+  pickupStationName: string;
+  dropoffStationId: string;
+  dropoffStationName: string;
+  priority: TaskPriority;
+  status: TaskStatus;
+  assignedAmrId?: string;
+  assignedAmrCode?: string;
+  estimatedWeightKg: number;
+  scoreBreakdown?: TaskScoreBreakdown;
+  createdTime: string;
+  estimatedDurationSec: number;
+  completedTime?: string;
+}
+
+export interface RobotRouteConflict {
+  id: string;
+  amrId1: string;
+  amrCode1: string;
+  amrId2: string;
+  amrCode2: string;
+  location: GridPosition;
+  conflictType: 'SAME_CELL' | 'CROSSING' | 'OBSTACLE_BLOCK';
+  severity: 'CRITICAL' | 'HIGH' | 'WARNING';
+  recommendedAction: string;
+  resolved: boolean;
   timestamp: string;
-  timeAgo: string;
-  location: string;
-  ward: string;
-  driverName: string;
-  conductorName: string;
-  description: string;
-  passengerName?: string;
-  passengerPhone?: string;
-  hasCctvClip?: boolean;
-  cctvSnapshotUrl?: string;
-  resolutionNotes?: string;
 }
 
-export interface AccidentZoneBlackspot {
+export interface EdgePerceptionDetection {
   id: string;
-  spotCode: string;
-  corridorName: string;
-  ward: string;
-  riskLevel: 'EXTREME_RISK' | 'HIGH_RISK' | 'MODERATE_RISK';
-  accidentsPast30Days: number;
-  accidentsPast6Months: number;
-  accidentsPast1Year: number;
-  fatalitiesCount: number;
-  injuriesCount: number;
-  dailyTrafficVolume: string;
-  coordinates: {
-    lat: number;
-    lng: number;
-    formatted: string;
-    mapX: number;
-    mapY: number;
-  };
-  primaryHazardFactors: string[];
-  lastAccidentDate: string;
-  safetyIndexScore: number;
-  remedialActionStatus: 'Survey In Progress' | 'Speed Tables Approved' | 'Lighting Retrofit Underway' | 'Signage Installed' | 'Pending Action';
-  actionAuthority: string;
+  amrId: string;
+  amrCode: string;
+  objectClass: 'Person' | 'Pallet' | 'Debris' | 'Forklift' | 'Obstacle' | 'AMR';
+  confidence: number; // 0.0 - 1.0
+  bbox: { x: number; y: number; w: number; h: number };
+  location: GridPosition;
+  timestamp: string;
+  snapshotUrl: string;
+  isSimulated: boolean;
 }
 
-export interface UIDAIStyleServiceItem {
+export interface WarehouseObstacle {
   id: string;
-  titleHi: string;
-  titleEn: string;
-  descHi: string;
-  descEn: string;
-  icon: string;
-  badge?: string;
-  targetView: ActiveView;
-  subCategory: string;
-  actionType?: 'navigate' | 'modal' | 'filter';
-  filterKey?: string;
+  code: string;
+  position: GridPosition;
+  type: 'Pallet Debris' | 'Maintenance Rig' | 'Human Operator' | 'Temporary Box';
+  detectedByAmrId: string;
+  timestamp: string;
 }
 
-export interface UIDAIStylePortalSection {
+export interface OperationalAlert {
   id: string;
-  headingHi: string;
-  headingEn: string;
-  subheadingHi: string;
-  subheadingEn: string;
-  icon: string;
-  color: string;
-  items: UIDAIStyleServiceItem[];
+  alertType: 'COLLISION_WARNING' | 'LOW_BATTERY' | 'ROBOT_BLOCKED' | 'TASK_TIMEOUT' | 'HARDWARE_FAULT';
+  severity: 'CRITICAL' | 'WARNING' | 'INFO';
+  amrId?: string;
+  amrCode?: string;
+  message: string;
+  timestamp: string;
+  resolved: boolean;
+}
+
+export interface FleetMetrics {
+  totalAmrs: number;
+  activeAmrs: number;
+  idleAmrs: number;
+  chargingAmrs: number;
+  blockedAmrs: number;
+  taskCompletionRatePct: number;
+  avgTaskTimeSec: number;
+  warehouseThroughputPalletsHr: number;
+  collisionWarningsAvoidedCount: number;
+  activeConflictsCount: number;
+  avgWifiLatencyMs: number;
+  lastSyncTimestamp: string;
 }
 
 export interface UserAccount {
@@ -267,5 +182,4 @@ export interface UserAccount {
   department: string;
   avatar: string;
   phone: string;
-  wardAssigned?: string;
 }

@@ -1,34 +1,34 @@
 import { Router } from 'express';
 import authRoutes from './auth.routes';
-import defectsRoutes from './defects.routes';
-import liveFeedRoutes from './liveFeed.routes';
-import fleetRoutes from './fleet.routes';
-import cabinIncidentsRoutes from './cabinIncidents.routes';
-import blackspotsRoutes from './blackspots.routes';
-import crossAgencyRoutes from './crossAgency.routes';
-import rulesRoutes from './rules.routes';
-import analyticsRoutes from './analytics.routes';
-import alertsRoutes from './alerts.routes';
-import aiRoutes from './ai.routes';
-import portalRoutes from './portal.routes';
+import amrRoutes from './amr.routes';
+import warehouseRoutes from './warehouse.routes';
+import tasksRoutes from './tasks.routes';
+import coordinationRoutes from './coordination.routes';
+import edgeAiRoutes from './edgeAi.routes';
+import simulationRoutes from './simulation.routes';
 import systemRoutes from './system.routes';
-import automationRoutes from './automation.routes';
 
 const masterRouter = Router();
 
+// Version 1 Routes (/api/v1/...)
+const v1Router = Router();
+v1Router.use('/amrs', amrRoutes);
+v1Router.use('/warehouse', warehouseRoutes);
+v1Router.use('/tasks', tasksRoutes);
+v1Router.use('/coordination', coordinationRoutes);
+v1Router.use('/edge-ai', edgeAiRoutes);
+v1Router.use('/simulation', simulationRoutes);
+
+masterRouter.use('/v1', v1Router);
+
+// Standard API Routes (/api/...)
 masterRouter.use('/auth', authRoutes);
-masterRouter.use('/defects', defectsRoutes);
-masterRouter.use('/live-feed', liveFeedRoutes);
-masterRouter.use('/fleet', fleetRoutes);
-masterRouter.use('/cabin-incidents', cabinIncidentsRoutes);
-masterRouter.use('/blackspots', blackspotsRoutes);
-masterRouter.use('/cross-agency', crossAgencyRoutes);
-masterRouter.use('/rules', rulesRoutes);
-masterRouter.use('/analytics', analyticsRoutes);
-masterRouter.use('/alerts', alertsRoutes);
-masterRouter.use('/ai', aiRoutes);
-masterRouter.use('/portal', portalRoutes);
-masterRouter.use('/automation', automationRoutes);
+masterRouter.use('/amrs', amrRoutes);
+masterRouter.use('/warehouse', warehouseRoutes);
+masterRouter.use('/tasks', tasksRoutes);
+masterRouter.use('/coordination', coordinationRoutes);
+masterRouter.use('/edge-ai', edgeAiRoutes);
+masterRouter.use('/simulation', simulationRoutes);
 masterRouter.use('/', systemRoutes);
 
 export default masterRouter;
