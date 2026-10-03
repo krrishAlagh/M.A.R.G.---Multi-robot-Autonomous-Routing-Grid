@@ -44,10 +44,11 @@
       "name": "Titan Payload Carrier 1",
       "model": "Nexus AMR-1000 Pro",
       "status": "Idle",
-      "batteryLevel": 26,
+      "batteryLevel": 95,
       "currentPosition": {
-        "x": 46,
-        "y": 6
+        "x": 4,
+        "y": 38,
+        "zoneId": "zone-5"
       },
       "speed": 0,
       "heading": 90,
@@ -2651,6 +2652,16 @@
     }
   ],
   "alerts": [
+    {
+      "id": "alt-bat-1791022686388",
+      "alertType": "LOW_BATTERY",
+      "severity": "WARNING",
+      "amrId": "amr-01",
+      "amrCode": "AMR-01",
+      "message": "AMR-01 battery dropped below 15% threshold. Returning to Wireless Dock C1.",
+      "timestamp": "2026-10-03T10:18:06.388Z",
+      "resolved": false
+    },
     {
       "id": "alt-1791021691476",
       "alertType": "ROBOT_BLOCKED",

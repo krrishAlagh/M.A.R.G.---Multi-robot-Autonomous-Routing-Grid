@@ -1,4 +1,5 @@
 export type ActiveView = 
+  | 'dashboard'
   | 'overview'
   | 'fleet'
   | 'warehouse'
@@ -8,7 +9,6 @@ export type ActiveView =
   | 'alerts'
   | 'analytics'
   | 'simulation'
-  | 'api-explorer'
   | 'settings'
   | 'login';
 

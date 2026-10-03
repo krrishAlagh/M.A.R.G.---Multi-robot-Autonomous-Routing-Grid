@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ActiveView, Language, UserRole, Theme } from './types';
 import { NavBar } from './components/NavBar';
+import { DashboardView } from './components/DashboardView';
 import { WarehouseDigitalTwinView } from './components/WarehouseDigitalTwinView';
 import { AmrFleetView } from './components/AmrFleetView';
 import { TaskAllocationView } from './components/TaskAllocationView';
@@ -8,7 +9,6 @@ import { MultiRobotCoordinationView } from './components/MultiRobotCoordinationV
 import { EdgeAiPerceptionView } from './components/EdgeAiPerceptionView';
 import { WarehouseAnalyticsView } from './components/WarehouseAnalyticsView';
 import { JudgeDemoSimulationView } from './components/JudgeDemoSimulationView';
-import { ApiExplorerView } from './components/ApiExplorerView';
 import { NotificationsView } from './components/NotificationsView';
 import { SettingsView } from './components/SettingsView';
 import { LoginView } from './components/LoginView';
@@ -130,6 +130,21 @@ export default function App() {
       <main className="pt-[96px] min-h-screen">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
+          {/* 0. Dashboard */}
+          {activeView === 'dashboard' && (
+            <DashboardView
+              language={language}
+              amrs={realtimeState.amrs}
+              tasks={realtimeState.tasks}
+              conflicts={realtimeState.conflicts}
+              alerts={realtimeState.alerts}
+              metrics={realtimeState.metrics}
+              isConnected={realtimeState.isConnected}
+              onNavigate={(view) => setActiveView(view)}
+              onSelectAmr={(id) => selectAmr(id)}
+            />
+          )}
+
           {/* 1. Digital Twin / Warehouse Grid */}
           {(activeView === 'overview' || activeView === 'warehouse') && (
             <WarehouseDigitalTwinView
@@ -202,11 +217,6 @@ export default function App() {
               language={language}
               onRefresh={refreshData}
             />
-          )}
-
-          {/* 9. API Playground & OpenAPI Explorer */}
-          {activeView === 'api-explorer' && (
-            <ApiExplorerView language={language} />
           )}
 
           {/* 10. Settings */}

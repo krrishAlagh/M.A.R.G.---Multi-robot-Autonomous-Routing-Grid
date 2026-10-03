@@ -29,15 +29,15 @@ interface NavItem {
 }
 
 const ALL_NAV_ITEMS: NavItem[] = [
-  { id: 'overview', label: 'Digital Twin', labelHi: 'डिजिटल जुड़वा', icon: 'grid_view', shortcut: '⌘1' },
+  { id: 'dashboard', label: 'Dashboard', labelHi: 'डैशबोर्ड', icon: 'dashboard', shortcut: '⌘D' },
+  { id: 'overview', label: 'Digital Twin', labelHi: 'डिजिटल ट्विन', icon: 'grid_view', shortcut: '⌘1' },
   { id: 'fleet', label: 'AMR Fleet', labelHi: 'एएमआर फ्लीट', icon: 'smart_toy', badge: '6', shortcut: '⌘2' },
   { id: 'tasks', label: 'Task Allocator', labelHi: 'कार्य आवंटन', icon: 'assignment', shortcut: '⌘3' },
-  { id: 'coordination', label: 'Multi-Robot Pathing', labelHi: 'पाथ योजना', icon: 'alt_route', badge: 'A*', shortcut: '⌘4' },
-  { id: 'edge-ai', label: 'Edge AI Perception', labelHi: 'एज एआई', icon: 'videocam_sensor', badge: '<15ms', shortcut: '⌘5' },
-  { id: 'analytics', label: 'Throughput Metrics', labelHi: 'थ्रूपुट आंकड़े', icon: 'analytics', shortcut: '⌘6' },
-  { id: 'simulation', label: 'SIH Judge Demo', labelHi: 'SIH जज डेमो', icon: 'sports_esports', badge: 'Live', shortcut: '⌘7' },
-  { id: 'alerts', label: 'Safety Alerts', labelHi: 'सुरक्षा अलर्ट', icon: 'notifications', shortcut: '⌘8' },
-  { id: 'api-explorer', label: 'API Playground', labelHi: 'एपीआई प्लेग्राउंड', icon: 'api', badge: 'REST/WS', shortcut: '⌘0' },
+  { id: 'coordination', label: 'Multi-Robot', labelHi: 'पाथ योजना', icon: 'alt_route', badge: 'A*', shortcut: '⌘4' },
+  { id: 'edge-ai', label: 'Edge AI Vision', labelHi: 'एज एआई', icon: 'videocam_sensor', badge: '<15ms', shortcut: '⌘5' },
+  { id: 'analytics', label: 'Analytics', labelHi: 'आंकड़े', icon: 'analytics', shortcut: '⌘6' },
+  { id: 'simulation', label: 'Judge Demo', labelHi: 'जज डेमो', icon: 'sports_esports', badge: 'Live', shortcut: '⌘7' },
+  { id: 'alerts', label: 'Alerts', labelHi: 'अलर्ट', icon: 'notifications', shortcut: '⌘8' },
   { id: 'settings', label: 'Settings', labelHi: 'सेटिंग्स', icon: 'settings', shortcut: '⌘9' }
 ];
 

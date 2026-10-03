@@ -101,20 +101,20 @@ export const ROLE_PROFILES: Record<UserRole, RoleProfile> = {
 
 export const ROLE_PERMISSIONS: Record<UserRole, RolePermissions> = {
   'Warehouse Operations Director': {
-    allowedViews: ['overview', 'fleet', 'warehouse', 'tasks', 'coordination', 'edge-ai', 'alerts', 'analytics', 'simulation', 'api-explorer', 'settings'],
-    defaultView: 'overview'
+    allowedViews: ['dashboard', 'overview', 'fleet', 'warehouse', 'tasks', 'coordination', 'edge-ai', 'alerts', 'analytics', 'simulation', 'settings'],
+    defaultView: 'dashboard'
   },
   'Fleet Systems Engineer': {
-    allowedViews: ['overview', 'fleet', 'warehouse', 'coordination', 'edge-ai', 'alerts', 'analytics', 'simulation', 'api-explorer', 'settings'],
-    defaultView: 'coordination'
+    allowedViews: ['dashboard', 'overview', 'fleet', 'warehouse', 'coordination', 'edge-ai', 'alerts', 'analytics', 'simulation', 'settings'],
+    defaultView: 'dashboard'
   },
   'Safety & Edge AI Specialist': {
-    allowedViews: ['overview', 'fleet', 'edge-ai', 'alerts', 'analytics', 'simulation', 'api-explorer', 'settings'],
-    defaultView: 'edge-ai'
+    allowedViews: ['dashboard', 'overview', 'fleet', 'edge-ai', 'alerts', 'analytics', 'simulation', 'settings'],
+    defaultView: 'dashboard'
   },
   'Warehouse Floor Supervisor': {
-    allowedViews: ['overview', 'fleet', 'warehouse', 'tasks', 'alerts', 'api-explorer', 'settings'],
-    defaultView: 'tasks'
+    allowedViews: ['dashboard', 'overview', 'fleet', 'warehouse', 'tasks', 'alerts', 'settings'],
+    defaultView: 'dashboard'
   }
 };
 
