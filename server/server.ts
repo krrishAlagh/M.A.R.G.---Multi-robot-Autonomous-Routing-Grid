@@ -1,5 +1,6 @@
 import http from 'http';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import express, { Express, Request, Response } from 'express';
 import cors from 'cors';
 import { ENV } from './config/env';
@@ -10,11 +11,22 @@ import masterRouter from './routes';
 import { wsService } from './services/websocket.service';
 import { TelemetryService } from './services/telemetry.service';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+// Resolve to the repo root whether running from /server or from /
+const ROOT_DIR = path.resolve(__dirname, '..');
+
 const app: Express = express();
 const server = http.createServer(app);
 
-// Security & Parsing Middlewares
-app.use(cors({ origin: ENV.CORS_ORIGIN, credentials: true }));
+// Trust Cloud Run / reverse-proxy forwarded headers (X-Forwarded-For, etc.)
+app.set('trust proxy', 1);
+
+// CORS — in production restrict to APP_URL; in dev allow all
+const corsOrigin = ENV.IS_PRODUCTION
+  ? [ENV.APP_URL, /\.run\.app$/]
+  : (ENV.CORS_ORIGIN === '*' ? '*' : ENV.CORS_ORIGIN);
+app.use(cors({ origin: corsOrigin, credentials: true }));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(rateLimiter);
@@ -23,10 +35,11 @@ app.use(requestLogger);
 // Serve CCTV footage and dataset archives directly to the frontend
 app.use('/datasets', express.static(path.join(process.cwd(), 'datasets')));
 
-// Root greeting & redirect to docs
-app.get('/', (req: Request, res: Response) => {
-  res.redirect('/api/docs');
-});
+// In production: serve the compiled React SPA from dist/
+if (ENV.IS_PRODUCTION) {
+  const distDir = path.join(ROOT_DIR, 'dist');
+  app.use(express.static(distDir));
+}
 
 // Master API Routes
 app.use('/api', masterRouter);
@@ -41,6 +54,20 @@ app.use('/api/*', (req: Request, res: Response) => {
     }
   });
 });
+
+// In production: SPA catch-all — serve index.html for all non-API routes
+// This enables React Router to handle client-side navigation on deep links
+if (ENV.IS_PRODUCTION) {
+  const distDir = path.join(ROOT_DIR, 'dist');
+  app.get('*', (req: Request, res: Response) => {
+    res.sendFile(path.join(distDir, 'index.html'));
+  });
+} else {
+  // Dev: redirect root to API docs
+  app.get('/', (req: Request, res: Response) => {
+    res.redirect('/api/docs');
+  });
+}
 
 // Global Error Handler
 app.use(errorHandler);
