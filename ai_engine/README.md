@@ -1,6 +1,6 @@
-# NEXUS AMR OS — Distributed Edge-AI Fleet Coordination Engine (SIH26123)
+# M.A.R.G. - Multi-robot Autonomous Routing Grid — Distributed Edge-AI Fleet Coordination Engine (SIH26123)
 
-Production-grade, end-to-end Edge-to-Cloud AI/ML pipeline for **NEXUS AMR OS (SIH Problem Statement 26123)**: Edge-AI Based Distributed Fleet Coordination for Autonomous Mobile Robots (AMRs) in Smart Warehouses.
+Production-grade, end-to-end Edge-to-Cloud AI/ML pipeline for **M.A.R.G. - Multi-robot Autonomous Routing Grid (SIH Problem Statement 26123)**: Edge-AI Based Distributed Fleet Coordination for Autonomous Mobile Robots (AMRs) in Smart Warehouses.
 
 ```
        🤖 [Onboard Edge-AI Hardware - NVIDIA Jetson Orin NX]
@@ -33,7 +33,7 @@ Production-grade, end-to-end Edge-to-Cloud AI/ML pipeline for **NEXUS AMR OS (SI
 └────────────────────────┬─────────────────────────────────────┘
                          │ WebSockets / REST API
                          ▼
-       🖥️ [NEXUS AMR Command Center & Digital Twin Dashboard]
+       🖥️ [M.A.R.G. Command Center & Digital Twin Dashboard]
 ```
 
 ---

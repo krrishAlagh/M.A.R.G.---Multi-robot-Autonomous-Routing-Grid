@@ -12,7 +12,7 @@ router.get('/health', (req: Request, res: Response) => {
 
   res.json({
     status: 'healthy',
-    service: 'NEXUS AMR OS - Distributed Fleet Coordination Backend',
+    service: 'M.A.R.G. - Multi-robot Autonomous Routing Grid Backend',
     version: '2.6.0',
     timestamp: new Date().toISOString(),
     uptimeSeconds,

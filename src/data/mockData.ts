@@ -5,7 +5,7 @@ export const ASSETS = {
 };
 
 export const GOV_TICKER_BULLETINS = [
-  'NEXUS AMR OS v2.6 Active: Real-time Multi-Robot Coordination & Sub-18ms Edge Perception online.',
+  'M.A.R.G. - Multi-robot Autonomous Routing Grid v2.6 Active: Real-time Multi-Robot Coordination & Sub-18ms Edge Perception online.',
   'Task Allocation Engine: Dynamic scoring (Distance 35%, Battery 25%, Workload 20%, Priority 10%, Congestion 10%).',
   'Safety Interlock System: Edge YOLOv8 vision active on AMRs 1..6 with automatic E-Stop override.'
 ];
@@ -21,7 +21,7 @@ export const TRANSLATIONS: Record<'en' | 'hi', Record<string, string>> = {
     fleetMonitoring: 'AMR Fleet Manager',
     multiAgency: 'Coordination Engine',
     notifications: 'Operational Alerts',
-    settings: 'NEXUS System Settings',
+    settings: 'M.A.R.G. System Settings',
     allServices: 'Warehouse Zones & Storage',
     newWorkOrder: '+ Create Logistics Task'
   },

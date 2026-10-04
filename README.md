@@ -1,4 +1,4 @@
-# NEXUS AMR OS v2.6.0 — Edge-AI Distributed Fleet Coordination Engine
+# M.A.R.G. - Multi-robot Autonomous Routing Grid v2.6.0 — Edge-AI Distributed Fleet Coordination Engine
 
 [![SIH 2026](https://img.shields.io/badge/SIH-2026-blue.svg)](https://smartindiahackathon.gov.in)
 [![Problem Statement](https://img.shields.io/badge/Problem%20Statement-SIH26123-orange.svg)](#sih26123-problem-statement)
@@ -19,8 +19,8 @@ In modern smart warehouses, scaling fleets of Autonomous Mobile Robots (AMRs) cr
 3. **Sub-optimal Task Allocations**: Greedy task assignment algorithms ignore real-time robot battery thermal degradation, distance metrics, and current workload.
 4. **Perception Latency**: Offloading raw camera feeds to the cloud consumes excessive network bandwidth and introduces unacceptable delays for emergency stopping.
 
-### The NEXUS Solution
-**NEXUS AMR OS** combines **onboard Edge-AI vision perception** (NVIDIA Jetson Orin INT8 YOLOv8) with a **sub-15ms peer-to-peer conflict resolution mesh** and a **multi-criteria task allocation scoring engine**, accessible via an interactive **2D Digital Twin Control Center**.
+### The M.A.R.G. Solution
+**M.A.R.G. - Multi-robot Autonomous Routing Grid** combines **onboard Edge-AI vision perception** (NVIDIA Jetson Orin INT8 YOLOv8) with a **sub-15ms peer-to-peer conflict resolution mesh** and a **multi-criteria task allocation scoring engine**, accessible via an interactive **2D Digital Twin Control Center**.
 
 ---
 
@@ -57,7 +57,7 @@ In modern smart warehouses, scaling fleets of Autonomous Mobile Robots (AMRs) cr
 └────────────────────────────────┬───────────────────────────────────────┘
                                  │ WebSockets / REST API
                                  ▼
-        🖥️ [NEXUS AMR Command Center & Digital Twin Dashboard]
+        🖥️ [M.A.R.G. Command Center & Digital Twin Dashboard]
 ```
 
 ---
@@ -205,4 +205,4 @@ python ai_engine/train_model.py --epochs 10 --batch 16
 ## 📄 License & Attribution
 
 Developed for **Smart India Hackathon (SIH 2026)** under Problem Statement **SIH26123**.
-All rights reserved © 2026 **NEXUS AMR OS Team**.
+All rights reserved © 2026 **M.A.R.G. Team**.

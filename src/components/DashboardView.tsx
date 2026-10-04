@@ -261,7 +261,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
     {
       img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80',
       badge: 'ZONE B — HIGH-SPEED PICK & PLACE', badgeColor: 'text-emerald-400 bg-emerald-500/15 border-emerald-500/30',
-      titleEn: 'NEXUS AMR OS', titleHi: 'NEXUS AMR OS',
+      titleEn: 'M.A.R.G. - Multi-robot Autonomous Routing Grid', titleHi: 'M.A.R.G.',
       subtitleEn: 'Autonomous Warehouse Intelligence Platform', subtitleHi: 'स्वायत्त वेयरहाउस इंटेलिजेंस प्लेटफॉर्म',
       descEn: 'Next-Generation AMR Fleet OS for Bharat Electronics Limited — Sub-18ms Edge AI vision, distributed A* path coordination, and real-time 500ms telemetry mesh.',
       descHi: 'BEL के लिए नेक्स्ट-जेन AMR फ्लीट OS — सब-18ms एज AI, A* पाथ समन्वय, 500ms टेलीमेट्री।',
@@ -414,7 +414,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-sky-500 bg-sky-500/10 border border-sky-500/20 px-2.5 py-1 rounded-full">Bharat Electronics Limited</span>
             </div>
             <h2 className="text-xl font-extrabold text-neutral-900 dark:text-white tracking-tight" style={{ letterSpacing: '-0.025em' }}>
-              NEXUS AMR OS — <span className="text-neutral-400 dark:text-neutral-500 font-semibold">{isHi ? 'स्वायत्त वेयरहाउस इंटेलिजेंस' : 'Autonomous Warehouse Intelligence'}</span>
+              M.A.R.G. - Multi-robot Autonomous Routing Grid — <span className="text-neutral-400 dark:text-neutral-500 font-semibold">{isHi ? 'स्वायत्त वेयरहाउस इंटेलिजेंस' : 'Autonomous Warehouse Intelligence'}</span>
             </h2>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mt-1 max-w-2xl">
               {isHi

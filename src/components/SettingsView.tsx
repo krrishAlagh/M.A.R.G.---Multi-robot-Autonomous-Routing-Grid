@@ -30,7 +30,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
         <div>
           <div className="flex items-center gap-2">
             <h1 className="text-lg sm:text-2xl font-bold text-white tracking-tight">
-              {language === 'hi' ? 'प्रणाली सेटिंग्स एवं कॉन्फ़िगरेशन' : 'NEXUS AMR OS Parameters & Preferences'}
+              {language === 'hi' ? 'प्रणाली सेटिंग्स एवं कॉन्फ़िगरेशन' : 'M.A.R.G. - Multi-robot Autonomous Routing Grid Parameters & Preferences'}
             </h1>
             <span className="text-[10px] font-semibold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-0.5 rounded-full font-mono">
               SIH26123 Configuration

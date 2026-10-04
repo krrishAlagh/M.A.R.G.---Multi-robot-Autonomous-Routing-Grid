@@ -84,7 +84,7 @@ export const LoginView: React.FC<LoginViewProps> = ({
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-              NEXUS AMR <span className="text-cyan-400 font-mono text-2xl lg:text-3xl block lg:inline">OS 2.6</span>
+              M.A.R.G. <span className="text-cyan-400 font-mono text-2xl lg:text-3xl block lg:inline">OS 2.6</span>
             </h1>
           </div>
 
@@ -152,7 +152,7 @@ export const LoginView: React.FC<LoginViewProps> = ({
               <span>{isHi ? 'सुरक्षित प्रमाणीकरण' : 'Warehouse OS Authentication'}</span>
             </div>
             <h2 className="text-2xl font-black text-white">
-              {isHi ? 'NEXUS AMR OS में साइन इन करें' : 'Sign In to NEXUS AMR OS'}
+              {isHi ? 'M.A.R.G. में साइन इन करें' : 'Sign In to M.A.R.G. - Multi-robot Autonomous Routing Grid'}
             </h2>
             <p className="text-xs text-slate-400 mt-1">
               Select your persona to auto-populate credentials for SIH evaluation.
@@ -237,7 +237,7 @@ export const LoginView: React.FC<LoginViewProps> = ({
               type="submit"
               className="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-sm shadow-xl shadow-cyan-500/20 transition-all flex items-center justify-center gap-2 transform active:scale-98 cursor-pointer"
             >
-              <span>{isHi ? `${selectedRole} के रूप में प्रवेश करें` : `Enter NEXUS AMR OS`}</span>
+              <span>{isHi ? `${selectedRole} के रूप में प्रवेश करें` : `Enter M.A.R.G.`}</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </form>

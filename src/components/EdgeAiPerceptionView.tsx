@@ -278,7 +278,7 @@ export const EdgeAiPerceptionView: React.FC<EdgeAiPerceptionViewProps> = ({
               {/* HUD Bottom Bar */}
               <div className="absolute bottom-0 inset-x-0 flex items-center justify-between px-4 py-2 bg-black/80 backdrop-blur border-t border-white/5 text-[9px] font-mono">
                 <span className="text-neutral-400">LATENCY: <span className="text-emerald-400">12.5ms</span></span>
-                <span className="text-neutral-400">MODEL: <span className="text-white">NEXUS-YOLOV8-M-INT8</span></span>
+                <span className="text-neutral-400">MODEL: <span className="text-white">MARG-YOLOV8-M-INT8</span></span>
                 <span className="text-neutral-400">BWIDTH SAVINGS: <span className="text-sky-400">94.2%</span></span>
                 <span className="text-neutral-400">EDGE CPU: <span className="text-amber-400">23%</span></span>
               </div>

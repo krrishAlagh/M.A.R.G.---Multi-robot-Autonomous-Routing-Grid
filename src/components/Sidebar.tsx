@@ -62,7 +62,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       items: [
         { id: 'alerts', label: language === 'hi' ? 'चेतावनी एवं अलार्म' : 'System Alerts', icon: 'notifications', badge: unreadAlertsCount || undefined },
         { id: 'simulation', label: language === 'hi' ? 'न्यायाधीश डेमो नियंत्रक' : 'SIH Judge Demo', icon: 'sports_esports', badge: 'LIVE' },
-        { id: 'settings', label: language === 'hi' ? 'प्रणाली सेटिंग्स' : 'NEXUS Settings', icon: 'settings' }
+        { id: 'settings', label: language === 'hi' ? 'प्रणाली सेटिंग्स' : 'M.A.R.G. Settings', icon: 'settings' }
       ]
     }
   ];
@@ -108,7 +108,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </div>
             <div>
               <h1 className="font-semibold text-[14px] leading-tight text-white tracking-tight flex items-center gap-1.5">
-                <span>NEXUS AMR</span>
+                <span>M.A.R.G.</span>
                 <span className="text-[9px] font-mono bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 px-1.5 py-0.2 rounded font-bold">
                   OS 2.6
                 </span>

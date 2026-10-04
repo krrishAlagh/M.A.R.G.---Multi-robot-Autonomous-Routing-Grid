@@ -46,7 +46,7 @@ export class WebSocketService {
         timestamp: new Date().toISOString(),
         data: {
           status: 'connected',
-          server: 'NEXUS AMR OS Fleet Telemetry Core',
+          server: 'M.A.R.G. - Multi-robot Autonomous Routing Grid Fleet Telemetry Core',
           version: '4.0.0',
           activeClients: this.clients.size
         }

@@ -81,7 +81,7 @@ export const TopHeader: React.FC<TopHeaderProps> = ({
       {/* Left Title & Status */}
       <div className="flex items-center gap-3">
         <div className="flex items-center gap-2">
-          <span className="text-xs text-slate-400 font-mono hidden sm:inline">NEXUS AMR OS</span>
+          <span className="text-xs text-slate-400 font-mono hidden sm:inline">M.A.R.G. - Multi-robot Autonomous Routing Grid</span>
           <span className="text-slate-600 hidden sm:inline">/</span>
           <h2 className="text-sm font-semibold text-white tracking-tight">
             {language === 'hi' ? viewTitles[activeView]?.hi : viewTitles[activeView]?.en}

@@ -37,7 +37,7 @@ export const InfAiChatbot: React.FC<InfAiChatbotProps> = ({
       sender: 'bot',
       text: language === 'hi' 
         ? 'नमस्ते! मैं INF AI स्वायत्त फ्लीट सहायक हूँ। आप मुझसे फ्लीट स्थिति, अलर्ट, या SIH26123 विनिर्देशों के बारे में पूछ सकते हैं।' 
-        : 'Hello! I am **INF AI Assistant** for NEXUS AMR OS. Ask me about live AMR telemetry, active hazards, task scoring, or support contact details.',
+        : 'Hello! I am **INF AI Assistant** for M.A.R.G. - Multi-robot Autonomous Routing Grid. Ask me about live AMR telemetry, active hazards, task scoring, or support contact details.',
       timestamp: new Date().toLocaleTimeString('en-US', { hour12: false })
     }
   ]);
@@ -108,14 +108,14 @@ export const InfAiChatbot: React.FC<InfAiChatbotProps> = ({
     // 5. Contact / Support
     if (q.includes('contact') || q.includes('help') || q.includes('phone') || q.includes('email') || q.includes('support') || q.includes('hq') || q.includes('bel')) {
       return {
-        text: `📞 **BEL Operations HQ & Support Hotline**:\n- **24/7 Hotline**: +91 1800-NEXUS-AMR (+91 1800-63987-267)\n- **Email**: ops@nexus-amr.bel.gov.in\n- **Command Center**: BEL CRL R&D Complex, Bengaluru - 560013.`,
+        text: `📞 **BEL Operations HQ & Support Hotline**:\n- **24/7 Hotline**: +91 1800-MARG-GRID (+91 1800-63987-267)\n- **Email**: ops@marg.bel.gov.in\n- **Command Center**: BEL CRL R&D Complex, Bengaluru - 560013.`,
         chipNav: 'dashboard'
       };
     }
 
     // Default fallback
     return {
-      text: `💡 **NEXUS INF AI Assistant**: I am synchronized with live WebSocket telemetry. You can ask me about:\n- Fleet Status & Battery Levels\n- Live Hazards & E-Stop Interlocks\n- Multi-Robot A* Path Coordination\n- BEL Operations HQ Support`,
+      text: `💡 **M.A.R.G. INF AI Assistant**: I am synchronized with live WebSocket telemetry. You can ask me about:\n- Fleet Status & Battery Levels\n- Live Hazards & E-Stop Interlocks\n- Multi-Robot A* Path Coordination\n- BEL Operations HQ Support`,
       chipNav: 'dashboard'
     };
   };

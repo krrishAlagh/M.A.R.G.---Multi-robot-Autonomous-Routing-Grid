@@ -240,7 +240,7 @@ export const ApiExplorerView: React.FC<ApiExplorerViewProps> = ({ language }) =>
               </div>
               <div>
                 <h2 className="text-base font-bold text-white tracking-tight">
-                  {language === 'hi' ? 'NEXUS AMR OS — REST API एक्सप्लोरर' : 'NEXUS AMR OS — REST API Explorer & Playground'}
+                  {language === 'hi' ? 'M.A.R.G. — REST API एक्सप्लोरर' : 'M.A.R.G. - Multi-robot Autonomous Routing Grid — REST API Explorer & Playground'}
                 </h2>
                 <div className="flex items-center gap-2 mt-0.5">
                   <span className="text-[10px] font-mono text-violet-400 bg-violet-500/10 border border-violet-500/20 px-1.5 py-0.5 rounded">OpenAPI 3.0</span>

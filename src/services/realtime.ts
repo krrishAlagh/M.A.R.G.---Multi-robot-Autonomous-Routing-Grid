@@ -129,7 +129,7 @@ export function useRealtimeData() {
         wsRef.current = ws;
 
         ws.onopen = () => {
-          console.log('[NEXUS Realtime WS] Connected to AMR Fleet Telemetry Server.');
+          console.log('[MARG Realtime WS] Connected to AMR Fleet Telemetry Server.');
           setState((prev) => ({ ...prev, isConnected: true }));
         };
 
@@ -182,7 +182,7 @@ export function useRealtimeData() {
               hydrateData();
             }
           } catch (err) {
-            console.warn('[NEXUS WS] Parse error:', err);
+            console.warn('[MARG WS] Parse error:', err);
           }
         };
 

@@ -41,7 +41,7 @@ export const ContactUsView: React.FC<ContactUsViewProps> = ({ language, userRole
               </span>
             </div>
             <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-              {isHi ? 'संपर्क करें एवं सहायता केंद्र' : 'NEXUS AMR OS Support & Command HQ'}
+              {isHi ? 'संपर्क करें एवं सहायता केंद्र' : 'M.A.R.G. - Multi-robot Autonomous Routing Grid Support & Command HQ'}
             </h1>
             <p className="text-sm text-neutral-400 leading-relaxed">
               Direct technical escalation desk for Bharat Electronics Limited (BEL), Smart India Hackathon evaluators, and warehouse floor operations supervisors.
@@ -55,7 +55,7 @@ export const ContactUsView: React.FC<ContactUsViewProps> = ({ language, userRole
               </div>
               <div>
                 <div className="text-[10px] font-mono text-neutral-500 uppercase">24/7 EMERGENCY HOTLINE</div>
-                <div className="text-sm font-bold text-white font-mono">+91 1800-NEXUS-AMR</div>
+                <div className="text-sm font-bold text-white font-mono">+91 1800-MARG-GRID</div>
               </div>
             </div>
           </div>
@@ -81,7 +81,7 @@ export const ContactUsView: React.FC<ContactUsViewProps> = ({ language, userRole
             <p className="text-xs text-neutral-400 mt-0.5">Fleet routing, task scheduling, and supervisor escalation.</p>
           </div>
           <div className="pt-2 border-t border-neutral-800 text-xs font-mono text-sky-400">
-            📞 +91 (080) 2838-5000 | ops@nexus-amr.bel.gov.in
+            📞 +91 (080) 2838-5000 | ops@marg.bel.gov.in
           </div>
         </div>
 
@@ -94,7 +94,7 @@ export const ContactUsView: React.FC<ContactUsViewProps> = ({ language, userRole
             <p className="text-xs text-neutral-400 mt-0.5">YOLOv8 TensorRT vision, LiDAR calibration & A* path engine.</p>
           </div>
           <div className="pt-2 border-t border-neutral-800 text-xs font-mono text-purple-400">
-            📧 edge-ai@nexus-amr.bel.gov.in
+            📧 edge-ai@marg.bel.gov.in
           </div>
         </div>
 
@@ -107,7 +107,7 @@ export const ContactUsView: React.FC<ContactUsViewProps> = ({ language, userRole
             <p className="text-xs text-neutral-400 mt-0.5">Li-Ion battery replacement, drive motor overhaul, wireless dock C1.</p>
           </div>
           <div className="pt-2 border-t border-neutral-800 text-xs font-mono text-amber-400">
-            🛠️ maintenance@nexus-amr.bel.gov.in
+            🛠️ maintenance@marg.bel.gov.in
           </div>
         </div>
 
@@ -124,7 +124,7 @@ export const ContactUsView: React.FC<ContactUsViewProps> = ({ language, userRole
               Submit Support Inquiry / Emergency Ticket
             </h3>
             <p className="text-xs text-neutral-400 mt-1">
-              Direct ticket logging into NEXUS AMR OS central dispatch system.
+              Direct ticket logging into M.A.R.G. - Multi-robot Autonomous Routing Grid central dispatch system.
             </p>
           </div>
 
@@ -147,7 +147,7 @@ export const ContactUsView: React.FC<ContactUsViewProps> = ({ language, userRole
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="operator@nexus-amr.bel.gov.in"
+                placeholder="operator@marg.bel.gov.in"
                 className="w-full bg-[#141419] border border-neutral-800 rounded-xl p-3 text-white placeholder-neutral-500 focus:outline-none focus:border-sky-500/50"
                 required
               />
@@ -216,7 +216,7 @@ export const ContactUsView: React.FC<ContactUsViewProps> = ({ language, userRole
               <div className="p-3 bg-[#141419] border border-neutral-800 rounded-xl">
                 <span className="text-[10px] text-neutral-500 block">COMMAND CENTER TELEMETRY SERVER</span>
                 <span className="font-bold text-emerald-400 mt-0.5 block">
-                  Host: nexus-amr.bel.gov.in (Port 5005 / WS)
+                  Host: marg.bel.gov.in (Port 5005 / WS)
                 </span>
               </div>
             </div>

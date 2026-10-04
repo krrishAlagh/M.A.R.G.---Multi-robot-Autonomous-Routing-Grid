@@ -1,5 +1,5 @@
 """
-NEXUS AMR OS - Edge AI Vision Model Training & Fine-Tuning Engine (SIH26123)
+M.A.R.G. - Multi-robot Autonomous Routing Grid - Edge AI Vision Model Training & Fine-Tuning Engine (SIH26123)
 Trains YOLOv8 8-Class Warehouse Perception model for Autonomous Mobile Robots (AMRs)
 Supports Jetson Orin NX CUDA, Apple Silicon MPS, and CPU execution.
 """
@@ -18,7 +18,7 @@ MODELS_DIR = BASE_DIR / "ai_engine" / "models"
 MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Train NEXUS AMR Edge AI Perception Model")
+    parser = argparse.ArgumentParser(description="Train M.A.R.G. Edge AI Perception Model")
     parser.add_argument("--epochs", type=int, default=10, help="Number of training epochs (default: 10)")
     parser.add_argument("--batch", type=int, default=16, help="Batch size (default: 16)")
     parser.add_argument("--imgsz", type=int, default=640, help="Image resolution (default: 640)")
@@ -38,11 +38,11 @@ def select_optimal_device():
         print("⚙️ Utilizing Multi-Core CPU for training")
     return device
 
-def train_nexus_amr_ai():
+def train_marg_ai():
     args = parse_args()
     
     print("=" * 70)
-    print("🤖 NEXUS AMR OS: EDGE-AI WAREHOUSE PERCEPTION MODEL TRAINING")
+    print("🤖 M.A.R.G.: EDGE-AI WAREHOUSE PERCEPTION MODEL TRAINING")
     print("=" * 70)
     print(f"Configuration:")
     print(f"  • Base Model Architecture : {args.model}")
@@ -67,7 +67,7 @@ def train_nexus_amr_ai():
         device=device,
         workers=args.workers,
         project=str(BASE_DIR / "ai_engine" / "runs"),
-        name="nexus_amr_edge_ai",
+        name="marg_edge_ai",
         exist_ok=True,
         pretrained=True,
         optimizer="AdamW",
@@ -100,22 +100,22 @@ def train_nexus_amr_ai():
     print(f"  • Recall       : {metrics.box.mr:.4f}")
     
     # 4. Export & Package Model Weights
-    best_weight_source = BASE_DIR / "ai_engine" / "runs" / "nexus_amr_edge_ai" / "weights" / "best.pt"
-    dest_weight = MODELS_DIR / "nexus_amr_edge_best.pt"
+    best_weight_source = BASE_DIR / "ai_engine" / "runs" / "marg_edge_ai" / "weights" / "best.pt"
+    dest_weight = MODELS_DIR / "marg_edge_best.pt"
     
     if best_weight_source.exists():
         shutil.copy(str(best_weight_source), str(dest_weight))
         print(f"\n[4/4] ✅ Successfully saved trained weights to: {dest_weight}")
     else:
-        fallback_weight = BASE_DIR / "ai_engine" / "runs" / "nexus_amr_edge_ai" / "weights" / "last.pt"
+        fallback_weight = BASE_DIR / "ai_engine" / "runs" / "marg_edge_ai" / "weights" / "last.pt"
         if fallback_weight.exists():
             shutil.copy(str(fallback_weight), str(dest_weight))
             print(f"\n[4/4] ✅ Successfully saved weights to: {dest_weight}")
             
     print("\n" + "=" * 70)
-    print("🎉 NEXUS AMR OS EDGE-AI MODEL TRAINING & VALIDATION COMPLETED")
+    print("🎉 M.A.R.G. EDGE-AI MODEL TRAINING & VALIDATION COMPLETED")
     print("=" * 70)
     return metrics
 
 if __name__ == "__main__":
-    train_nexus_amr_ai()
+    train_marg_ai()

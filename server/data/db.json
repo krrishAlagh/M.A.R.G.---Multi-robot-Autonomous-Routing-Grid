@@ -3,7 +3,7 @@
     {
       "id": "USR-OPS-DIR",
       "name": "Vikram Malhotra",
-      "email": "v.malhotra@nexuswarehousing.ai",
+      "email": "v.malhotra@marg.ai",
       "role": "Warehouse Operations Director",
       "department": "Autonomous Fleet Control HQ",
       "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
@@ -12,7 +12,7 @@
     {
       "id": "USR-FLEET-ENG",
       "name": "Dr. Ananya Roy",
-      "email": "a.roy@nexuswarehousing.ai",
+      "email": "a.roy@marg.ai",
       "role": "Fleet Systems Engineer",
       "department": "Multi-Robot Coordination & Dynamics",
       "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
@@ -21,7 +21,7 @@
     {
       "id": "USR-EDGE-AI",
       "name": "Kabir Mehta",
-      "email": "k.mehta@nexuswarehousing.ai",
+      "email": "k.mehta@marg.ai",
       "role": "Safety & Edge AI Specialist",
       "department": "Embedded Vision & Perception",
       "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
@@ -30,7 +30,7 @@
     {
       "id": "USR-FLOOR-SUP",
       "name": "Rajesh Nair",
-      "email": "r.nair@nexuswarehousing.ai",
+      "email": "r.nair@marg.ai",
       "role": "Warehouse Floor Supervisor",
       "department": "Floor Logistics & Dispatch",
       "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80",
@@ -42,125 +42,74 @@
       "id": "amr-01",
       "code": "AMR-01",
       "name": "Titan Payload Carrier 1",
-      "model": "Nexus AMR-1000 Pro",
+      "model": "MARG AMR-1000 Pro",
       "status": "Active",
       "batteryLevel": 95,
       "currentPosition": {
-        "x": 8,
-        "y": 20
+        "x": 14,
+        "y": 6
       },
-      "speed": 1.4285918666625328,
+      "speed": 1.4709184376722273,
       "heading": 90,
       "payloadKg": 350,
       "maxPayloadKg": 1000,
       "currentRoute": [
         {
-          "x": 8,
-          "y": 19
+          "x": 15,
+          "y": 6
         },
         {
-          "x": 8,
-          "y": 18
+          "x": 16,
+          "y": 6
         },
         {
-          "x": 8,
-          "y": 17
+          "x": 17,
+          "y": 6
         },
         {
-          "x": 8,
-          "y": 16
+          "x": 18,
+          "y": 6
         },
         {
-          "x": 8,
-          "y": 15
+          "x": 19,
+          "y": 6
         },
         {
-          "x": 8,
-          "y": 14
+          "x": 20,
+          "y": 6
         },
         {
-          "x": 8,
-          "y": 13
-        },
-        {
-          "x": 8,
-          "y": 12
-        },
-        {
-          "x": 8,
-          "y": 11
-        },
-        {
-          "x": 8,
-          "y": 10
-        },
-        {
-          "x": 8,
-          "y": 9
-        },
-        {
-          "x": 8,
-          "y": 8
-        },
-        {
-          "x": 8,
+          "x": 20,
           "y": 7
         },
         {
-          "x": 8,
-          "y": 6
-        }
-      ],
-      "health": {
-        "motorTempC": 38.5,
-        "wifiSignalDbm": -54,
-        "sensorOk": true,
-        "lidarStatus": "OK",
-        "batteryCycles": 142
-      },
-      "cameraFeedUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&auto=format&fit=crop"
-    },
-    {
-      "id": "amr-02",
-      "code": "AMR-02",
-      "name": "Swift Mover 2",
-      "model": "Nexus AMR-500 Light",
-      "status": "Blocked",
-      "batteryLevel": 55.8,
-      "currentPosition": {
-        "x": 46,
-        "y": 6
-      },
-      "speed": 0,
-      "heading": 180,
-      "payloadKg": 180,
-      "maxPayloadKg": 500,
-      "currentRoute": [],
-      "health": {
-        "motorTempC": 41,
-        "wifiSignalDbm": -58,
-        "sensorOk": true,
-        "lidarStatus": "OK",
-        "batteryCycles": 210
-      },
-      "cameraFeedUrl": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&auto=format&fit=crop"
-    },
-    {
-      "id": "amr-03",
-      "code": "AMR-03",
-      "name": "Heavy Tugger 3",
-      "model": "Nexus AMR-1500 Heavy",
-      "status": "Active",
-      "batteryLevel": 36,
-      "currentPosition": {
-        "x": 20,
-        "y": 14
-      },
-      "speed": 1.2409033538490792,
-      "heading": 0,
-      "payloadKg": 0,
-      "maxPayloadKg": 1500,
-      "currentRoute": [
+          "x": 20,
+          "y": 8
+        },
+        {
+          "x": 20,
+          "y": 9
+        },
+        {
+          "x": 20,
+          "y": 10
+        },
+        {
+          "x": 20,
+          "y": 11
+        },
+        {
+          "x": 20,
+          "y": 12
+        },
+        {
+          "x": 20,
+          "y": 13
+        },
+        {
+          "x": 20,
+          "y": 14
+        },
         {
           "x": 20,
           "y": 15
@@ -259,6 +208,277 @@
         }
       ],
       "health": {
+        "motorTempC": 38.5,
+        "wifiSignalDbm": -54,
+        "sensorOk": true,
+        "lidarStatus": "OK",
+        "batteryCycles": 142
+      },
+      "cameraFeedUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "amr-02",
+      "code": "AMR-02",
+      "name": "Swift Mover 2",
+      "model": "MARG AMR-500 Light",
+      "status": "Blocked",
+      "batteryLevel": 55.8,
+      "currentPosition": {
+        "x": 46,
+        "y": 6
+      },
+      "speed": 0,
+      "heading": 180,
+      "payloadKg": 180,
+      "maxPayloadKg": 500,
+      "currentRoute": [],
+      "health": {
+        "motorTempC": 41,
+        "wifiSignalDbm": -58,
+        "sensorOk": true,
+        "lidarStatus": "OK",
+        "batteryCycles": 210
+      },
+      "cameraFeedUrl": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "amr-03",
+      "code": "AMR-03",
+      "name": "Heavy Tugger 3",
+      "model": "MARG AMR-1500 Heavy",
+      "status": "Active",
+      "batteryLevel": 36,
+      "currentPosition": {
+        "x": 31,
+        "y": 6
+      },
+      "speed": 1.2081153335297645,
+      "heading": 0,
+      "payloadKg": 0,
+      "maxPayloadKg": 1500,
+      "currentRoute": [
+        {
+          "x": 30,
+          "y": 6
+        },
+        {
+          "x": 29,
+          "y": 6
+        },
+        {
+          "x": 28,
+          "y": 6
+        },
+        {
+          "x": 27,
+          "y": 6
+        },
+        {
+          "x": 26,
+          "y": 6
+        },
+        {
+          "x": 25,
+          "y": 6
+        },
+        {
+          "x": 24,
+          "y": 6
+        },
+        {
+          "x": 23,
+          "y": 6
+        },
+        {
+          "x": 22,
+          "y": 6
+        },
+        {
+          "x": 21,
+          "y": 6
+        },
+        {
+          "x": 20,
+          "y": 6
+        },
+        {
+          "x": 19,
+          "y": 6
+        },
+        {
+          "x": 18,
+          "y": 6
+        },
+        {
+          "x": 17,
+          "y": 6
+        },
+        {
+          "x": 16,
+          "y": 6
+        },
+        {
+          "x": 15,
+          "y": 6
+        },
+        {
+          "x": 14,
+          "y": 6
+        },
+        {
+          "x": 13,
+          "y": 6
+        },
+        {
+          "x": 12,
+          "y": 6
+        },
+        {
+          "x": 11,
+          "y": 6
+        },
+        {
+          "x": 10,
+          "y": 6
+        },
+        {
+          "x": 9,
+          "y": 6
+        },
+        {
+          "x": 8,
+          "y": 6
+        },
+        {
+          "x": 8,
+          "y": 7
+        },
+        {
+          "x": 8,
+          "y": 8
+        },
+        {
+          "x": 8,
+          "y": 9
+        },
+        {
+          "x": 8,
+          "y": 10
+        },
+        {
+          "x": 8,
+          "y": 11
+        },
+        {
+          "x": 8,
+          "y": 12
+        },
+        {
+          "x": 8,
+          "y": 13
+        },
+        {
+          "x": 8,
+          "y": 14
+        },
+        {
+          "x": 8,
+          "y": 15
+        },
+        {
+          "x": 8,
+          "y": 16
+        },
+        {
+          "x": 8,
+          "y": 17
+        },
+        {
+          "x": 8,
+          "y": 18
+        },
+        {
+          "x": 8,
+          "y": 19
+        },
+        {
+          "x": 8,
+          "y": 20
+        },
+        {
+          "x": 8,
+          "y": 21
+        },
+        {
+          "x": 8,
+          "y": 22
+        },
+        {
+          "x": 8,
+          "y": 23
+        },
+        {
+          "x": 8,
+          "y": 24
+        },
+        {
+          "x": 8,
+          "y": 25
+        },
+        {
+          "x": 8,
+          "y": 26
+        },
+        {
+          "x": 8,
+          "y": 27
+        },
+        {
+          "x": 8,
+          "y": 28
+        },
+        {
+          "x": 8,
+          "y": 29
+        },
+        {
+          "x": 8,
+          "y": 30
+        },
+        {
+          "x": 8,
+          "y": 31
+        },
+        {
+          "x": 8,
+          "y": 32
+        },
+        {
+          "x": 8,
+          "y": 33
+        },
+        {
+          "x": 8,
+          "y": 34
+        },
+        {
+          "x": 8,
+          "y": 35
+        },
+        {
+          "x": 8,
+          "y": 36
+        },
+        {
+          "x": 8,
+          "y": 37
+        },
+        {
+          "x": 8,
+          "y": 38
+        }
+      ],
+      "health": {
         "motorTempC": 32,
         "wifiSignalDbm": -48,
         "sensorOk": true,
@@ -271,70 +491,18 @@
       "id": "amr-04",
       "code": "AMR-04",
       "name": "Echo Navigator 4",
-      "model": "Nexus AMR-500 Light",
+      "model": "MARG AMR-500 Light",
       "status": "Active",
       "batteryLevel": 49.4,
       "currentPosition": {
-        "x": 30,
+        "x": 43,
         "y": 38
       },
-      "speed": 1.510144841485268,
+      "speed": 1.6179786649941974,
       "heading": 270,
       "payloadKg": 0,
       "maxPayloadKg": 500,
       "currentRoute": [
-        {
-          "x": 31,
-          "y": 38
-        },
-        {
-          "x": 32,
-          "y": 38
-        },
-        {
-          "x": 33,
-          "y": 38
-        },
-        {
-          "x": 34,
-          "y": 38
-        },
-        {
-          "x": 35,
-          "y": 38
-        },
-        {
-          "x": 36,
-          "y": 38
-        },
-        {
-          "x": 37,
-          "y": 38
-        },
-        {
-          "x": 38,
-          "y": 38
-        },
-        {
-          "x": 39,
-          "y": 38
-        },
-        {
-          "x": 40,
-          "y": 38
-        },
-        {
-          "x": 41,
-          "y": 38
-        },
-        {
-          "x": 42,
-          "y": 38
-        },
-        {
-          "x": 43,
-          "y": 38
-        },
         {
           "x": 44,
           "y": 38
@@ -489,172 +657,92 @@
       "id": "amr-05",
       "code": "AMR-05",
       "name": "Pallet Cruiser 5",
-      "model": "Nexus AMR-1000 Pro",
+      "model": "MARG AMR-1000 Pro",
       "status": "Active",
       "batteryLevel": 95.5,
       "currentPosition": {
-        "x": 11,
-        "y": 38
+        "x": 46,
+        "y": 25
       },
-      "speed": 1.3800554297028385,
+      "speed": 1.2718816497640058,
       "heading": 90,
       "payloadKg": 420,
       "maxPayloadKg": 1000,
       "currentRoute": [
         {
-          "x": 10,
-          "y": 38
-        },
-        {
-          "x": 9,
-          "y": 38
-        },
-        {
-          "x": 8,
-          "y": 38
-        },
-        {
-          "x": 7,
-          "y": 38
-        },
-        {
-          "x": 6,
-          "y": 38
-        },
-        {
-          "x": 5,
-          "y": 38
-        },
-        {
-          "x": 4,
-          "y": 38
-        },
-        {
-          "x": 4,
-          "y": 37
-        },
-        {
-          "x": 4,
-          "y": 36
-        },
-        {
-          "x": 4,
-          "y": 35
-        },
-        {
-          "x": 4,
-          "y": 34
-        },
-        {
-          "x": 4,
-          "y": 33
-        },
-        {
-          "x": 4,
-          "y": 32
-        },
-        {
-          "x": 4,
-          "y": 31
-        },
-        {
-          "x": 4,
-          "y": 30
-        },
-        {
-          "x": 4,
-          "y": 29
-        },
-        {
-          "x": 4,
-          "y": 28
-        },
-        {
-          "x": 4,
-          "y": 27
-        },
-        {
-          "x": 4,
-          "y": 26
-        },
-        {
-          "x": 4,
-          "y": 25
-        },
-        {
-          "x": 4,
+          "x": 46,
           "y": 24
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 23
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 22
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 21
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 20
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 19
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 18
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 17
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 16
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 15
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 14
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 13
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 12
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 11
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 10
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 9
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 8
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 7
         },
         {
-          "x": 4,
+          "x": 46,
           "y": 6
         }
       ],
@@ -671,29 +759,273 @@
       "id": "amr-06",
       "code": "AMR-06",
       "name": "Vanguard Transporter 6",
-      "model": "Nexus AMR-1000 Pro",
+      "model": "MARG AMR-1000 Pro",
       "status": "Active",
       "batteryLevel": 38.6,
       "currentPosition": {
-        "x": 38,
-        "y": 6
+        "x": 9,
+        "y": 38
       },
-      "speed": 1.6735159390945515,
+      "speed": 1.5757357715339193,
       "heading": 0,
       "payloadKg": 280,
       "maxPayloadKg": 1000,
       "currentRoute": [
         {
+          "x": 10,
+          "y": 38
+        },
+        {
+          "x": 11,
+          "y": 38
+        },
+        {
+          "x": 12,
+          "y": 38
+        },
+        {
+          "x": 13,
+          "y": 38
+        },
+        {
+          "x": 14,
+          "y": 38
+        },
+        {
+          "x": 15,
+          "y": 38
+        },
+        {
+          "x": 16,
+          "y": 38
+        },
+        {
+          "x": 17,
+          "y": 38
+        },
+        {
+          "x": 18,
+          "y": 38
+        },
+        {
+          "x": 19,
+          "y": 38
+        },
+        {
+          "x": 20,
+          "y": 38
+        },
+        {
+          "x": 21,
+          "y": 38
+        },
+        {
+          "x": 22,
+          "y": 38
+        },
+        {
+          "x": 23,
+          "y": 38
+        },
+        {
+          "x": 24,
+          "y": 38
+        },
+        {
+          "x": 25,
+          "y": 38
+        },
+        {
+          "x": 26,
+          "y": 38
+        },
+        {
+          "x": 27,
+          "y": 38
+        },
+        {
+          "x": 28,
+          "y": 38
+        },
+        {
+          "x": 29,
+          "y": 38
+        },
+        {
+          "x": 30,
+          "y": 38
+        },
+        {
+          "x": 31,
+          "y": 38
+        },
+        {
+          "x": 32,
+          "y": 38
+        },
+        {
+          "x": 33,
+          "y": 38
+        },
+        {
+          "x": 34,
+          "y": 38
+        },
+        {
+          "x": 35,
+          "y": 38
+        },
+        {
+          "x": 36,
+          "y": 38
+        },
+        {
+          "x": 37,
+          "y": 38
+        },
+        {
+          "x": 38,
+          "y": 38
+        },
+        {
           "x": 39,
-          "y": 6
+          "y": 38
         },
         {
           "x": 40,
-          "y": 6
+          "y": 38
         },
         {
           "x": 41,
-          "y": 6
+          "y": 38
+        },
+        {
+          "x": 42,
+          "y": 38
+        },
+        {
+          "x": 42,
+          "y": 37
+        },
+        {
+          "x": 42,
+          "y": 36
+        },
+        {
+          "x": 42,
+          "y": 35
+        },
+        {
+          "x": 42,
+          "y": 34
+        },
+        {
+          "x": 42,
+          "y": 33
+        },
+        {
+          "x": 42,
+          "y": 32
+        },
+        {
+          "x": 42,
+          "y": 31
+        },
+        {
+          "x": 42,
+          "y": 30
+        },
+        {
+          "x": 42,
+          "y": 29
+        },
+        {
+          "x": 42,
+          "y": 28
+        },
+        {
+          "x": 42,
+          "y": 27
+        },
+        {
+          "x": 42,
+          "y": 26
+        },
+        {
+          "x": 42,
+          "y": 25
+        },
+        {
+          "x": 42,
+          "y": 24
+        },
+        {
+          "x": 42,
+          "y": 23
+        },
+        {
+          "x": 42,
+          "y": 22
+        },
+        {
+          "x": 42,
+          "y": 21
+        },
+        {
+          "x": 42,
+          "y": 20
+        },
+        {
+          "x": 42,
+          "y": 19
+        },
+        {
+          "x": 42,
+          "y": 18
+        },
+        {
+          "x": 42,
+          "y": 17
+        },
+        {
+          "x": 42,
+          "y": 16
+        },
+        {
+          "x": 42,
+          "y": 15
+        },
+        {
+          "x": 42,
+          "y": 14
+        },
+        {
+          "x": 42,
+          "y": 13
+        },
+        {
+          "x": 42,
+          "y": 12
+        },
+        {
+          "x": 42,
+          "y": 11
+        },
+        {
+          "x": 42,
+          "y": 10
+        },
+        {
+          "x": 42,
+          "y": 9
+        },
+        {
+          "x": 42,
+          "y": 8
+        },
+        {
+          "x": 42,
+          "y": 7
         },
         {
           "x": 42,
@@ -1340,6 +1672,326 @@
     }
   ],
   "conflicts": [
+    {
+      "id": "cnf-1791026911291-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 9,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:28:31.291Z"
+    },
+    {
+      "id": "cnf-1791026857188-2-4",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 8,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:27:37.188Z"
+    },
+    {
+      "id": "cnf-1791026829137-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 9,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:27:09.137Z"
+    },
+    {
+      "id": "cnf-1791026763014-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 21,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:26:03.014Z"
+    },
+    {
+      "id": "cnf-1791026762012-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 23,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:26:02.012Z"
+    },
+    {
+      "id": "cnf-1791026761009-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 25,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:26:01.009Z"
+    },
+    {
+      "id": "cnf-1791026760008-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 27,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:26:00.008Z"
+    },
+    {
+      "id": "cnf-1791026759007-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 29,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:25:59.007Z"
+    },
+    {
+      "id": "cnf-1791026758005-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 31,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:25:58.005Z"
+    },
+    {
+      "id": "cnf-1791026757003-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 33,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:25:57.003Z"
+    },
+    {
+      "id": "cnf-1791026756001-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 35,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:25:56.001Z"
+    },
+    {
+      "id": "cnf-1791026754999-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 37,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:25:54.999Z"
+    },
+    {
+      "id": "cnf-1791026753997-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 39,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:25:53.997Z"
+    },
+    {
+      "id": "cnf-1791026752996-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 41,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:25:52.996Z"
+    },
+    {
+      "id": "cnf-1791026735967-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 19,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:25:35.967Z"
+    },
+    {
+      "id": "cnf-1791026719941-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 12,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:25:19.941Z"
+    },
+    {
+      "id": "cnf-1791026712927-1-3",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 30,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:25:12.928Z"
+    },
+    {
+      "id": "cnf-1791026703907-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 12,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:25:03.908Z"
+    },
+    {
+      "id": "cnf-1791026702906-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 10,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:25:02.906Z"
+    },
+    {
+      "id": "cnf-1791026701904-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 8,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-03T11:25:01.904Z"
+    },
     {
       "id": "cnf-1791026494447-1-3",
       "amrId1": "amr-03",

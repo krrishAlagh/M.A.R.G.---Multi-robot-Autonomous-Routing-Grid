@@ -69,7 +69,7 @@ class HighPerformanceDatabase {
       console.warn('[DB] Failed to load disk state, initializing SIH26123 seed datasets:', err);
     }
 
-    console.log('[DB] Initializing new database with NEXUS AMR OS seed datasets.');
+    console.log('[DB] Initializing new database with M.A.R.G. - Multi-robot Autonomous Routing Grid seed datasets.');
     const initial: DatabaseSchema = {
       users: INITIAL_USERS,
       amrs: INITIAL_AMRS,

@@ -1,5 +1,5 @@
 {
-  "dataset_name": "NEXUS AMR Smart Warehouse Vision Dataset (SIH26123)",
+  "dataset_name": "M.A.R.G. Smart Warehouse Vision Dataset (SIH26123)",
   "version": "v2.6.0-edge",
   "modalities": [
     "RGB_Camera_Overhead",

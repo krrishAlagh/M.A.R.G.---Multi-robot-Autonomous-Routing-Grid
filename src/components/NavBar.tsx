@@ -124,9 +124,9 @@ export const NavBar: React.FC<NavBarProps> = ({
             <div className={`w-5 h-5 rounded flex items-center justify-center font-mono text-[11px] ${
               isDark ? 'bg-white text-black' : 'bg-neutral-900 text-white'
             }`}>
-              NX
+              MG
             </div>
-            <span className="text-[14px]">NEXUS AMR OS</span>
+            <span className="text-[14px]">M.A.R.G. - Multi-robot Autonomous Routing Grid</span>
           </button>
 
           <span className={`text-[11px] font-mono px-2 py-0.5 rounded border ${

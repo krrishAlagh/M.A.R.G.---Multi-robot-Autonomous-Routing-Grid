@@ -48,10 +48,10 @@ export const BelFooter: React.FC<BelFooterProps> = ({ language, onNavigate }) =>
             {/* Logo row */}
             <div className="flex items-center gap-2.5">
               <div className="w-7 h-7 rounded-lg flex items-center justify-center font-mono text-[13px] font-black bg-neutral-900 dark:bg-white text-white dark:text-black">
-                NX
+                MG
               </div>
               <div>
-                <div className="text-sm font-bold text-neutral-900 dark:text-white tracking-tight">NEXUS AMR OS</div>
+                <div className="text-sm font-bold text-neutral-900 dark:text-white tracking-tight">M.A.R.G. - Multi-robot Autonomous Routing Grid</div>
                 <div className="text-[10px] font-mono text-neutral-500 dark:text-neutral-500">SIH26123 · BEL</div>
               </div>
             </div>

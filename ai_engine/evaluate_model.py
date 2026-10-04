@@ -1,5 +1,5 @@
 """
-NEXUS AMR OS - Edge AI Perception Benchmark & Jetson Orin Simulator (SIH26123)
+M.A.R.G. - Multi-robot Autonomous Routing Grid - Edge AI Perception Benchmark & Jetson Orin Simulator (SIH26123)
 Runs real-time inference using trained YOLOv8 model weights on Warehouse Camera feeds.
 Outputs latency, mAP, and detection telemetry logs for AMR fleet coordination.
 """
@@ -12,14 +12,14 @@ from pathlib import Path
 from ultralytics import YOLO
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-MODEL_PATH = BASE_DIR / "ai_engine" / "models" / "nexus_amr_edge_best.pt"
+MODEL_PATH = BASE_DIR / "ai_engine" / "models" / "marg_edge_best.pt"
 TEST_IMG_DIR = BASE_DIR / "datasets" / "warehouse_perception" / "images" / "test" / "images"
 RESULTS_DIR = BASE_DIR / "ai_engine" / "evaluation_results"
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 def evaluate_on_samples(num_images=10):
     print("=" * 70)
-    print("🤖 NEXUS AMR OS: EDGE PERCEPTION INFERENCE BENCHMARKS")
+    print("🤖 M.A.R.G.: EDGE PERCEPTION INFERENCE BENCHMARKS")
     print("=" * 70)
 
     if not MODEL_PATH.exists():
@@ -49,7 +49,7 @@ def evaluate_on_samples(num_images=10):
         
         for r in results:
             annotated_img = r.plot()
-            out_path = RESULTS_DIR / f"nexus_annotated_{filename}"
+            out_path = RESULTS_DIR / f"marg_annotated_{filename}"
             cv2.imwrite(str(out_path), annotated_img)
             
             boxes_count = len(r.boxes)

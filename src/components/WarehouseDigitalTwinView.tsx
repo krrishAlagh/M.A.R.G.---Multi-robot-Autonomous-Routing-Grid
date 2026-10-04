@@ -201,7 +201,7 @@ export const WarehouseDigitalTwinView: React.FC<WarehouseDigitalTwinViewProps> =
           <div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
             <div className="flex items-center gap-2 bg-black/80 backdrop-blur border border-neutral-800 px-3 py-1.5 rounded-xl text-[10px] font-mono">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-              <span className="text-neutral-300">NEXUS SPATIAL ENGINE v3.2</span>
+              <span className="text-neutral-300">MARG SPATIAL ENGINE v3.2</span>
               <span className="text-neutral-600">|</span>
               <span className="text-sky-400">WS://localhost:5005</span>
             </div>
@@ -605,7 +605,7 @@ export const WarehouseDigitalTwinView: React.FC<WarehouseDigitalTwinViewProps> =
           {
             img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
             title: 'Control Room — Operator Dashboard',
-            desc: 'NEXUS AMR OS operator console showing live telemetry dashboards, SIH26123 monitoring systems.',
+            desc: 'M.A.R.G. - Multi-robot Autonomous Routing Grid operator console showing live telemetry dashboards, SIH26123 monitoring systems.',
             badge: 'CONTROL ROOM', badgeColor: 'text-amber-400 bg-amber-400/10 border-amber-400/30'
           }
         ].map((item, i) => (
