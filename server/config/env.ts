@@ -17,7 +17,7 @@ if (jwtSecret === DEFAULT_JWT_SECRET && process.env.NODE_ENV === 'production') {
 export const ENV = {
   NODE_ENV: process.env.NODE_ENV || 'development',
   IS_PRODUCTION: process.env.NODE_ENV === 'production',
-  // Cloud Run injects PORT=8080; fallback to 5005 for local dev
+  // Render & Cloud Run inject PORT; fallback to 5005 for local dev
   PORT: parseInt(process.env.PORT || '5005', 10),
   APP_URL: process.env.APP_URL || 'http://localhost:3005',
   GEMINI_API_KEY: process.env.GEMINI_API_KEY || '',
