@@ -6,9 +6,9 @@ import { wsService } from '../services/websocket.service';
 const router = Router();
 
 /**
- * GET /api/v1/warehouse/map - Warehouse navigation graph, grid layout, zones, stations & obstacles
+ * GET /api/v1/warehouse/map & /api/v1/map - Warehouse navigation graph, grid layout, zones, stations & obstacles
  */
-router.get('/map', (req: Request, res: Response) => {
+router.get(['/map', '/'], (req: Request, res: Response) => {
   try {
     const zones = db.getZones();
     const stations = db.getStations();
@@ -32,9 +32,9 @@ router.get('/map', (req: Request, res: Response) => {
 });
 
 /**
- * POST /api/v1/warehouse/obstacle - Inject an obstacle on the navigation grid
+ * POST /api/v1/warehouse/obstacle & /api/v1/map/obstacles - Inject an obstacle on the navigation grid
  */
-router.post('/obstacle', (req: Request, res: Response) => {
+router.post(['/obstacle', '/obstacles'], (req: Request, res: Response) => {
   try {
     const { x, y, type, amrId } = req.body;
     if (x === undefined || y === undefined) {
@@ -83,7 +83,7 @@ router.post('/obstacle', (req: Request, res: Response) => {
 /**
  * DELETE /api/v1/warehouse/obstacle/:id - Clear an obstacle from grid
  */
-router.delete('/obstacle/:id', (req: Request, res: Response) => {
+router.delete(['/obstacle/:id', '/obstacles/:id'], (req: Request, res: Response) => {
   try {
     const id = req.params.id;
     const removed = db.removeObstacle(id);

@@ -44,166 +44,150 @@
       "name": "Titan Payload Carrier 1",
       "model": "MARG AMR-1000 Pro",
       "status": "Active",
-      "batteryLevel": 95,
+      "batteryLevel": 96,
       "currentPosition": {
-        "x": 14,
+        "x": 6,
         "y": 6
       },
-      "speed": 1.4709184376722273,
+      "speed": 1.4295944893398063,
       "heading": 90,
       "payloadKg": 350,
       "maxPayloadKg": 1000,
       "currentRoute": [
         {
-          "x": 15,
+          "x": 5,
           "y": 6
         },
         {
-          "x": 16,
+          "x": 4,
           "y": 6
         },
         {
-          "x": 17,
-          "y": 6
-        },
-        {
-          "x": 18,
-          "y": 6
-        },
-        {
-          "x": 19,
-          "y": 6
-        },
-        {
-          "x": 20,
-          "y": 6
-        },
-        {
-          "x": 20,
+          "x": 4,
           "y": 7
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 8
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 9
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 10
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 11
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 12
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 13
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 14
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 15
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 16
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 17
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 18
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 19
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 20
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 21
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 22
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 23
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 24
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 25
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 26
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 27
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 28
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 29
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 30
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 31
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 32
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 33
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 34
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 35
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 36
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 37
         },
         {
-          "x": 20,
+          "x": 4,
           "y": 38
         }
       ],
@@ -249,42 +233,218 @@
       "status": "Active",
       "batteryLevel": 36,
       "currentPosition": {
-        "x": 31,
+        "x": 12,
         "y": 6
       },
-      "speed": 1.2081153335297645,
+      "speed": 1.2635808581088632,
       "heading": 0,
       "payloadKg": 0,
       "maxPayloadKg": 1500,
       "currentRoute": [
         {
-          "x": 30,
+          "x": 11,
           "y": 6
         },
         {
-          "x": 29,
+          "x": 10,
           "y": 6
         },
         {
-          "x": 28,
+          "x": 9,
           "y": 6
         },
         {
-          "x": 27,
+          "x": 8,
           "y": 6
         },
         {
-          "x": 26,
-          "y": 6
+          "x": 8,
+          "y": 7
         },
         {
-          "x": 25,
-          "y": 6
+          "x": 8,
+          "y": 8
         },
         {
-          "x": 24,
-          "y": 6
+          "x": 8,
+          "y": 9
         },
+        {
+          "x": 8,
+          "y": 10
+        },
+        {
+          "x": 8,
+          "y": 11
+        },
+        {
+          "x": 8,
+          "y": 12
+        },
+        {
+          "x": 8,
+          "y": 13
+        },
+        {
+          "x": 8,
+          "y": 14
+        },
+        {
+          "x": 8,
+          "y": 15
+        },
+        {
+          "x": 8,
+          "y": 16
+        },
+        {
+          "x": 8,
+          "y": 17
+        },
+        {
+          "x": 8,
+          "y": 18
+        },
+        {
+          "x": 8,
+          "y": 19
+        },
+        {
+          "x": 8,
+          "y": 20
+        },
+        {
+          "x": 8,
+          "y": 21
+        },
+        {
+          "x": 8,
+          "y": 22
+        },
+        {
+          "x": 8,
+          "y": 23
+        },
+        {
+          "x": 8,
+          "y": 24
+        },
+        {
+          "x": 8,
+          "y": 25
+        },
+        {
+          "x": 8,
+          "y": 26
+        },
+        {
+          "x": 8,
+          "y": 27
+        },
+        {
+          "x": 8,
+          "y": 28
+        },
+        {
+          "x": 8,
+          "y": 29
+        },
+        {
+          "x": 8,
+          "y": 30
+        },
+        {
+          "x": 8,
+          "y": 31
+        },
+        {
+          "x": 8,
+          "y": 32
+        },
+        {
+          "x": 8,
+          "y": 33
+        },
+        {
+          "x": 8,
+          "y": 34
+        },
+        {
+          "x": 8,
+          "y": 35
+        },
+        {
+          "x": 8,
+          "y": 36
+        },
+        {
+          "x": 8,
+          "y": 37
+        },
+        {
+          "x": 8,
+          "y": 38
+        }
+      ],
+      "health": {
+        "motorTempC": 32,
+        "wifiSignalDbm": -48,
+        "sensorOk": true,
+        "lidarStatus": "OK",
+        "batteryCycles": 85
+      },
+      "cameraFeedUrl": "https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "amr-04",
+      "code": "AMR-04",
+      "name": "Echo Navigator 4",
+      "model": "MARG AMR-500 Light",
+      "status": "Active",
+      "batteryLevel": 49.4,
+      "currentPosition": {
+        "x": 8,
+        "y": 36
+      },
+      "speed": 1.6452167579325805,
+      "heading": 270,
+      "payloadKg": 0,
+      "maxPayloadKg": 500,
+      "currentRoute": [
+        {
+          "x": 8,
+          "y": 37
+        },
+        {
+          "x": 8,
+          "y": 38
+        }
+      ],
+      "health": {
+        "motorTempC": 36.2,
+        "wifiSignalDbm": -50,
+        "sensorOk": true,
+        "lidarStatus": "OK",
+        "batteryCycles": 340
+      },
+      "cameraFeedUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "amr-05",
+      "code": "AMR-05",
+      "name": "Pallet Cruiser 5",
+      "model": "MARG AMR-1000 Pro",
+      "status": "Emergency",
+      "batteryLevel": 95.5,
+      "currentPosition": {
+        "x": 24,
+        "y": 6
+      },
+      "speed": 0,
+      "heading": 90,
+      "payloadKg": 420,
+      "maxPayloadKg": 1000,
+      "currentRoute": [
         {
           "x": 23,
           "y": 6
@@ -479,274 +639,6 @@
         }
       ],
       "health": {
-        "motorTempC": 32,
-        "wifiSignalDbm": -48,
-        "sensorOk": true,
-        "lidarStatus": "OK",
-        "batteryCycles": 85
-      },
-      "cameraFeedUrl": "https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&auto=format&fit=crop"
-    },
-    {
-      "id": "amr-04",
-      "code": "AMR-04",
-      "name": "Echo Navigator 4",
-      "model": "MARG AMR-500 Light",
-      "status": "Active",
-      "batteryLevel": 49.4,
-      "currentPosition": {
-        "x": 43,
-        "y": 38
-      },
-      "speed": 1.6179786649941974,
-      "heading": 270,
-      "payloadKg": 0,
-      "maxPayloadKg": 500,
-      "currentRoute": [
-        {
-          "x": 44,
-          "y": 38
-        },
-        {
-          "x": 45,
-          "y": 38
-        },
-        {
-          "x": 46,
-          "y": 38
-        },
-        {
-          "x": 46,
-          "y": 37
-        },
-        {
-          "x": 46,
-          "y": 36
-        },
-        {
-          "x": 46,
-          "y": 35
-        },
-        {
-          "x": 46,
-          "y": 34
-        },
-        {
-          "x": 46,
-          "y": 33
-        },
-        {
-          "x": 46,
-          "y": 32
-        },
-        {
-          "x": 46,
-          "y": 31
-        },
-        {
-          "x": 46,
-          "y": 30
-        },
-        {
-          "x": 46,
-          "y": 29
-        },
-        {
-          "x": 46,
-          "y": 28
-        },
-        {
-          "x": 46,
-          "y": 27
-        },
-        {
-          "x": 46,
-          "y": 26
-        },
-        {
-          "x": 46,
-          "y": 25
-        },
-        {
-          "x": 46,
-          "y": 24
-        },
-        {
-          "x": 46,
-          "y": 23
-        },
-        {
-          "x": 46,
-          "y": 22
-        },
-        {
-          "x": 46,
-          "y": 21
-        },
-        {
-          "x": 46,
-          "y": 20
-        },
-        {
-          "x": 46,
-          "y": 19
-        },
-        {
-          "x": 46,
-          "y": 18
-        },
-        {
-          "x": 46,
-          "y": 17
-        },
-        {
-          "x": 46,
-          "y": 16
-        },
-        {
-          "x": 46,
-          "y": 15
-        },
-        {
-          "x": 46,
-          "y": 14
-        },
-        {
-          "x": 46,
-          "y": 13
-        },
-        {
-          "x": 46,
-          "y": 12
-        },
-        {
-          "x": 46,
-          "y": 11
-        },
-        {
-          "x": 46,
-          "y": 10
-        },
-        {
-          "x": 46,
-          "y": 9
-        },
-        {
-          "x": 46,
-          "y": 8
-        },
-        {
-          "x": 46,
-          "y": 7
-        },
-        {
-          "x": 46,
-          "y": 6
-        }
-      ],
-      "health": {
-        "motorTempC": 36.2,
-        "wifiSignalDbm": -50,
-        "sensorOk": true,
-        "lidarStatus": "OK",
-        "batteryCycles": 340
-      },
-      "cameraFeedUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&auto=format&fit=crop"
-    },
-    {
-      "id": "amr-05",
-      "code": "AMR-05",
-      "name": "Pallet Cruiser 5",
-      "model": "MARG AMR-1000 Pro",
-      "status": "Active",
-      "batteryLevel": 95.5,
-      "currentPosition": {
-        "x": 46,
-        "y": 25
-      },
-      "speed": 1.2718816497640058,
-      "heading": 90,
-      "payloadKg": 420,
-      "maxPayloadKg": 1000,
-      "currentRoute": [
-        {
-          "x": 46,
-          "y": 24
-        },
-        {
-          "x": 46,
-          "y": 23
-        },
-        {
-          "x": 46,
-          "y": 22
-        },
-        {
-          "x": 46,
-          "y": 21
-        },
-        {
-          "x": 46,
-          "y": 20
-        },
-        {
-          "x": 46,
-          "y": 19
-        },
-        {
-          "x": 46,
-          "y": 18
-        },
-        {
-          "x": 46,
-          "y": 17
-        },
-        {
-          "x": 46,
-          "y": 16
-        },
-        {
-          "x": 46,
-          "y": 15
-        },
-        {
-          "x": 46,
-          "y": 14
-        },
-        {
-          "x": 46,
-          "y": 13
-        },
-        {
-          "x": 46,
-          "y": 12
-        },
-        {
-          "x": 46,
-          "y": 11
-        },
-        {
-          "x": 46,
-          "y": 10
-        },
-        {
-          "x": 46,
-          "y": 9
-        },
-        {
-          "x": 46,
-          "y": 8
-        },
-        {
-          "x": 46,
-          "y": 7
-        },
-        {
-          "x": 46,
-          "y": 6
-        }
-      ],
-      "health": {
         "motorTempC": 44.8,
         "wifiSignalDbm": -62,
         "sensorOk": false,
@@ -763,272 +655,24 @@
       "status": "Active",
       "batteryLevel": 38.6,
       "currentPosition": {
-        "x": 9,
-        "y": 38
+        "x": 46,
+        "y": 9
       },
-      "speed": 1.5757357715339193,
+      "speed": 1.2114114747057134,
       "heading": 0,
       "payloadKg": 280,
       "maxPayloadKg": 1000,
       "currentRoute": [
         {
-          "x": 10,
-          "y": 38
-        },
-        {
-          "x": 11,
-          "y": 38
-        },
-        {
-          "x": 12,
-          "y": 38
-        },
-        {
-          "x": 13,
-          "y": 38
-        },
-        {
-          "x": 14,
-          "y": 38
-        },
-        {
-          "x": 15,
-          "y": 38
-        },
-        {
-          "x": 16,
-          "y": 38
-        },
-        {
-          "x": 17,
-          "y": 38
-        },
-        {
-          "x": 18,
-          "y": 38
-        },
-        {
-          "x": 19,
-          "y": 38
-        },
-        {
-          "x": 20,
-          "y": 38
-        },
-        {
-          "x": 21,
-          "y": 38
-        },
-        {
-          "x": 22,
-          "y": 38
-        },
-        {
-          "x": 23,
-          "y": 38
-        },
-        {
-          "x": 24,
-          "y": 38
-        },
-        {
-          "x": 25,
-          "y": 38
-        },
-        {
-          "x": 26,
-          "y": 38
-        },
-        {
-          "x": 27,
-          "y": 38
-        },
-        {
-          "x": 28,
-          "y": 38
-        },
-        {
-          "x": 29,
-          "y": 38
-        },
-        {
-          "x": 30,
-          "y": 38
-        },
-        {
-          "x": 31,
-          "y": 38
-        },
-        {
-          "x": 32,
-          "y": 38
-        },
-        {
-          "x": 33,
-          "y": 38
-        },
-        {
-          "x": 34,
-          "y": 38
-        },
-        {
-          "x": 35,
-          "y": 38
-        },
-        {
-          "x": 36,
-          "y": 38
-        },
-        {
-          "x": 37,
-          "y": 38
-        },
-        {
-          "x": 38,
-          "y": 38
-        },
-        {
-          "x": 39,
-          "y": 38
-        },
-        {
-          "x": 40,
-          "y": 38
-        },
-        {
-          "x": 41,
-          "y": 38
-        },
-        {
-          "x": 42,
-          "y": 38
-        },
-        {
-          "x": 42,
-          "y": 37
-        },
-        {
-          "x": 42,
-          "y": 36
-        },
-        {
-          "x": 42,
-          "y": 35
-        },
-        {
-          "x": 42,
-          "y": 34
-        },
-        {
-          "x": 42,
-          "y": 33
-        },
-        {
-          "x": 42,
-          "y": 32
-        },
-        {
-          "x": 42,
-          "y": 31
-        },
-        {
-          "x": 42,
-          "y": 30
-        },
-        {
-          "x": 42,
-          "y": 29
-        },
-        {
-          "x": 42,
-          "y": 28
-        },
-        {
-          "x": 42,
-          "y": 27
-        },
-        {
-          "x": 42,
-          "y": 26
-        },
-        {
-          "x": 42,
-          "y": 25
-        },
-        {
-          "x": 42,
-          "y": 24
-        },
-        {
-          "x": 42,
-          "y": 23
-        },
-        {
-          "x": 42,
-          "y": 22
-        },
-        {
-          "x": 42,
-          "y": 21
-        },
-        {
-          "x": 42,
-          "y": 20
-        },
-        {
-          "x": 42,
-          "y": 19
-        },
-        {
-          "x": 42,
-          "y": 18
-        },
-        {
-          "x": 42,
-          "y": 17
-        },
-        {
-          "x": 42,
-          "y": 16
-        },
-        {
-          "x": 42,
-          "y": 15
-        },
-        {
-          "x": 42,
-          "y": 14
-        },
-        {
-          "x": 42,
-          "y": 13
-        },
-        {
-          "x": 42,
-          "y": 12
-        },
-        {
-          "x": 42,
-          "y": 11
-        },
-        {
-          "x": 42,
-          "y": 10
-        },
-        {
-          "x": 42,
-          "y": 9
-        },
-        {
-          "x": 42,
+          "x": 46,
           "y": 8
         },
         {
-          "x": 42,
+          "x": 46,
           "y": 7
         },
         {
-          "x": 42,
+          "x": 46,
           "y": 6
         }
       ],
@@ -1205,6 +849,463 @@
     }
   ],
   "tasks": [
+    {
+      "id": "task-rush-1791186216936-5",
+      "taskCode": "TASK-RUSH-5",
+      "title": "Rush Priority Cargo Transit #5",
+      "pickupStationId": "st-p2",
+      "pickupStationName": "Inbound Dock Station 2",
+      "dropoffStationId": "st-d2",
+      "dropoffStationName": "Packing Bay 2",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-05T07:43:36.936Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791186216936-4",
+      "taskCode": "TASK-RUSH-4",
+      "title": "Rush Priority Cargo Transit #4",
+      "pickupStationId": "st-p1",
+      "pickupStationName": "Inbound Dock Station 1",
+      "dropoffStationId": "st-d1",
+      "dropoffStationName": "Packing Bay 1",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-05T07:43:36.936Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791186216936-3",
+      "taskCode": "TASK-RUSH-3",
+      "title": "Rush Priority Cargo Transit #3",
+      "pickupStationId": "st-p2",
+      "pickupStationName": "Inbound Dock Station 2",
+      "dropoffStationId": "st-d2",
+      "dropoffStationName": "Packing Bay 2",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-05T07:43:36.936Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791186216935-2",
+      "taskCode": "TASK-RUSH-2",
+      "title": "Rush Priority Cargo Transit #2",
+      "pickupStationId": "st-p1",
+      "pickupStationName": "Inbound Dock Station 1",
+      "dropoffStationId": "st-d1",
+      "dropoffStationName": "Packing Bay 1",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-05T07:43:36.936Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791186216934-1",
+      "taskCode": "TASK-RUSH-1",
+      "title": "Rush Priority Cargo Transit #1",
+      "pickupStationId": "st-p2",
+      "pickupStationName": "Inbound Dock Station 2",
+      "dropoffStationId": "st-d2",
+      "dropoffStationName": "Packing Bay 2",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-05T07:43:36.934Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791186003450-5",
+      "taskCode": "TASK-RUSH-5",
+      "title": "Rush Priority Cargo Transit #5",
+      "pickupStationId": "st-p2",
+      "pickupStationName": "Inbound Dock Station 2",
+      "dropoffStationId": "st-d2",
+      "dropoffStationName": "Packing Bay 2",
+      "priority": "CRITICAL",
+      "status": "COMPLETED",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-05T07:40:03.450Z",
+      "estimatedDurationSec": 180,
+      "scoreBreakdown": {
+        "distanceScore": 72,
+        "batteryScore": 96,
+        "workloadScore": 100,
+        "priorityScore": 100,
+        "congestionScore": 90,
+        "totalScore": 88.2
+      },
+      "assignedAmrId": "amr-01",
+      "assignedAmrCode": "AMR-01",
+      "completedTime": "2026-10-05T07:44:04.765Z"
+    },
+    {
+      "id": "task-rush-1791186003450-4",
+      "taskCode": "TASK-RUSH-4",
+      "title": "Rush Priority Cargo Transit #4",
+      "pickupStationId": "st-p1",
+      "pickupStationName": "Inbound Dock Station 1",
+      "dropoffStationId": "st-d1",
+      "dropoffStationName": "Packing Bay 1",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-05T07:40:03.450Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791186003450-3",
+      "taskCode": "TASK-RUSH-3",
+      "title": "Rush Priority Cargo Transit #3",
+      "pickupStationId": "st-p2",
+      "pickupStationName": "Inbound Dock Station 2",
+      "dropoffStationId": "st-d2",
+      "dropoffStationName": "Packing Bay 2",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-05T07:40:03.450Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791186003450-2",
+      "taskCode": "TASK-RUSH-2",
+      "title": "Rush Priority Cargo Transit #2",
+      "pickupStationId": "st-p1",
+      "pickupStationName": "Inbound Dock Station 1",
+      "dropoffStationId": "st-d1",
+      "dropoffStationName": "Packing Bay 1",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-05T07:40:03.450Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791186003449-1",
+      "taskCode": "TASK-RUSH-1",
+      "title": "Rush Priority Cargo Transit #1",
+      "pickupStationId": "st-p2",
+      "pickupStationName": "Inbound Dock Station 2",
+      "dropoffStationId": "st-d2",
+      "dropoffStationName": "Packing Bay 2",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-05T07:40:03.449Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-1791186003432",
+      "taskCode": "TASK-PK-6480",
+      "title": "High-Priority Circuit Board Pallet Transfer",
+      "pickupStationId": "st-p1",
+      "pickupStationName": "Inbound Dock Station 1",
+      "dropoffStationId": "st-d1",
+      "dropoffStationName": "Packing Bay 1",
+      "priority": "CRITICAL",
+      "status": "COMPLETED",
+      "estimatedWeightKg": 180,
+      "createdTime": "2026-10-05T07:40:03.432Z",
+      "estimatedDurationSec": 200,
+      "scoreBreakdown": {
+        "distanceScore": 60,
+        "batteryScore": 96,
+        "workloadScore": 100,
+        "priorityScore": 100,
+        "congestionScore": 90,
+        "totalScore": 84
+      },
+      "assignedAmrId": "amr-01",
+      "assignedAmrCode": "AMR-01",
+      "completedTime": "2026-10-05T07:40:32.924Z"
+    },
+    {
+      "id": "task-rush-1791131774299-5",
+      "taskCode": "TASK-RUSH-5",
+      "title": "Rush Priority Cargo Transit #5",
+      "pickupStationId": "st-p2",
+      "pickupStationName": "Inbound Dock Station 2",
+      "dropoffStationId": "st-d2",
+      "dropoffStationName": "Packing Bay 2",
+      "priority": "CRITICAL",
+      "status": "IN_TRANSIT",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-04T16:36:14.299Z",
+      "estimatedDurationSec": 180,
+      "scoreBreakdown": {
+        "distanceScore": 32,
+        "batteryScore": 96,
+        "workloadScore": 100,
+        "priorityScore": 100,
+        "congestionScore": 90,
+        "totalScore": 74.2
+      },
+      "assignedAmrId": "amr-01",
+      "assignedAmrCode": "AMR-01"
+    },
+    {
+      "id": "task-rush-1791131774299-4",
+      "taskCode": "TASK-RUSH-4",
+      "title": "Rush Priority Cargo Transit #4",
+      "pickupStationId": "st-p1",
+      "pickupStationName": "Inbound Dock Station 1",
+      "dropoffStationId": "st-d1",
+      "dropoffStationName": "Packing Bay 1",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-04T16:36:14.299Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791131774299-3",
+      "taskCode": "TASK-RUSH-3",
+      "title": "Rush Priority Cargo Transit #3",
+      "pickupStationId": "st-p2",
+      "pickupStationName": "Inbound Dock Station 2",
+      "dropoffStationId": "st-d2",
+      "dropoffStationName": "Packing Bay 2",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-04T16:36:14.299Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791131774299-2",
+      "taskCode": "TASK-RUSH-2",
+      "title": "Rush Priority Cargo Transit #2",
+      "pickupStationId": "st-p1",
+      "pickupStationName": "Inbound Dock Station 1",
+      "dropoffStationId": "st-d1",
+      "dropoffStationName": "Packing Bay 1",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-04T16:36:14.299Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791131774298-1",
+      "taskCode": "TASK-RUSH-1",
+      "title": "Rush Priority Cargo Transit #1",
+      "pickupStationId": "st-p2",
+      "pickupStationName": "Inbound Dock Station 2",
+      "dropoffStationId": "st-d2",
+      "dropoffStationName": "Packing Bay 2",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-04T16:36:14.298Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-1791131774263",
+      "taskCode": "TASK-PK-2197",
+      "title": "High-Priority Circuit Board Pallet Transfer",
+      "pickupStationId": "st-p1",
+      "pickupStationName": "Inbound Dock Station 1",
+      "dropoffStationId": "st-d1",
+      "dropoffStationName": "Packing Bay 1",
+      "priority": "CRITICAL",
+      "status": "COMPLETED",
+      "estimatedWeightKg": 180,
+      "createdTime": "2026-10-04T16:36:14.263Z",
+      "estimatedDurationSec": 200,
+      "scoreBreakdown": {
+        "distanceScore": 20,
+        "batteryScore": 95,
+        "workloadScore": 100,
+        "priorityScore": 100,
+        "congestionScore": 90,
+        "totalScore": 69.8
+      },
+      "assignedAmrId": "amr-01",
+      "assignedAmrCode": "AMR-01",
+      "completedTime": "2026-10-04T16:36:53.587Z"
+    },
+    {
+      "id": "task-rush-1791131749922-5",
+      "taskCode": "TASK-RUSH-5",
+      "title": "Rush Priority Cargo Transit #5",
+      "pickupStationId": "st-p2",
+      "pickupStationName": "Inbound Dock Station 2",
+      "dropoffStationId": "st-d2",
+      "dropoffStationName": "Packing Bay 2",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-04T16:35:49.922Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791131749922-4",
+      "taskCode": "TASK-RUSH-4",
+      "title": "Rush Priority Cargo Transit #4",
+      "pickupStationId": "st-p1",
+      "pickupStationName": "Inbound Dock Station 1",
+      "dropoffStationId": "st-d1",
+      "dropoffStationName": "Packing Bay 1",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-04T16:35:49.922Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791131749922-3",
+      "taskCode": "TASK-RUSH-3",
+      "title": "Rush Priority Cargo Transit #3",
+      "pickupStationId": "st-p2",
+      "pickupStationName": "Inbound Dock Station 2",
+      "dropoffStationId": "st-d2",
+      "dropoffStationName": "Packing Bay 2",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-04T16:35:49.922Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791131749922-2",
+      "taskCode": "TASK-RUSH-2",
+      "title": "Rush Priority Cargo Transit #2",
+      "pickupStationId": "st-p1",
+      "pickupStationName": "Inbound Dock Station 1",
+      "dropoffStationId": "st-d1",
+      "dropoffStationName": "Packing Bay 1",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-04T16:35:49.922Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791131749921-1",
+      "taskCode": "TASK-RUSH-1",
+      "title": "Rush Priority Cargo Transit #1",
+      "pickupStationId": "st-p2",
+      "pickupStationName": "Inbound Dock Station 2",
+      "dropoffStationId": "st-d2",
+      "dropoffStationName": "Packing Bay 2",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-04T16:35:49.922Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-1791131749899",
+      "taskCode": "TASK-PK-4956",
+      "title": "High-Priority Circuit Board Pallet Transfer",
+      "pickupStationId": "st-p1",
+      "pickupStationName": "Inbound Dock Station 1",
+      "dropoffStationId": "st-d1",
+      "dropoffStationName": "Packing Bay 1",
+      "priority": "CRITICAL",
+      "status": "COMPLETED",
+      "estimatedWeightKg": 180,
+      "createdTime": "2026-10-04T16:35:49.899Z",
+      "estimatedDurationSec": 200,
+      "scoreBreakdown": {
+        "distanceScore": 86,
+        "batteryScore": 95,
+        "workloadScore": 100,
+        "priorityScore": 100,
+        "congestionScore": 90,
+        "totalScore": 92.8
+      },
+      "assignedAmrId": "amr-01",
+      "assignedAmrCode": "AMR-01",
+      "completedTime": "2026-10-04T16:36:12.486Z"
+    },
+    {
+      "id": "task-rush-1791131529669-5",
+      "taskCode": "TASK-RUSH-5",
+      "title": "Rush Priority Cargo Transit #5",
+      "pickupStationId": "st-p2",
+      "pickupStationName": "Inbound Dock Station 2",
+      "dropoffStationId": "st-d2",
+      "dropoffStationName": "Packing Bay 2",
+      "priority": "CRITICAL",
+      "status": "COMPLETED",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-04T16:32:09.669Z",
+      "estimatedDurationSec": 180,
+      "scoreBreakdown": {
+        "distanceScore": 0,
+        "batteryScore": 95,
+        "workloadScore": 100,
+        "priorityScore": 100,
+        "congestionScore": 90,
+        "totalScore": 62.8
+      },
+      "assignedAmrId": "amr-01",
+      "assignedAmrCode": "AMR-01",
+      "completedTime": "2026-10-04T16:33:02.201Z"
+    },
+    {
+      "id": "task-rush-1791131529669-4",
+      "taskCode": "TASK-RUSH-4",
+      "title": "Rush Priority Cargo Transit #4",
+      "pickupStationId": "st-p1",
+      "pickupStationName": "Inbound Dock Station 1",
+      "dropoffStationId": "st-d1",
+      "dropoffStationName": "Packing Bay 1",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-04T16:32:09.669Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791131529669-3",
+      "taskCode": "TASK-RUSH-3",
+      "title": "Rush Priority Cargo Transit #3",
+      "pickupStationId": "st-p2",
+      "pickupStationName": "Inbound Dock Station 2",
+      "dropoffStationId": "st-d2",
+      "dropoffStationName": "Packing Bay 2",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-04T16:32:09.669Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791131529669-2",
+      "taskCode": "TASK-RUSH-2",
+      "title": "Rush Priority Cargo Transit #2",
+      "pickupStationId": "st-p1",
+      "pickupStationName": "Inbound Dock Station 1",
+      "dropoffStationId": "st-d1",
+      "dropoffStationName": "Packing Bay 1",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-04T16:32:09.669Z",
+      "estimatedDurationSec": 180
+    },
+    {
+      "id": "task-rush-1791131529666-1",
+      "taskCode": "TASK-RUSH-1",
+      "title": "Rush Priority Cargo Transit #1",
+      "pickupStationId": "st-p2",
+      "pickupStationName": "Inbound Dock Station 2",
+      "dropoffStationId": "st-d2",
+      "dropoffStationName": "Packing Bay 2",
+      "priority": "CRITICAL",
+      "status": "PENDING",
+      "estimatedWeightKg": 400,
+      "createdTime": "2026-10-04T16:32:09.668Z",
+      "estimatedDurationSec": 180
+    },
     {
       "id": "task-rush-1791018604712-5",
       "taskCode": "TASK-RUSH-5",
@@ -1672,6 +1773,3574 @@
     }
   ],
   "conflicts": [
+    {
+      "id": "cnf-1791186351206-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 14,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:45:51.206Z"
+    },
+    {
+      "id": "cnf-1791186297441-2-3",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 8,
+        "y": 24
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:44:57.441Z"
+    },
+    {
+      "id": "cnf-1791186261015-2-3",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 33,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:44:21.015Z"
+    },
+    {
+      "id": "cnf-1791186250901-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 35,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:44:10.901Z"
+    },
+    {
+      "id": "cnf-1791186236617-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 30,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:43:56.617Z"
+    },
+    {
+      "id": "cnf-1791186185914-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:43:05.914Z"
+    },
+    {
+      "id": "cnf-1791186184892-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 36
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:43:04.892Z"
+    },
+    {
+      "id": "cnf-1791186183872-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 34
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:43:03.872Z"
+    },
+    {
+      "id": "cnf-1791186182843-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 32
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:43:02.843Z"
+    },
+    {
+      "id": "cnf-1791186181828-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 30
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:43:01.828Z"
+    },
+    {
+      "id": "cnf-1791186180801-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 28
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:43:00.801Z"
+    },
+    {
+      "id": "cnf-1791186179798-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 26
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:59.798Z"
+    },
+    {
+      "id": "cnf-1791186178795-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 24
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:58.795Z"
+    },
+    {
+      "id": "cnf-1791186177790-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 22
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:57.790Z"
+    },
+    {
+      "id": "cnf-1791186176763-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 20
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:56.763Z"
+    },
+    {
+      "id": "cnf-1791186175746-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 18
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:55.747Z"
+    },
+    {
+      "id": "cnf-1791186174741-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 16
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:54.741Z"
+    },
+    {
+      "id": "cnf-1791186173734-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 14
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:53.734Z"
+    },
+    {
+      "id": "cnf-1791186172730-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 12
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:52.730Z"
+    },
+    {
+      "id": "cnf-1791186171719-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 10
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:51.719Z"
+    },
+    {
+      "id": "cnf-1791186170688-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 8
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:50.688Z"
+    },
+    {
+      "id": "cnf-1791186169644-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:49.644Z"
+    },
+    {
+      "id": "cnf-1791186168627-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 22,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:48.627Z"
+    },
+    {
+      "id": "cnf-1791186167617-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 24,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:47.618Z"
+    },
+    {
+      "id": "cnf-1791186166607-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 26,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:46.607Z"
+    },
+    {
+      "id": "cnf-1791186165603-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 28,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:45.603Z"
+    },
+    {
+      "id": "cnf-1791186164589-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 30,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:44.589Z"
+    },
+    {
+      "id": "cnf-1791186163573-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 32,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:43.573Z"
+    },
+    {
+      "id": "cnf-1791186162543-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 34,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:42.543Z"
+    },
+    {
+      "id": "cnf-1791186161538-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 36,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:41.538Z"
+    },
+    {
+      "id": "cnf-1791186160531-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 38,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:40.531Z"
+    },
+    {
+      "id": "cnf-1791186159528-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 40,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:39.528Z"
+    },
+    {
+      "id": "cnf-1791186158527-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 42,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:42:38.527Z"
+    },
+    {
+      "id": "cnf-1791186104657-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 4,
+        "y": 7
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:41:44.657Z"
+    },
+    {
+      "id": "cnf-1791186100633-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 16,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:41:40.633Z"
+    },
+    {
+      "id": "cnf-1791186060216-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 8,
+        "y": 25
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:41:00.216Z"
+    },
+    {
+      "id": "cnf-1791185903323-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 8,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:38:23.323Z"
+    },
+    {
+      "id": "cnf-1791185833698-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 4,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:37:13.698Z"
+    },
+    {
+      "id": "cnf-1791185829587-2-4",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 4,
+        "y": 14
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:37:09.587Z"
+    },
+    {
+      "id": "cnf-1791185807819-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 19,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:36:47.819Z"
+    },
+    {
+      "id": "cnf-1791185806805-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 17,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:36:46.805Z"
+    },
+    {
+      "id": "cnf-1791185805781-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 15,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:36:45.781Z"
+    },
+    {
+      "id": "cnf-1791185804752-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 13,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:36:44.752Z"
+    },
+    {
+      "id": "cnf-1791185801665-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 8,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-05T07:36:41.665Z"
+    },
+    {
+      "id": "cnf-1791136826253-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 46,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T18:00:26.253Z"
+    },
+    {
+      "id": "cnf-1791136798953-1-3",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 22,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:59:58.953Z"
+    },
+    {
+      "id": "cnf-1791136762568-2-4",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 22,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:59:22.568Z"
+    },
+    {
+      "id": "cnf-1791136748440-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 9,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:59:08.440Z"
+    },
+    {
+      "id": "cnf-1791136733286-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 13,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:58:53.286Z"
+    },
+    {
+      "id": "cnf-1791136724202-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 31,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:58:44.202Z"
+    },
+    {
+      "id": "cnf-1791136649449-1-3",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 4,
+        "y": 26
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:57:29.449Z"
+    },
+    {
+      "id": "cnf-1791136602014-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 42,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:56:42.014Z"
+    },
+    {
+      "id": "cnf-1791136326194-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 7,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:52:06.194Z"
+    },
+    {
+      "id": "cnf-1791136319110-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 12,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:51:59.110Z"
+    },
+    {
+      "id": "cnf-1791136278700-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 42,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:51:18.700Z"
+    },
+    {
+      "id": "cnf-1791136262522-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 8,
+        "y": 31
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:51:02.522Z"
+    },
+    {
+      "id": "cnf-1791136258482-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 8,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:50:58.482Z"
+    },
+    {
+      "id": "cnf-1791136250400-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 19,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:50:50.400Z"
+    },
+    {
+      "id": "cnf-1791136249388-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 17,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:50:49.388Z"
+    },
+    {
+      "id": "cnf-1791136248376-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 15,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:50:48.376Z"
+    },
+    {
+      "id": "cnf-1791136247356-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 13,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:50:47.356Z"
+    },
+    {
+      "id": "cnf-1791136201854-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 32,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:50:01.854Z"
+    },
+    {
+      "id": "cnf-1791136157380-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 8,
+        "y": 37
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:49:17.380Z"
+    },
+    {
+      "id": "cnf-1791136141207-2-4",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 8,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:49:01.207Z"
+    },
+    {
+      "id": "cnf-1791136120025-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 37,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:48:40.025Z"
+    },
+    {
+      "id": "cnf-1791136079373-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 8,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:59.373Z"
+    },
+    {
+      "id": "cnf-1791136069136-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 4,
+        "y": 23
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:49.136Z"
+    },
+    {
+      "id": "cnf-1791136057906-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 8,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:37.906Z"
+    },
+    {
+      "id": "cnf-1791136056890-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 10,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:36.890Z"
+    },
+    {
+      "id": "cnf-1791136055862-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 12,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:35.862Z"
+    },
+    {
+      "id": "cnf-1791136054851-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 14,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:34.851Z"
+    },
+    {
+      "id": "cnf-1791136053826-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 16,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:33.826Z"
+    },
+    {
+      "id": "cnf-1791136052798-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 18,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:32.798Z"
+    },
+    {
+      "id": "cnf-1791136051774-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 20,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:31.774Z"
+    },
+    {
+      "id": "cnf-1791136050759-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 22,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:30.759Z"
+    },
+    {
+      "id": "cnf-1791136049747-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 24,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:29.747Z"
+    },
+    {
+      "id": "cnf-1791136048728-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 26,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:28.728Z"
+    },
+    {
+      "id": "cnf-1791136047703-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 12,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:27.703Z"
+    },
+    {
+      "id": "cnf-1791136047703-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 28,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:27.703Z"
+    },
+    {
+      "id": "cnf-1791136046688-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 30,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:26.688Z"
+    },
+    {
+      "id": "cnf-1791136045684-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 32,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:25.684Z"
+    },
+    {
+      "id": "cnf-1791136044670-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 34,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:24.670Z"
+    },
+    {
+      "id": "cnf-1791136043642-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 36,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:23.642Z"
+    },
+    {
+      "id": "cnf-1791136042613-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 38,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:22.613Z"
+    },
+    {
+      "id": "cnf-1791136041588-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 40,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:21.588Z"
+    },
+    {
+      "id": "cnf-1791136040575-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 42,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:47:20.575Z"
+    },
+    {
+      "id": "cnf-1791136011973-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 20,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:46:51.973Z"
+    },
+    {
+      "id": "cnf-1791135986436-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 12,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:46:26.436Z"
+    },
+    {
+      "id": "cnf-1791135837788-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 8,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:43:57.788Z"
+    },
+    {
+      "id": "cnf-1791135779702-2-4",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 17,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:42:59.702Z"
+    },
+    {
+      "id": "cnf-1791135747020-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 8,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:42:27.020Z"
+    },
+    {
+      "id": "cnf-1791135735750-2-3",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 11,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:42:15.750Z"
+    },
+    {
+      "id": "cnf-1791135721457-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 4,
+        "y": 18
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:42:01.457Z"
+    },
+    {
+      "id": "cnf-1791135716374-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 4,
+        "y": 28
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:56.374Z"
+    },
+    {
+      "id": "cnf-1791135705197-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 4,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:45.197Z"
+    },
+    {
+      "id": "cnf-1791135704169-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 6,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:44.169Z"
+    },
+    {
+      "id": "cnf-1791135703144-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 8,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:43.144Z"
+    },
+    {
+      "id": "cnf-1791135702118-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 10,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:42.118Z"
+    },
+    {
+      "id": "cnf-1791135701105-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 12,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:41.105Z"
+    },
+    {
+      "id": "cnf-1791135700074-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 14,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:40.074Z"
+    },
+    {
+      "id": "cnf-1791135699061-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 16,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:39.061Z"
+    },
+    {
+      "id": "cnf-1791135698031-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 18,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:38.031Z"
+    },
+    {
+      "id": "cnf-1791135697018-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 20,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:37.018Z"
+    },
+    {
+      "id": "cnf-1791135695990-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 22,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:35.990Z"
+    },
+    {
+      "id": "cnf-1791135694962-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 24,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:34.962Z"
+    },
+    {
+      "id": "cnf-1791135693933-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 26,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:33.933Z"
+    },
+    {
+      "id": "cnf-1791135692905-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 28,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:32.905Z"
+    },
+    {
+      "id": "cnf-1791135691891-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 30,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:31.891Z"
+    },
+    {
+      "id": "cnf-1791135690863-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 32,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:30.863Z"
+    },
+    {
+      "id": "cnf-1791135689849-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 34,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:29.849Z"
+    },
+    {
+      "id": "cnf-1791135688832-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 36,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:28.832Z"
+    },
+    {
+      "id": "cnf-1791135687808-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 38,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:27.808Z"
+    },
+    {
+      "id": "cnf-1791135686778-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 40,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:26.778Z"
+    },
+    {
+      "id": "cnf-1791135685750-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 42,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:41:25.750Z"
+    },
+    {
+      "id": "cnf-1791135654167-2-3",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 8,
+        "y": 32
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:40:54.167Z"
+    },
+    {
+      "id": "cnf-1791135640945-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 4,
+        "y": 33
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:40:40.945Z"
+    },
+    {
+      "id": "cnf-1791135632796-1-3",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 4,
+        "y": 17
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:40:32.796Z"
+    },
+    {
+      "id": "cnf-1791135579980-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 20,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:39:39.981Z"
+    },
+    {
+      "id": "cnf-1791135549412-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 46,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:39:09.412Z"
+    },
+    {
+      "id": "cnf-1791135545325-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 39,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:39:05.325Z"
+    },
+    {
+      "id": "cnf-1791135400175-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 34,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:36:40.175Z"
+    },
+    {
+      "id": "cnf-1791135258453-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 4,
+        "y": 24
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:34:18.453Z"
+    },
+    {
+      "id": "cnf-1791135144380-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 6,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:32:24.380Z"
+    },
+    {
+      "id": "cnf-1791134875030-1-3",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 18,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:27:55.030Z"
+    },
+    {
+      "id": "cnf-1791134789039-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 31,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:26:29.039Z"
+    },
+    {
+      "id": "cnf-1791134716383-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 13,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:25:16.383Z"
+    },
+    {
+      "id": "cnf-1791134715368-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 15,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:25:15.368Z"
+    },
+    {
+      "id": "cnf-1791134714350-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 17,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:25:14.351Z"
+    },
+    {
+      "id": "cnf-1791134713350-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 19,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:25:13.350Z"
+    },
+    {
+      "id": "cnf-1791134712344-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 20,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:25:12.344Z"
+    },
+    {
+      "id": "cnf-1791134695101-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 20,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:24:55.101Z"
+    },
+    {
+      "id": "cnf-1791134673842-2-4",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 11,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:24:33.842Z"
+    },
+    {
+      "id": "cnf-1791134663644-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 32,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:24:23.644Z"
+    },
+    {
+      "id": "cnf-1791134633140-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 4,
+        "y": 37
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:23:53.140Z"
+    },
+    {
+      "id": "cnf-1791134568683-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 25,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:22:48.683Z"
+    },
+    {
+      "id": "cnf-1791134548218-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 20,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:22:28.218Z"
+    },
+    {
+      "id": "cnf-1791134490835-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 10,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:21:30.835Z"
+    },
+    {
+      "id": "cnf-1791134337181-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 19,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:18:57.181Z"
+    },
+    {
+      "id": "cnf-1791134311625-2-3",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 42,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:18:31.625Z"
+    },
+    {
+      "id": "cnf-1791134217581-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 8,
+        "y": 24
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:16:57.581Z"
+    },
+    {
+      "id": "cnf-1791134076328-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 4,
+        "y": 31
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:14:36.328Z"
+    },
+    {
+      "id": "cnf-1791134040487-1-3",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 44,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:14:00.487Z"
+    },
+    {
+      "id": "cnf-1791134037404-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 38,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:13:57.404Z"
+    },
+    {
+      "id": "cnf-1791133994569-2-4",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 44,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:13:14.569Z"
+    },
+    {
+      "id": "cnf-1791133939325-2-4",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 6,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:12:19.325Z"
+    },
+    {
+      "id": "cnf-1791133938311-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 8,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:12:18.311Z"
+    },
+    {
+      "id": "cnf-1791133884033-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 42,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:11:24.033Z"
+    },
+    {
+      "id": "cnf-1791133874829-1-3",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 25,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:11:14.829Z"
+    },
+    {
+      "id": "cnf-1791133823619-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 27,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:10:23.619Z"
+    },
+    {
+      "id": "cnf-1791133781676-2-3",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 38,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:09:41.676Z"
+    },
+    {
+      "id": "cnf-1791133770383-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 16,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:09:30.383Z"
+    },
+    {
+      "id": "cnf-1791133725312-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 8,
+        "y": 17
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:08:45.312Z"
+    },
+    {
+      "id": "cnf-1791133620976-0-3",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 20,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:07:00.976Z"
+    },
+    {
+      "id": "cnf-1791133602594-2-3",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 4,
+        "y": 25
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:06:42.594Z"
+    },
+    {
+      "id": "cnf-1791133563792-2-3",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 32,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:06:03.792Z"
+    },
+    {
+      "id": "cnf-1791133375784-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 20,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:02:55.784Z"
+    },
+    {
+      "id": "cnf-1791133305311-1-3",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 8,
+        "y": 30
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:01:45.311Z"
+    },
+    {
+      "id": "cnf-1791133285847-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 4,
+        "y": 23
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:01:25.847Z"
+    },
+    {
+      "id": "cnf-1791133283815-1-3",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 4,
+        "y": 19
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:01:23.815Z"
+    },
+    {
+      "id": "cnf-1791133266406-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 18,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:01:06.406Z"
+    },
+    {
+      "id": "cnf-1791133251060-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 18,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T17:00:51.060Z"
+    },
+    {
+      "id": "cnf-1791133032423-0-1",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-03",
+      "amrCode2": "AMR-03",
+      "location": {
+        "x": 17,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-03 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:57:12.423Z"
+    },
+    {
+      "id": "cnf-1791133030385-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 12,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:57:10.385Z"
+    },
+    {
+      "id": "cnf-1791132941741-2-4",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 28,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:55:41.741Z"
+    },
+    {
+      "id": "cnf-1791132851221-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 20,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:54:11.221Z"
+    },
+    {
+      "id": "cnf-1791132850193-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 18,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:54:10.193Z"
+    },
+    {
+      "id": "cnf-1791132849166-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 16,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:54:09.166Z"
+    },
+    {
+      "id": "cnf-1791132848153-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 14,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:54:08.153Z"
+    },
+    {
+      "id": "cnf-1791132847126-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 12,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:54:07.126Z"
+    },
+    {
+      "id": "cnf-1791132846098-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 10,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:54:06.098Z"
+    },
+    {
+      "id": "cnf-1791132845096-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 8,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:54:05.096Z"
+    },
+    {
+      "id": "cnf-1791132840040-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 9,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:54:00.040Z"
+    },
+    {
+      "id": "cnf-1791132839013-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 11,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:53:59.013Z"
+    },
+    {
+      "id": "cnf-1791132837984-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 13,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:53:57.984Z"
+    },
+    {
+      "id": "cnf-1791132836970-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 15,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:53:56.970Z"
+    },
+    {
+      "id": "cnf-1791132835942-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 17,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:53:55.942Z"
+    },
+    {
+      "id": "cnf-1791132834916-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 19,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:53:54.916Z"
+    },
+    {
+      "id": "cnf-1791132833899-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 20,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:53:53.899Z"
+    },
+    {
+      "id": "cnf-1791132710026-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 4,
+        "y": 23
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:51:50.026Z"
+    },
+    {
+      "id": "cnf-1791132666341-2-4",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 8,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:51:06.341Z"
+    },
+    {
+      "id": "cnf-1791132640923-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 37,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:50:40.923Z"
+    },
+    {
+      "id": "cnf-1791132587035-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 41,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:49:47.035Z"
+    },
+    {
+      "id": "cnf-1791132586024-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 39,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:49:46.024Z"
+    },
+    {
+      "id": "cnf-1791132584996-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 37,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:49:44.996Z"
+    },
+    {
+      "id": "cnf-1791132583981-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 35,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:49:43.981Z"
+    },
+    {
+      "id": "cnf-1791132582967-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 33,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:49:42.967Z"
+    },
+    {
+      "id": "cnf-1791132581941-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 31,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:49:41.941Z"
+    },
+    {
+      "id": "cnf-1791132580926-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 29,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:49:40.926Z"
+    },
+    {
+      "id": "cnf-1791132579902-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 27,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:49:39.902Z"
+    },
+    {
+      "id": "cnf-1791132578881-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 25,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:49:38.881Z"
+    },
+    {
+      "id": "cnf-1791132577880-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 23,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:49:37.880Z"
+    },
+    {
+      "id": "cnf-1791132576853-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 21,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:49:36.853Z"
+    },
+    {
+      "id": "cnf-1791132467874-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 8,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:47:47.874Z"
+    },
+    {
+      "id": "cnf-1791132466859-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 10,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:47:46.859Z"
+    },
+    {
+      "id": "cnf-1791132465846-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 12,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:47:45.846Z"
+    },
+    {
+      "id": "cnf-1791132444522-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 4,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:47:24.522Z"
+    },
+    {
+      "id": "cnf-1791132430242-2-3",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 31,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:47:10.242Z"
+    },
+    {
+      "id": "cnf-1791132310085-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 8,
+        "y": 15
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:45:10.085Z"
+    },
+    {
+      "id": "cnf-1791132238860-1-3",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 8,
+        "y": 8
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:43:58.860Z"
+    },
+    {
+      "id": "cnf-1791132237834-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 8,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:43:57.834Z"
+    },
+    {
+      "id": "cnf-1791132166754-2-3",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 8,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:42:46.754Z"
+    },
+    {
+      "id": "cnf-1791132162679-1-3",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 4,
+        "y": 9
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:42:42.679Z"
+    },
+    {
+      "id": "cnf-1791132161677-3-4",
+      "amrId1": "amr-05",
+      "amrCode1": "AMR-05",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 4,
+        "y": 11
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-05 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:42:41.677Z"
+    },
+    {
+      "id": "cnf-1791132095497-2-3",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 30,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:41:35.497Z"
+    },
+    {
+      "id": "cnf-1791132051664-2-4",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 9,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:40:51.664Z"
+    },
+    {
+      "id": "cnf-1791132029301-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 20,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:40:29.301Z"
+    },
+    {
+      "id": "cnf-1791132028284-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 22,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:40:28.284Z"
+    },
+    {
+      "id": "cnf-1791132027268-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 24,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:40:27.268Z"
+    },
+    {
+      "id": "cnf-1791132026237-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 26,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:40:26.237Z"
+    },
+    {
+      "id": "cnf-1791132025211-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 28,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:40:25.211Z"
+    },
+    {
+      "id": "cnf-1791132024195-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 30,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:40:24.195Z"
+    },
+    {
+      "id": "cnf-1791132023191-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 32,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:40:23.191Z"
+    },
+    {
+      "id": "cnf-1791132022163-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 34,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:40:22.163Z"
+    },
+    {
+      "id": "cnf-1791132021159-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 36,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:40:21.159Z"
+    },
+    {
+      "id": "cnf-1791132020143-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 38,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:40:20.143Z"
+    },
+    {
+      "id": "cnf-1791132019116-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 40,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:40:19.116Z"
+    },
+    {
+      "id": "cnf-1791132018090-1-4",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 42,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:40:18.090Z"
+    },
+    {
+      "id": "cnf-1791132002811-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 22,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:40:02.811Z"
+    },
+    {
+      "id": "cnf-1791131976326-1-2",
+      "amrId1": "amr-03",
+      "amrCode1": "AMR-03",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 12,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-03 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:39:36.326Z"
+    },
+    {
+      "id": "cnf-1791131872435-2-3",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 11,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:37:52.435Z"
+    },
+    {
+      "id": "cnf-1791131851083-0-2",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-04",
+      "amrCode2": "AMR-04",
+      "location": {
+        "x": 5,
+        "y": 38
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-04 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:37:31.083Z"
+    },
+    {
+      "id": "cnf-1791131832808-2-3",
+      "amrId1": "amr-04",
+      "amrCode1": "AMR-04",
+      "amrId2": "amr-05",
+      "amrCode2": "AMR-05",
+      "location": {
+        "x": 8,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-05 hold position for 4.0s while AMR-04 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:37:12.808Z"
+    },
+    {
+      "id": "cnf-1791131821679-0-4",
+      "amrId1": "amr-01",
+      "amrCode1": "AMR-01",
+      "amrId2": "amr-06",
+      "amrCode2": "AMR-06",
+      "location": {
+        "x": 27,
+        "y": 6
+      },
+      "conflictType": "SAME_CELL",
+      "severity": "CRITICAL",
+      "recommendedAction": "EMERGENCY STOP: AMR-06 hold position for 4.0s while AMR-01 passes",
+      "resolved": false,
+      "timestamp": "2026-10-04T16:37:01.679Z"
+    },
     {
       "id": "cnf-1791026911291-1-4",
       "amrId1": "amr-03",
@@ -3827,6 +7496,39 @@
       "type": "Pallet Debris",
       "detectedByAmrId": "amr-02",
       "timestamp": "2026-10-03T11:05:29.444Z"
+    },
+    {
+      "id": "obs-1791131529615",
+      "code": "OBS-438",
+      "position": {
+        "x": 20,
+        "y": 20
+      },
+      "type": "Pallet Debris",
+      "detectedByAmrId": "amr-05",
+      "timestamp": "2026-10-04T16:32:09.615Z"
+    },
+    {
+      "id": "obs-sim-1791185952646",
+      "code": "OBS-PALLET-SIM",
+      "position": {
+        "x": 18,
+        "y": 14
+      },
+      "type": "Pallet Debris",
+      "detectedByAmrId": "amr-02",
+      "timestamp": "2026-10-05T07:39:12.646Z"
+    },
+    {
+      "id": "obs-1791186216919",
+      "code": "OBS-126",
+      "position": {
+        "x": 25,
+        "y": 15
+      },
+      "type": "Pallet Debris",
+      "detectedByAmrId": "amr-05",
+      "timestamp": "2026-10-05T07:43:36.919Z"
     }
   ],
   "perceptions": [
@@ -3895,6 +7597,76 @@
     }
   ],
   "alerts": [
+    {
+      "id": "alt-1791186216920",
+      "alertType": "ROBOT_BLOCKED",
+      "severity": "WARNING",
+      "message": "New obstacle OBS-126 (Pallet Debris) detected at Grid Position X:25, Y:15. Dynamic path recalculation initiated.",
+      "timestamp": "2026-10-05T07:43:36.920Z",
+      "resolved": false
+    },
+    {
+      "id": "alt-1791186003420",
+      "alertType": "ROBOT_BLOCKED",
+      "severity": "WARNING",
+      "message": "New obstacle OBS-663 (Pallet Debris) detected at Grid Position X:22, Y:16. Dynamic path recalculation initiated.",
+      "timestamp": "2026-10-05T07:40:03.420Z",
+      "resolved": false
+    },
+    {
+      "id": "alt-fail-1791185960118",
+      "alertType": "HARDWARE_FAULT",
+      "severity": "CRITICAL",
+      "amrId": "amr-05",
+      "amrCode": "AMR-05",
+      "message": "EMERGENCY STOP: AMR-05 motor driver thermal fault detected. Mission automatically reassigned.",
+      "timestamp": "2026-10-05T07:39:20.118Z",
+      "resolved": false
+    },
+    {
+      "id": "alt-bat-1791185956278",
+      "alertType": "LOW_BATTERY",
+      "severity": "WARNING",
+      "amrId": "amr-01",
+      "amrCode": "AMR-01",
+      "message": "AMR-01 battery dropped below 15% threshold. Returning to Wireless Dock C1.",
+      "timestamp": "2026-10-05T07:39:16.278Z",
+      "resolved": false
+    },
+    {
+      "id": "alt-obs-1791185952650",
+      "alertType": "ROBOT_BLOCKED",
+      "severity": "WARNING",
+      "amrId": "amr-02",
+      "amrCode": "AMR-02",
+      "message": "Aisle A blocked by unexpected pallet debris. Dynamic A* path recalculation initiated.",
+      "timestamp": "2026-10-05T07:39:12.650Z",
+      "resolved": false
+    },
+    {
+      "id": "alt-1791131774248",
+      "alertType": "ROBOT_BLOCKED",
+      "severity": "WARNING",
+      "message": "New obstacle OBS-877 (Pallet Debris) detected at Grid Position X:22, Y:16. Dynamic path recalculation initiated.",
+      "timestamp": "2026-10-04T16:36:14.248Z",
+      "resolved": false
+    },
+    {
+      "id": "alt-1791131749885",
+      "alertType": "ROBOT_BLOCKED",
+      "severity": "WARNING",
+      "message": "New obstacle OBS-787 (Pallet Debris) detected at Grid Position X:22, Y:16. Dynamic path recalculation initiated.",
+      "timestamp": "2026-10-04T16:35:49.885Z",
+      "resolved": false
+    },
+    {
+      "id": "alt-1791131529615",
+      "alertType": "ROBOT_BLOCKED",
+      "severity": "WARNING",
+      "message": "New obstacle OBS-438 (Pallet Debris) detected at Grid Position X:20, Y:20. Dynamic path recalculation initiated.",
+      "timestamp": "2026-10-04T16:32:09.615Z",
+      "resolved": false
+    },
     {
       "id": "alt-bat-1791025531407",
       "alertType": "LOW_BATTERY",

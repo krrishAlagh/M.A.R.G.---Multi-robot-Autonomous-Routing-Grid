@@ -23,6 +23,15 @@ export const TaskAllocationView: React.FC<TaskAllocationViewProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [allocationMsg, setAllocationMsg] = useState<string | null>(null);
 
+  React.useEffect(() => {
+    if (!pickupId && stations.length > 0) {
+      setPickupId(stations.find((s) => s.type === 'Pickup')?.id || stations[0]?.id || '');
+    }
+    if (!dropoffId && stations.length > 0) {
+      setDropoffId(stations.find((s) => s.type === 'Dropoff')?.id || stations[1]?.id || stations[0]?.id || '');
+    }
+  }, [stations, pickupId, dropoffId]);
+
   const handleCreateTask = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);

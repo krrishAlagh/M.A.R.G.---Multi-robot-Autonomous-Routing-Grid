@@ -7,7 +7,7 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DEFAULT_JWT_SECRET = 'nagar-drishti-secure-gov-jwt-key-2026';
+const DEFAULT_JWT_SECRET = 'marg-edge-ai-fleet-mesh-secret-key-2026';
 const jwtSecret = process.env.JWT_SECRET || DEFAULT_JWT_SECRET;
 
 if (jwtSecret === DEFAULT_JWT_SECRET && process.env.NODE_ENV === 'production') {

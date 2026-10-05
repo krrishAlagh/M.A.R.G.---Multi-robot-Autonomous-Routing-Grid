@@ -305,6 +305,22 @@ class HighPerformanceDatabase {
       lastSyncTimestamp: new Date().toISOString()
     };
   }
+
+  public resetDatabase(): void {
+    this.data = {
+      users: JSON.parse(JSON.stringify(INITIAL_USERS)),
+      amrs: JSON.parse(JSON.stringify(INITIAL_AMRS)),
+      zones: JSON.parse(JSON.stringify(INITIAL_ZONES)),
+      stations: JSON.parse(JSON.stringify(INITIAL_STATIONS)),
+      tasks: JSON.parse(JSON.stringify(INITIAL_TASKS)),
+      conflicts: JSON.parse(JSON.stringify(INITIAL_CONFLICTS)),
+      obstacles: JSON.parse(JSON.stringify(INITIAL_OBSTACLES)),
+      perceptions: JSON.parse(JSON.stringify(INITIAL_EDGE_PERCEPTIONS)),
+      alerts: JSON.parse(JSON.stringify(INITIAL_ALERTS)),
+      metrics: JSON.parse(JSON.stringify(INITIAL_METRICS))
+    };
+    this.save();
+  }
 }
 
 export const db = new HighPerformanceDatabase();

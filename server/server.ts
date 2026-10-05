@@ -76,7 +76,7 @@ server.listen(ENV.PORT, () => {
   console.log(`
 ╔════════════════════════════════════════════════════════════════════════╗
 ║                                                                        ║
-║   🏛️   NAGAR DRISHTI - URBAN INTELLIGENCE & COMMAND BACKEND CORE       ║
+║   🤖   M.A.R.G. - MULTI-ROBOT AUTONOMOUS ROUTING GRID BACKEND CORE     ║
 ║                                                                        ║
 ║   ⚡ REST API Server:      http://localhost:${ENV.PORT}/api/health              ║
 ║   📖 API Documentation:    http://localhost:${ENV.PORT}/api/docs                ║

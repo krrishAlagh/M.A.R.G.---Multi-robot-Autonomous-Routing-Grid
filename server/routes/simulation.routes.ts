@@ -6,11 +6,11 @@ import { wsService } from '../services/websocket.service';
 const router = Router();
 
 /**
- * POST /api/v1/simulation/control - Control judge demonstration simulation scenarios
+ * POST /api/v1/simulation/control & /api/v1/simulation/scenario - Control judge demonstration simulation scenarios
  */
-router.post('/control', (req: Request, res: Response) => {
+router.post(['/control', '/scenario'], (req: Request, res: Response) => {
   try {
-    const { scenario } = req.body; // 'rush-hour' | 'obstacle-injected' | 'robot-failure' | 'low-battery-dock' | 'reset'
+    const scenario = req.body.scenario || req.body.scenarioId; // 'rush-hour' | 'obstacle-injected' | 'robot-failure' | 'low-battery-dock' | 'reset'
 
     if (scenario === 'rush-hour') {
       // Create 5 instant rush tasks & allocate
@@ -103,6 +103,12 @@ router.post('/control', (req: Request, res: Response) => {
 
       wsService.broadcast('SIMULATION_EVENT', { scenario, message: 'AMR-01 battery low (14%). Docking to C1 initiated.' });
       return res.json({ success: true, message: 'Low battery dock scenario triggered.', amr });
+    }
+
+    if (scenario === 'reset') {
+      db.resetDatabase();
+      wsService.broadcast('SIMULATION_EVENT', { scenario, message: 'Warehouse digital twin simulation reset to factory state.' });
+      return res.json({ success: true, message: 'Simulation reset successfully.' });
     }
 
     return res.status(400).json({
